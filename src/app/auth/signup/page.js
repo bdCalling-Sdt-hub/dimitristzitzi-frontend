@@ -19,7 +19,7 @@ const signup = () => {
 
   return (
     <AuthLayout>
-      <div className="xl:flex lg:flex flex-row items-center justify-between container mx-auto  h-[832px] px-4">
+      <div className="xl:flex lg:flex  flex-row items-center justify-between container mx-auto   px-4">
 
       <div className="w-full h-full ">
         <div className="flex justify-start items-center mb-4 container mx-auto  p-4">

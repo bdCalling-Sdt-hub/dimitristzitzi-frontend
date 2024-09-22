@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Carousel } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import Image from "next/image";
-import SignupImage from "../../public/images/categoryimg3.png"; // Update the image path if necessary
+import SignupImage from "../../public/images/signupimage2.png"; // Update the image path if necessary
 import girlimage from "../../public/images/medium-shot-smiley-woman.jpg";
 const SignupCarousel = () => {
   const carouselRef = useRef(null);
@@ -21,7 +21,7 @@ const SignupCarousel = () => {
     <div className="relative h-[832px] lg:p-0 md:p-0  ">
       {/* Custom Left Arrow */}
       <div
-        className="absolute bottom-28 xl:left-[60%] lg:left-[50%] md:left-[40%] left-[40%] transform -translate-y-1/2 bg-transparent border rounded-full h-[56px] w-[56px] flex items-center justify-center z-10 cursor-pointer"
+        className="absolute xl:bottom-0 lg:bottom-8 bottom-28 xl:left-[60%] lg:left-[50%] md:left-[40%] left-[40%] transform -translate-y-1/2 bg-transparent border rounded-full h-[56px] w-[56px] flex items-center justify-center z-10 cursor-pointer"
         onClick={prevSlide}
       >
         <ArrowLeftOutlined style={{ color: "#fff", fontSize: "20px" }} />
@@ -34,7 +34,7 @@ const SignupCarousel = () => {
           {/* Image */}
           <Image
             className="w-full h-full rounded-bl-[10%] rounded-tl-[10%] object-cover"
-            src={girlimage}
+            src={SignupImage}
             alt="carousel1"
           />
 
@@ -119,7 +119,7 @@ const SignupCarousel = () => {
 
       {/* Custom Right Arrow */}
       <div
-        className="absolute right-[20%] bottom-28 transform -translate-y-1/2 bg-transparent border rounded-full h-[56px] w-[56px] flex items-center justify-center z-10 cursor-pointer"
+        className="absolute right-[20%] xl:bottom-0 lg:bottom-8 bottom-28 transform -translate-y-1/2 bg-transparent border rounded-full h-[56px] w-[56px] flex items-center justify-center z-10 cursor-pointer"
         onClick={nextSlide}
       >
         <ArrowRightOutlined style={{ color: "#fff", fontSize: "25px" }} />

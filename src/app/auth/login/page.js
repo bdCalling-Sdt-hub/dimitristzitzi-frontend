@@ -25,7 +25,8 @@ const signIn = () => {
           <h1 className="text-3xl font-bold mb-4">Log in to your account</h1>
           <h3 className='text-[#475467] text-[16px]'>Welcome back! Please enter your details.</h3>
         </div>
-      <div className="flex justify-center items-center ">
+   <div className='lg:max-w-lg w-full mx-auto px-4'>
+   <div className="flex justify-center items-center ">
         <Form
           name="signin"
           layout="vertical"
@@ -83,7 +84,15 @@ const signIn = () => {
             </Button>
           </Form.Item>
         </Form>
-      </div>
+
+       
+
+        </div>
+        <div className='text-center lg:mt-4'>
+          Don't have an account? <Link href="/auth/signup"><span className="text-[#195671] font-semibold hover:underline">Sign up</span></Link>
+        </div>
+   </div>
+      
     </AuthLayout>
   );
 };

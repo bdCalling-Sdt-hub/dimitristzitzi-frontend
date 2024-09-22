@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`antialiased`}
+        className={`antialiased font-Inter `}
       >
         {/* Conditionally render Navbar and Footer */}
         {!isAuthRoute && <Navbar />}

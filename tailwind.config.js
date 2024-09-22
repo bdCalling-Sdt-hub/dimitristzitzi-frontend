@@ -15,6 +15,10 @@ module.exports = {
         boldSecoundary: "#000000"
       
       },
+      fontFamily: {
+        Merriweather: ["Merriweather", "sans-serif"],
+        Inter: ["Inter", "ans-serif"],
+      }
     },
   },
   plugins: [],

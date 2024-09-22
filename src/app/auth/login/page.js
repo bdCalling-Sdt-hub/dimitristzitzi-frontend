@@ -96,7 +96,7 @@ const signIn = () => {
 
               {/* Forgot Password Link */}
               <Link
-                href="/#"
+                href="/auth/forgetpassword"
                 className="text-[14px] text-[#195671] font-semibold hover:underline pb-4"
               >
                 Forgot password?

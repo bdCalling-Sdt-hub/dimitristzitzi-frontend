@@ -21,7 +21,7 @@ const signup = () => {
     <AuthLayout>
       <div className="xl:flex lg:flex  flex-row items-center justify-between container mx-auto   px-4">
 
-      <div className="w-full h-full ">
+      <div className="w-full h-full xl:pb-0 md:pb-0 pb-12 ">
         <div className="flex justify-start items-center mb-4 container mx-auto  p-4">
           <Image src={signupimage} />
         </div>
@@ -154,7 +154,7 @@ const signup = () => {
         </div>
       </div>
 
-      <div className="xl:w-1/2 lg:w-1/2  w-full h-screen ">
+      <div className="xl:w-1/2 lg:w-1/2  w-full  ">
         <SignupCarosel/>
       </div>
       </div>

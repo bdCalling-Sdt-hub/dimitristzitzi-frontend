@@ -1,10 +1,14 @@
-'use client';
-import React, { useState } from 'react';
-import { Input, Button, Dropdown, Menu, Drawer } from 'antd';
-import { ShoppingCartOutlined, MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import logo from '../../public/images/logo.png';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import { Input, Button, Dropdown, Menu, Drawer } from "antd";
+import {
+  ShoppingCartOutlined,
+  MenuOutlined,
+  SearchOutlined,
+} from "@ant-design/icons";
+import logo from "../../public/images/logo.png";
+import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -36,30 +40,47 @@ const Navbar = () => {
 
       {/* Middle: Search bar with category button (Hidden on small screens) */}
       <div className="hidden w-full max-w-lg lg:flex items-center space-x-2">
-      <Input
-  placeholder="Search for course"
-  className="w-full text-[#667085] text-[16px]"
-  prefix={<SearchOutlined size={15} className='text-[#667085]' />}  // Single element for the left icon
-  suffix={ // Wrap inside a div
-    <div>
-    <div className='border-l-2 text-sm text-[#1D2939] font-normal border-[#D0D5DD]'>
-      <Dropdown className='border-none' overlay={categoryMenu} trigger={['hover']}>
-        <Button>Category</Button>
-      </Dropdown>
-    </div>
-    </div>
-  }
-/>
-
-
+        <Input
+          placeholder="Search for course"
+          className="w-full text-[#667085] text-[16px]"
+          prefix={<SearchOutlined size={15} className="text-[#667085]" />} // Single element for the left icon
+          suffix={
+            // Wrap inside a div
+            <div>
+              <div className="border-l-2 text-sm text-[#1D2939] font-normal border-[#D0D5DD]">
+                <Dropdown
+                  className="border-none"
+                  overlay={categoryMenu}
+                  trigger={["hover"]}
+                >
+                  <Button>Category</Button>
+                </Dropdown>
+              </div>
+            </div>
+          }
+        />
       </div>
 
       {/* Right Side: Links (Hidden on small screens) */}
       <div className="hidden lg:flex items-center space-x-6">
-        <a href="#" className="text-sm text-[#475467] font-normal">Become Instructor</a>
+        <a href="#" className="text-sm text-[#475467] font-normal">
+          Become Instructor
+        </a>
         <ShoppingCartOutlined className="text-2xl text-[#475467]" />
-        <Link href={'/auth/login'} className="text-[16px] font-semibold text-[#475467]">Log in</Link>
-        <Link href={'/auth/signup'}><Button className='text-[#FFFFFF] font-semibold text-[16px] p-5' type="primary">Sign up</Button></Link>
+        <Link
+          href={"/auth/login"}
+          className="text-[16px] font-semibold text-[#475467]"
+        >
+          Log in
+        </Link>
+        <Link href={"/auth/signup"}>
+          <Button
+            className="text-[#FFFFFF] font-semibold text-[16px] p-5"
+            type="primary"
+          >
+            Sign up
+          </Button>
+        </Link>
       </div>
 
       {/* Mobile Menu Button (Visible on small screens) */}
@@ -74,18 +95,29 @@ const Navbar = () => {
         onClose={closeDrawer}
         visible={drawerVisible}
       >
-        <Input.Search
-          placeholder="Search for course"
-          className="mb-4"
-        />
-        <Dropdown overlay={categoryMenu} trigger={['click']}>
+        <Input.Search placeholder="Search for course" className="mb-4" />
+        <Dropdown overlay={categoryMenu} trigger={["click"]}>
           <Button className="mb-4">Category</Button>
         </Dropdown>
         <div className="flex flex-col space-y-4">
-          <a href="#" className="text-sm">Become Instructor</a>
+          <a href="#" className="text-sm">
+            Become Instructor
+          </a>
           <ShoppingCartOutlined className="text-2xl" />
-          <a href="#" className="text-sm">Log in</a>
-          <Button type="primary">Sign up</Button>
+          <Link
+          href={"/auth/login"}
+          className="text-[16px] font-semibold text-[#475467]"
+        >
+          Log in
+        </Link>
+        <Link href={"/auth/signup"}>
+          <Button
+            className="text-[#FFFFFF] font-semibold text-[16px] p-5"
+            type="primary"
+          >
+            Sign up
+          </Button>
+        </Link>
         </div>
       </Drawer>
     </nav>

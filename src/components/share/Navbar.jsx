@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full p-4 bg-white container mx-auto flex justify-between items-center">
+    <nav className="w-full p-4 bg-white  mx-auto flex justify-between items-center">
       {/* Left Side: Logo */}
       <div className="flex items-center space-x-4">
         <Link href="/">

@@ -118,8 +118,8 @@ const PopularCourses = () => {
     return (
         <div className='container mx-auto py-24 px-4'>
             <div>
-                <h1 className='text-[56px] font-black leading-none sm:text-6xl text-[#101828] font-Merriweather text-center'> Popular Courses </h1>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-12 px-12'>
+                <h1 className='xl:text-[56px] lg:text-[56px] font-black leading-none text-2xl text-[#101828] font-Merriweather text-center'> Popular Courses </h1>
+                <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 gap-4 mt-12 '>
                 {
                     course.map((item) =><CourseCard key={item.id} courseimage={item?.imageLink}/> )
                 }

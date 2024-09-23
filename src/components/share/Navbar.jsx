@@ -11,11 +11,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
-<<<<<<< HEAD
-    return (
-        <div>
-            <h1>navbar + mehedi</h1>
-=======
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   const categoryMenu = (
@@ -123,7 +118,6 @@ const Navbar = () => {
             Sign up
           </Button>
         </Link>
->>>>>>> 08671fa555eb44f6be2d4e0d47ee7304bf38f633
         </div>
       </Drawer>
     </nav>

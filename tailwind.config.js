@@ -13,12 +13,16 @@ module.exports = {
         primary: "#0E68E7",
         secondary: "#475467",
         boldSecoundary: "#000000"
-      
+        
       },
       fontFamily: {
         Merriweather: ["Merriweather", "sans-serif"],
         Inter: ["Inter", "ans-serif"],
-      }
+      },
+      // backgroundImage: {
+      //   'herobgimg': "url('')",
+      // }
+      
     },
   },
   plugins: [],

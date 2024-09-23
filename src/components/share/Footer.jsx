@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../public/images/logo.png";
 import Image from "next/image";
 import { Button } from "antd";
-import { GlobalOutlined } from "@ant-design/icons";
+import { GlobalOutlined,YoutubeOutlined,InstagramOutlined,TwitterOutlined,PhoneOutlined,MailFilled } from "@ant-design/icons";
 import Link from "next/link";
 const Footer = () => {
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
                 English <GlobalOutlined />
               </Button>
           </div>
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  text-sm gap-x-3 gap-y-8 lg:w-2/3 w-full">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  text-sm gap-x-3 gap-y-8 lg:w-2/3 w-full">
             <div className="space-y-3 text-start">
               <h3 className="  text-[#FFFFFF] font-bold text-[16px] pb-3 font-Merriweather">Programs</h3>
               <div className="flex   gap-6">
@@ -63,69 +63,75 @@ const Footer = () => {
               <ul className="space-y-[12px] text-[#E4E7EC] text-sm">
                 <li>
                   <Link rel="noopener noreferrer" href="#">
-                  Art & Design
+                 Marketing
                   </Link>
                 </li>
                 <li>
                   <Link rel="noopener noreferrer" href="#">
-                  Development
+                 Content Writing
                   </Link>
                 </li>
                 <li>
                   <Link rel="noopener noreferrer" href="#">
-                  Communication
+                  Finance
                   </Link>
                 </li>
                 <li>
                   <Link rel="noopener noreferrer" href="#">
-                  Videography
+                  Science
                   </Link>
                 </li>
                 <li>
                   <Link rel="noopener noreferrer" href="#">
-                  Photography
+                  Newworking
                   </Link>
                 </li>
               </ul>
               </div>
             </div>
+
             <div className="space-y-3 pl-12">
-              <h3 className="tracking-wide uppercase text-gray-50">Company</h3>
-              <ul className="space-y-1">
+              <h3 className="  text-[#FFFFFF] font-bold text-[16px] pb-3 font-Merriweather">Help & Support</h3>
+              <ul className="space-y-[12px] text-[#E4E7EC] text-sm">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Privacy
-                  </a>
+                  <Link rel="noopener noreferrer" href="#">
+                  FAQs
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Terms of Service
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-3">
-              <h3 className="uppercase text-gray-50">Developers</h3>
-              <ul className="space-y-1">
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Public API
-                  </a>
+                  <Link rel="noopener noreferrer" href="#">
+                 Contact Us
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Documentation
-                  </a>
+                  <Link rel="noopener noreferrer" href="#">
+                  Privacy & Policy
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Guides
-                  </a>
+                  <Link rel="noopener noreferrer" href="#">
+                  Terms & Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link rel="noopener noreferrer" href="#">
+                  Course Enrollment Help
+                  </Link>
                 </li>
               </ul>
             </div>
+         
             <div className="space-y-3">
-              <div className="uppercase text-gray-50">Social media</div>
+            <h3 className="  text-[#FFFFFF] font-bold text-[16px] pb-3 font-Merriweather">Social Media</h3>
+            <div>
+            <InstagramOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
+            <TwitterOutlined   className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
+            <YoutubeOutlined   className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
+            </div>
+            <div className="text-[#E4E7EC] text-[16px] font-semibold space-y-4 pt-4">
+                <div><PhoneOutlined className="rotate-90 text-3xl text-[#4BCAE9] pr-2" /><span className="text-[#E4E7EC]" >+(00)-000-000-0000</span></div>
+                <div className="pl-2"><MailFilled  className=" text-2xl text-[#4BCAE9] pr-2" /><span className="text-[#E4E7EC]" >infoname@mail.com</span></div>
+            </div>
             </div>
           </div>
         </div>

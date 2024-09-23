@@ -1,9 +1,14 @@
+import HeroSection from "@/components/home/HeroSection";
+import InfoSumarize from "@/components/home/InfoSumarize";
 
 
 export default function Home() {
   return (
     <main>
-      <h1 className="text-primary">Welcome to this Pantagonostis</h1>
+      <div className=" mx-auto">
+        <HeroSection/>
+        <InfoSumarize/>
+      </div>
     </main>
   );
 }

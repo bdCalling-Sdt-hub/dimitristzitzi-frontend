@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import InfoSumarize from "@/components/home/InfoSumarize";
 
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <div className=" mx-auto">
         <HeroSection/>
+        <InfoSumarize/>
       </div>
     </main>
   );

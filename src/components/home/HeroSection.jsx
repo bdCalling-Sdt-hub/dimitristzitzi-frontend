@@ -6,7 +6,7 @@ import { Button } from "antd";
 import { ArrowUpOutlined } from "@ant-design/icons";
 const HeroSection = () => {
   return (
-    <div className="bg-[#D8F0FF] mb-12 min-h-[430px]">
+    <div className="bg-[#D8F0FF]  min-h-[430px]">
       <section className="">
         <div 
         

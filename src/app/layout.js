@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
 
   // Define routes where Navbar and Footer should not appear
   const authRoutes = [ "/auth/signup"];
-  const footerCriteria  = ["/auth/otpverification","/auth/forgetpassword","/auth/signup/intarest"];
+  const footerCriteria  = ["/auth/otpverification","/auth/forgetpassword","/auth/signup/intarest","/auth/signup/categories"];
   const isAuthRoute = authRoutes.includes(pathname);
   const isFooter = footerCriteria.includes(pathname);
 

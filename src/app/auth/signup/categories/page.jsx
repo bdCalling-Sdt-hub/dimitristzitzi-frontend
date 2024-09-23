@@ -3,10 +3,10 @@ import { Button, Form } from "antd";
 import Image from "next/image";
 import React, { useState } from "react";
 import { CheckCircleFilled } from "@ant-design/icons";
-import image1 from "../../../../public/images/intarest1.png";
-import image2 from "../../../../public/images/intarest2.png";
-import image3 from "../../../../public/images/intarest3.png";
-import image4 from "../../../../public/images/intarest4.png";
+import image1 from "../../../../public/images/category1.png";
+import image2 from "../../../../public/images/category2.png";
+import image3 from "../../../../public/images/category3.png";
+import image4 from "../../../../public/images/category4.png";
 
 const Page = () => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -48,16 +48,12 @@ const Page = () => {
 
   return (
     <div>
-      <div className="container mx-auto ">
+      <div className="container mx-auto mt-8">
         <div className="shadow-lg rounded-lg max-w-6xl mx-auto p-8">
           <div className="text-center py-8">
             <h1 className="text-4xl font-Merriweather font-bold mb-4 text-[#000000]">
-              What are you interested in?
+            Pick 3 categories you want to explore
             </h1>
-            <h3 className="text-[#1B1B1B99] text-[16px] font-Inter">
-              Select what you're into. We'll help you find great things to
-              learn.
-            </h3>
           </div>
 
           {/* Form for capturing selected interests */}

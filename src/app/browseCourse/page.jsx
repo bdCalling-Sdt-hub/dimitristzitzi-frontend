@@ -221,7 +221,7 @@ const page = () => {
                   reviews={item.reviews}
                   duration={item.duration}
                   students={item.students}
-                  enrollLink={item.enrollLink}
+                  enrollLink={item.id}
                 />
               ))}
         </div>

@@ -15,7 +15,7 @@ const HeroSection = () => {
             {/* LEFT HERO SECTION */}
           <div className="flex flex-col justify-center p-6  text-center rounded-sm lg:max-w-[750px] xl:max-w-[750px] lg:text-left ">
             <div className="bg-white px-4 font-semibold pr-6 py-2 text-[#475467] w-fit rounded-3xl"> 🔥 Introducing</div>
-            <h1 className="text-[56px] font-black leading-none sm:text-6xl text-[#101828] font-Merriweather">
+            <h1 className="lg:text-[56px] text-4xl font-black leading-none sm:text-6xl text-[#101828] font-Merriweather">
               An Excellent Platform to Boost your Career
             </h1>
             <p className="mt-6 mb-8 text-[16px] font-normal sm:mb-12 text-[#475467] leading-8 ">

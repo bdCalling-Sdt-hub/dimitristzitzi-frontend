@@ -55,3 +55,22 @@ h1{
 .ant-tabs-nav {
   border-bottom: none !important;
 }
+.category-button {
+  padding: 10px 20px;
+font-size: 14px;
+  border: none;
+  font-weight: 600;
+  color: #475467;
+  background: transparent;
+  cursor: pointer;
+}
+
+.active-tab {
+  background-color: #D1F5FC; /* Custom background color for active tab */
+  color: #1253BB;
+  border-radius: 8px;
+}
+
+.ant-tabs-tab {
+  margin-right: 16px;
+}

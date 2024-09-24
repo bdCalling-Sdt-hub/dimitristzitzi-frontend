@@ -2,7 +2,7 @@
 
 import React from 'react';
 import CourseCard from '../ui/CourseCard';
-import { Tabs } from 'antd';
+import { Button, Tabs } from 'antd';
 import { useState } from 'react';
 
 const PopularCourses = () => {
@@ -247,11 +247,11 @@ const PopularCourses = () => {
                     categories.map((category, index) => (
                         <Tabs.TabPane
                             tab={
-                                <button className={`category-button ${activeKey === String(index + 1) ? 'active-tab' : ''}`}>
+                                <Button className={`category-button ${activeKey === String(index + 1) ? 'active-tab' : ''}`}>
                                     {category}
-                                </button>
+                                </Button>
                             }
-                            className='py-12'
+                            className='pt-8'
                             key={index + 1}
                         >
                             <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 gap-4'>
@@ -274,27 +274,7 @@ const PopularCourses = () => {
             </Tabs>
 
             {/* Custom styles */}
-            <style jsx>{`
-                .category-button {
-                    padding: 10px 20px;
-                    font-size: 16px;
-                    border: none;
-                    font-weight: 600;
-                    color: #475467;
-                    background: transparent;
-                    cursor: pointer;
-                }
-
-                .active-tab {
-                    background-color: #D1F5FC; /* Custom background color for active tab */
-                    color: #1253BB;
-                    border-radius: 8px;
-                }
-
-                .ant-tabs-tab {
-                    margin-right: 16px;
-                }
-            `}</style>
+           
         </div>
     );
 };

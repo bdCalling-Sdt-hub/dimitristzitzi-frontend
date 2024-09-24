@@ -1,9 +1,14 @@
+'use client'
+
 import React from 'react';
 import CourseCard from '../ui/CourseCard';
-import imageone from '../../public/images/caourse1.png'
-const PopularCourses = () => {
+import { Tabs } from 'antd';
+import { useState } from 'react';
 
-    const course=[
+const PopularCourses = () => {
+    const [activeKey, setActiveKey] = useState('1');
+    
+    const course = [
         {
             "id": 1,
             "instructor": "John Michael",
@@ -14,8 +19,99 @@ const PopularCourses = () => {
             "students": 176,
             "price": "€ 29.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png"
-          
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
+        },
+        {
+            "id": 1,
+            "instructor": "John Michael",
+            "rating": 4.7,
+            "reviews": 3242,
+            "courseTitle": "Product Management Basic - Course",
+            "duration": "40 Hours",
+            "students": 176,
+            "price": "€ 29.00",
+            "enrollLink": "ENROLL NOW",
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "All courses"
         },
         {
             "id": 2,
@@ -27,7 +123,8 @@ const PopularCourses = () => {
             "students": 150,
             "price": "€ 35.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/xLN7bSQ/category2.png"
+            "imageLink": "https://i.ibb.co.com/xLN7bSQ/category2.png",
+            "category": "Graphic Design"
         },
         {
             "id": 3,
@@ -39,7 +136,8 @@ const PopularCourses = () => {
             "students": 200,
             "price": "€ 27.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/vPfYHr7/category1.png"
+            "imageLink": "https://i.ibb.co.com/vPfYHr7/category1.png",
+            "category": "UI/UX Design"
         },
         {
             "id": 4,
@@ -51,7 +149,8 @@ const PopularCourses = () => {
             "students": 250,
             "price": "€ 40.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/xLN7bSQ/category2.png"
+            "imageLink": "https://i.ibb.co.com/xLN7bSQ/category2.png",
+            "category": "Programming"
         },
         {
             "id": 5,
@@ -63,7 +162,8 @@ const PopularCourses = () => {
             "students": 300,
             "price": "€ 50.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png"
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "Artificial Intelligence"
         },
         {
             "id": 6,
@@ -75,7 +175,8 @@ const PopularCourses = () => {
             "students": 180,
             "price": "€ 25.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/vPfYHr7/category1.png"
+            "imageLink": "https://i.ibb.co.com/vPfYHr7/category1.png",
+            "category": "Business Management"
         },
         {
             "id": 7,
@@ -87,7 +188,8 @@ const PopularCourses = () => {
             "students": 190,
             "price": "€ 30.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/xLN7bSQ/category2.png"
+            "imageLink": "https://i.ibb.co.com/xLN7bSQ/category2.png",
+            "category": "3D"
         },
         {
             "id": 8,
@@ -99,7 +201,8 @@ const PopularCourses = () => {
             "students": 220,
             "price": "€ 33.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png"
+            "imageLink": "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+            "category": "Sports"
         },
         {
             "id": 9,
@@ -111,20 +214,87 @@ const PopularCourses = () => {
             "students": 210,
             "price": "€ 37.00",
             "enrollLink": "ENROLL NOW",
-            "imageLink": "https://i.ibb.co.com/vPfYHr7/category1.png"
+            "imageLink": "https://i.ibb.co.com/vPfYHr7/category1.png",
+            "category": "All courses"
         }
-    ]
+    ];
+
+    const categories = [...new Set(course.map(item => item.category))];
+    const filterCoursesByCategory = (category) => {
+        return course.filter(item => item.category === category);
+    };
+
+    const handleTabChange = (key) => {
+        setActiveKey(key);
+    };
 
     return (
         <div className='container mx-auto py-24 px-4'>
-            <div>
-                <h1 className='xl:text-[56px] lg:text-[56px] font-black leading-none text-2xl text-[#101828] font-Merriweather text-center'> Popular Courses </h1>
-                <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 gap-4 mt-12 '>
+            <h1 className='xl:text-[56px] lg:text-[56px] font-black leading-none text-2xl text-[#101828] font-Merriweather text-center pb-12'>
+                Popular Courses
+            </h1>
+
+            {/* Tabs for categories */}
+            <Tabs
+                defaultActiveKey="1"
+                activeKey={activeKey}
+                onChange={handleTabChange}
+                tabBarStyle={{
+                    borderBottom: 'none'  // Removes the default bottom border
+                }}
+            >
                 {
-                    course.map((item) =><CourseCard key={item.id} courseimage={item?.imageLink}/> )
+                    categories.map((category, index) => (
+                        <Tabs.TabPane
+                            tab={
+                                <button className={`category-button ${activeKey === String(index + 1) ? 'active-tab' : ''}`}>
+                                    {category}
+                                </button>
+                            }
+                            className='py-12'
+                            key={index + 1}
+                        >
+                            <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 gap-4'>
+                                {
+                                    filterCoursesByCategory(category).map((item) => (
+                                        <CourseCard 
+                                            key={item.id} 
+                                            courseimage={item.imageLink} 
+                                            courseTitle={item.courseTitle}
+                                            instructor={item.instructor}
+                                            rating={item.rating}
+                                            price={item.price}
+                                        />
+                                    ))
+                                }
+                            </div>
+                        </Tabs.TabPane>
+                    ))
                 }
-                </div>
-            </div>
+            </Tabs>
+
+            {/* Custom styles */}
+            <style jsx>{`
+                .category-button {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border: none;
+                    font-weight: 600;
+                    color: #475467;
+                    background: transparent;
+                    cursor: pointer;
+                }
+
+                .active-tab {
+                    background-color: #D1F5FC; /* Custom background color for active tab */
+                    color: #1253BB;
+                    border-radius: 8px;
+                }
+
+                .ant-tabs-tab {
+                    margin-right: 16px;
+                }
+            `}</style>
         </div>
     );
 };

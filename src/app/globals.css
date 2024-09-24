@@ -32,3 +32,26 @@ h1{
     text-wrap: balance;
   }
 }
+.category-button {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #1890ff;
+  color: white;
+}
+
+.ant-tabs-tab-btn {
+  padding: 0;
+}
+
+/* Remove the default Ant Design border for the Tabs */
+.ant-tabs-nav {
+  border-bottom: none !important;
+}

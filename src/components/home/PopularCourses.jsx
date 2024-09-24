@@ -234,7 +234,7 @@ const PopularCourses = () => {
   };
 
   return (
-    <div className="container mx-auto py-24 px-4">
+    <div className="container mx-auto py-16 px-4">
       <h1 className="xl:text-[56px] lg:text-[56px] font-black leading-none text-2xl text-[#101828] font-Merriweather text-center pb-12">
         Popular Courses
       </h1>
@@ -251,13 +251,13 @@ const PopularCourses = () => {
         {categories.map((category, index) => (
           <Tabs.TabPane
             tab={
-              <Button
+              <button
                 className={`category-button ${
                   activeKey === String(index + 1) ? "active-tab" : ""
                 }`}
               >
                 {category}
-              </Button>
+              </button>
             }
             className="pt-8"
             key={index + 1}

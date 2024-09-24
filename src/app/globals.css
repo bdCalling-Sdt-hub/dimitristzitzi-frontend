@@ -55,6 +55,10 @@ h1{
 .ant-tabs-nav {
   border-bottom: none !important;
 }
+.category-button:hover{
+  background-color: transparent;
+  color: #475467;
+}
 .category-button {
   padding: 10px 20px;
 font-size: 14px;

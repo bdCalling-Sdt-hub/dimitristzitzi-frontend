@@ -141,7 +141,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              {/* MENU ITEM THREE  */}
+              {/* SOCIAL MEDIA MENU ITEM   */}
               <div className="space-y-3">
                 <h3 className="  text-[#FFFFFF] font-bold text-[16px] pb-3 font-Merriweather">
                   Social Media
@@ -153,11 +153,11 @@ const Footer = () => {
                 </div>
                 <div className="text-[#E4E7EC] text-[16px] font-semibold space-y-4 pt-4">
                   <div>
-                    <PhoneOutlined className="rotate-90 text-3xl text-[#4BCAE9] pr-2" />
+                    <PhoneOutlined className="rotate-90 text-lg text-[#4BCAE9] pr-2" />
                     <span className="text-[#E4E7EC]">+(00)-000-000-0000</span>
                   </div>
                   <div className="pl-2">
-                    <MailFilled className=" text-2xl text-[#4BCAE9] pr-2" />
+                    <MailFilled className=" text-lg text-[#4BCAE9] pr-2" />
                     <span className="text-[#E4E7EC]">infoname@mail.com</span>
                   </div>
                 </div>

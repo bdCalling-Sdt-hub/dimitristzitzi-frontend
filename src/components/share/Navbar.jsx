@@ -5,6 +5,7 @@ import {
   ShoppingCartOutlined,
   MenuOutlined,
   SearchOutlined,
+  DownOutlined
 } from "@ant-design/icons";
 import logo from "../../public/images/logo.png";
 import Image from "next/image";
@@ -53,7 +54,7 @@ const Navbar = () => {
                   overlay={categoryMenu}
                   trigger={["hover"]}
                 >
-                  <Button>Category</Button>
+                  <Button className="">Category  <DownOutlined className="" /> </Button>
                 </Dropdown>
               </div>
             </div>

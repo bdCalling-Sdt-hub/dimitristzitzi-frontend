@@ -57,7 +57,7 @@ const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,
         </div>
         <div className="flex justify-between items-center py-4">
           <span className="text-lg font-semibold text-[#000000]">€ 29.00</span>
-          <Link href={`browseCourse/${enrollLink}`}
+          <Link href={`browseCourse/instructor/${enrollLink}`}
             className="inline-flex items-center text-[#14698A] border-b-2 border-[#14698A] text-[16px] font-semibold "
           >
             ENROLL NOW

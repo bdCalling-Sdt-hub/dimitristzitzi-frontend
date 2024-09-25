@@ -1,6 +1,6 @@
 "use client";
 import { Card, Avatar, Button, Rate } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import instactor from "../../../public/images/instructor.png";
 import instactor2 from "../../../public/images/instructor2.png";
 import videoimg from "../../../public/images/videoimg.png";
@@ -23,7 +23,9 @@ import {
 import ReviewCard from "@/components/ui/ReviewCard";
 import ratingimage from "../../../public/images/srahkhan.png";
 import Link from "next/link";
+import CourseCard from "@/components/ui/CourseCard";
 const page = ({ params }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   // course curriculam data
   const { Panel } = Collapse;
   const panels = [
@@ -70,10 +72,56 @@ const page = ({ params }) => {
         "This is a good course for someone how does not know how to code, but is interested.Each lection has projects, this is an enormous help to internalize the code. Additionally, for some projects, you need to use Google to get some specific help to get your code to work.I've learned how to code with this course, and would definitely recommend it!",
     },
   ];
+
+  // FAKE JSON DATA FOR DEMO PURPOSES ONLY
+  const courseone = [
+    {
+      id: 1,
+      instructor: "John Michael",
+      rating: 4.7,
+      reviews: 3242,
+      courseTitle: "Product Management Basic - Course",
+      duration: "40 Hours",
+      students: 176,
+      price: "€ 29.00",
+      enrollLink: "ENROLL NOW",
+      imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+      category: "All courses",
+    }, 
+    
+  ];
+  const coursetwo = [
+    {
+      id: 8,
+      instructor: "John Michael",
+      rating: 4.7,
+      reviews: 3242,
+      courseTitle: "Product Analytics for Beginners",
+      duration: "48 Hours",
+      students: 220,
+      price: "€ 33.00",
+      enrollLink: "ENROLL NOW",
+      imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
+      category: "Sports",
+    },
+    {
+      id: 9,
+      instructor: "John Michael",
+      rating: 4.6,
+      reviews: 3100,
+      courseTitle: "Building Digital Products",
+      duration: "55 Hours",
+      students: 210,
+      price: "€ 37.00",
+      enrollLink: "ENROLL NOW",
+      imageLink: "https://i.ibb.co.com/vPfYHr7/category1.png",
+      category: "All courses",
+    },
+  ]
   return (
     <div>
       <div>
-        <div className="mb-96 ">
+        <div className="mb-10 ">
           {/* hero section here ---------------------------------------------------------------------------- */}
           <div className="xl:bg-[#1D2939] lg:bg-[#1D2939] bg-transparent">
             <div className="container mx-auto  relative py-16 px-6">
@@ -599,16 +647,96 @@ const page = ({ params }) => {
                   <span className="text-[#475467] text-sm flex items-center justify-center">
                     <PlayCircleOutlined className="text-2xl pr-2" />
                   </span>
-                  <span className="text-[#475467] font-normal text-lg ml-2 pt-1">
+                  <span className="text-[#475467] font-normal text-lg ml-2 ">
                     254 Courses
                   </span>
                 </div>
               </div>
             </div>
 
+            {/* about section -------------------------------------------------------------- */}
+            <div className="bg-white my-12   max-w-2xl  relative">
+              <h2 className="text-lg font-semibold text-[#475467] mb-4">About</h2>
+              <div
+                className={`relative ${
+                  !isExpanded ? "max-h-40 overflow-hidden" : ""
+                }`}
+              >
+                <p className="text-[#475467] mb-4">
+                  I'm Angela, I'm a developer with a passion for teaching. I'm
+                  the lead instructor at the London App Brewery, London's
+                  leading Programming Bootcamp. I've helped hundreds of
+                  thousands of students learn to code and change their lives by
+                  becoming a developer. I've been invited by companies such as
+                  Twitter, Facebook and Google to teach their employees
+                </p>
+                <p className="text-[#475467]">
+                  My first foray into programming was when I was just 12 years
+                  old, wanting to build my own Space Invader game. Since then,
+                  I've made hundred of websites, apps and games. But most
+                  importantly, I realised that my greatest passion is teaching.
+                </p>
 
+                {/* Apply the gradient blur at the bottom when not expanded */}
+                {!isExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white to-transparent pointer-events-none"></div>
+                )}
+              </div>
 
-            {/* about section ------------------- */}
+              <button
+                className="text-blue-500 mt-4"
+                onClick={() => setIsExpanded(!isExpanded)}
+              >
+                {isExpanded ? "Show less" : "Show more"}
+              </button>
+            </div>
+
+            <div className="bg-white mt-32  max-w-2xl">
+            <h1 className="text-3xl font-bold mb-8 text-[#000000] font-Merriweather">
+            Other courses from John Doe (<span className="text-2xl text-[#1D2939] font-Merriweather">253</span>)
+              </h1>
+
+              <div className="">
+              {courseone.map((item) => (
+                <CourseCard
+                  key={item.id}
+                  courseimage={item.imageLink}
+                  courseTitle={item.courseTitle}
+                  instructor={item.instructor}
+                  rating={item.rating}
+                  price={item.price}
+                  reviews={item.reviews}
+                  duration={item.duration}
+                  students={item.students}
+                  enrollLink={item.id}
+                />
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1  md:grid-cols-2 mt-6 lg:grid-cols-2 gap-4">
+              {coursetwo.map((item) => (
+                <CourseCard
+                  key={item.id}
+                  courseimage={item.imageLink}
+                  courseTitle={item.courseTitle}
+                  instructor={item.instructor}
+                  rating={item.rating}
+                  price={item.price}
+                  reviews={item.reviews}
+                  duration={item.duration}
+                  students={item.students}
+                  enrollLink={item.id}
+                />
+              ))}
+            </div>
+            <Link
+                href={" #"}
+                className="inline-flex items-center text-[#475467] border-b-2 border-[#475467] mt-8 text-[16px] font-semibold "
+              >
+                Show all reviews
+                <ArrowUpOutlined className="rotate-45 text-xl pl-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

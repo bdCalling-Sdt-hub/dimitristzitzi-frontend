@@ -17,8 +17,14 @@ import {
   CheckOutlined,
   FolderOutlined,
   FileOutlined,
+  ArrowUpOutlined,
+  UsergroupAddOutlined,
 } from "@ant-design/icons";
+import ReviewCard from "@/components/ui/ReviewCard";
+import ratingimage from "../../../public/images/srahkhan.png";
+import Link from "next/link";
 const page = ({ params }) => {
+  // course curriculam data
   const { Panel } = Collapse;
   const panels = [
     { id: "01", title: "Getting started", time: "02:30 min", isVideo: true },
@@ -28,11 +34,47 @@ const page = ({ params }) => {
     { id: "05", title: "Basic Fundamental", time: "10:30 min", isVideo: true },
     { id: "06", title: "Basic Fundamental", time: "10:30 min", isVideo: true },
   ];
+
+  // review data
+  const reviews = [
+    {
+      name: "Sarah Khan",
+      avatar: ratingimage,
+      rating: 5,
+      time: "a month ago",
+      comment:
+        "This is a good course for someone how does not know how to code, but is interested.Each lection has projects, this is an enormous help to internalize the code. Additionally, for some projects, you need to use Google to get some specific help to get your code to work.I've learned how to code with this course, and would definitely recommend it!",
+    },
+    {
+      name: "John Doe",
+      avatar: ratingimage,
+      rating: 4,
+      time: "2 weeks ago",
+      comment:
+        "This is a good course for someone how does not know how to code, but is interested.Each lection has projects, this is an enormous help to internalize the code. Additionally, for some projects, you need to use Google to get some specific help to get your code to work.I've learned how to code with this course, and would definitely recommend it!",
+    },
+    {
+      name: "Emily Smith",
+      avatar: ratingimage,
+      rating: 5,
+      time: "3 weeks ago",
+      comment:
+        "This is a good course for someone how does not know how to code, but is interested.Each lection has projects, this is an enormous help to internalize the code. Additionally, for some projects, you need to use Google to get some specific help to get your code to work.I've learned how to code with this course, and would definitely recommend it!",
+    },
+    {
+      name: "David Johnson",
+      avatar: ratingimage,
+      rating: 4,
+      time: "a month ago",
+      comment:
+        "This is a good course for someone how does not know how to code, but is interested.Each lection has projects, this is an enormous help to internalize the code. Additionally, for some projects, you need to use Google to get some specific help to get your code to work.I've learned how to code with this course, and would definitely recommend it!",
+    },
+  ];
   return (
     <div>
-      {/* hero section here ---------------------------------------------------------------------------- */}
       <div>
-        <div className="      mb-96 ">
+        <div className="mb-96 ">
+          {/* hero section here ---------------------------------------------------------------------------- */}
           <div className="xl:bg-[#1D2939] lg:bg-[#1D2939] bg-transparent">
             <div className="container mx-auto  relative py-16 px-6">
               {/* left side content here-------------------------------------------- */}
@@ -117,7 +159,7 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border xl:border-[#D9D9D9] lg:border-[#D9D9D9 ] border-n rounded-lg  xl:absolute lg:absolute block right-0 top-[64px] lg:shadow-lg">
+              <div className="max-w-2xl mx-auto bg-white border xl:border-[#D9D9D9] lg:border-[#D9D9D9 ] border-none rounded-lg  xl:absolute lg:absolute block right-0 top-[64px] lg:shadow-lg">
                 <div className="relative">
                   <Image
                     src={videoimg}
@@ -220,6 +262,7 @@ const page = ({ params }) => {
                 />
               </div>
             </div>
+
             {/* course details section here ---------- */}
             <div className="border border-[#D9D9D9] rounded-lg my-12 p-6 max-w-2xl">
               <h1 className="text-3xl font-bold mb-8">you'll learn</h1>
@@ -289,7 +332,7 @@ const page = ({ params }) => {
 
               {/* lacture folder ----------------- */}
               <div className="flex items-center justify-between mb-4 ">
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex items-center justify-between lg:gap-6 md:gap-6 gap-1">
                   <div className="text-sm font-normal text-[#4E5566] flex items-center gap-3">
                     <FolderOutlined className="text-xl text-[#4E5566]" /> 6
                     Sections
@@ -306,7 +349,7 @@ const page = ({ params }) => {
               </div>
 
               {/* course outline here----------------------------------------------------------- */}
-              <div className=" mx-auto bg-[#F2F4F7] rounded-md p-4 border-none">
+              <div className=" mx-auto bg-[#F2F4F7] rounded-md lg:p-4 md:p-4 p-0 border-none">
                 <Collapse
                   defaultActiveKey={["1"]}
                   accordion
@@ -327,7 +370,7 @@ const page = ({ params }) => {
                     }
                     key="1"
                     className="mb-2 bg-transparent"
-                    style={{backgroundColor: "transparent"}}
+                    style={{ backgroundColor: "transparent" }}
                   >
                     <div className="space-y-3">
                       {/* Add space between items */}
@@ -341,7 +384,9 @@ const page = ({ params }) => {
                               {panel.id}
                             </div>
                             <div>
-                              <p className="font-semibold text-[#475467] text-[16px]">{panel.title}</p>
+                              <p className="font-semibold text-[#475467] text-[16px]">
+                                {panel.title}
+                              </p>
                               {panel.isVideo ? (
                                 <p className="text-sm text-[#98A2B3]">
                                   {panel.time}
@@ -379,7 +424,7 @@ const page = ({ params }) => {
                     }
                     key="2"
                     className="mb-2 bg-transparent"
-                    style={{backgroundColor: "transparent"}}
+                    style={{ backgroundColor: "transparent" }}
                   >
                     <div className="space-y-3">
                       {/* Add space between items */}
@@ -393,7 +438,9 @@ const page = ({ params }) => {
                               {panel.id}
                             </div>
                             <div>
-                              <p className="font-semibold text-[#475467] text-[16px]">{panel.title}</p>
+                              <p className="font-semibold text-[#475467] text-[16px]">
+                                {panel.title}
+                              </p>
                               {panel.isVideo ? (
                                 <p className="text-sm text-[#98A2B3]">
                                   {panel.time}
@@ -430,7 +477,7 @@ const page = ({ params }) => {
                     }
                     key="3"
                     className="mb-2 bg-transparent"
-                    style={{backgroundColor: "transparent"}}
+                    style={{ backgroundColor: "transparent" }}
                   >
                     <div className="space-y-3">
                       {/* Add space between items */}
@@ -444,7 +491,9 @@ const page = ({ params }) => {
                               {panel.id}
                             </div>
                             <div>
-                              <p className="font-semibold text-[#475467] text-[16px]">{panel.title}</p>
+                              <p className="font-semibold text-[#475467] text-[16px]">
+                                {panel.title}
+                              </p>
                               {panel.isVideo ? (
                                 <p className="text-sm text-[#98A2B3]">
                                   {panel.time}
@@ -470,6 +519,96 @@ const page = ({ params }) => {
                 </Collapse>
               </div>
             </div>
+
+            {/* Course rating and reviews here---------------------------------------------- */}
+            <div className="mt-28 max-w-2xl ">
+              <h1 className="text-3xl font-bold mb-8 text-[#1D2939] font-Merriweather">
+                {" "}
+                <Rate
+                  className="text-4xl text-[#FDB022] "
+                  count={1}
+                  defaultValue={4.7}
+                />
+                <span className="px-4">4.5 </span> Course Rating{" "}
+                <span className="text-lg text-[#475467] font-Inter">
+                  (4.2k students reviewed)
+                </span>
+              </h1>
+
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 mt-10">
+                {reviews.map((review, index) => (
+                  <ReviewCard key={index} review={review} />
+                ))}
+              </div>
+              <Link
+                href={" #"}
+                className="inline-flex items-center text-[#475467] border-b-2 border-[#475467] mt-8 text-[16px] font-semibold "
+              >
+                Show all reviews
+                <ArrowUpOutlined className="rotate-45 text-xl pl-2" />
+              </Link>
+            </div>
+
+            <div className=" mt-28 max-w-2xl ">
+              <h1 className="text-3xl font-bold mb-8 text-[#1D2939] font-Merriweather">
+                Instructor
+              </h1>
+              <div className="flex items-center justify-start px-2 mb-9">
+                <Image
+                  height={56}
+                  width={56}
+                  src={instactor}
+                  alt="instructor"
+                  className=" rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h3 className="text-lg  font-semibold border-b-2 text-[#1D2939] border-[#1D2939] w-fit ">
+                    Johon Doe
+                  </h3>
+                  <p className="text-[#475467] text-[16px] font-normal">
+                    Head of Product Management
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start justify-start mb-2">
+                  <span className="text-yellow-500 text-sm flex items-center justify-center">
+                    <Rate
+                      className="text-2xl pr-2"
+                      allowHalf
+                      count={1}
+                      defaultValue={4.5}
+                    />{" "}
+                    <span className="text-[#475467] font-bold text-[18px]">
+                      4.5
+                    </span>
+                  </span>
+                  <span className="text-[#475467] font-normal text-lg ml-2 pt-1">
+                    (8,250 <span className="text-[#0E68E7]">Reviews</span>)
+                  </span>
+                </div>
+                <div className="flex items-start justify-start mb-2">
+                  <span className="text-[#475467] text-sm flex items-center justify-center">
+                    <UsergroupAddOutlined className="text-2xl pr-2" />
+                  </span>
+                  <span className="text-[#475467] font-normal text-lg ml-2 pt-1">
+                    8,250 Students
+                  </span>
+                </div>
+                <div className="flex items-start justify-start mb-2">
+                  <span className="text-[#475467] text-sm flex items-center justify-center">
+                    <PlayCircleOutlined className="text-2xl pr-2" />
+                  </span>
+                  <span className="text-[#475467] font-normal text-lg ml-2 pt-1">
+                    254 Courses
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+
+            {/* about section ------------------- */}
           </div>
         </div>
       </div>

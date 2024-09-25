@@ -80,6 +80,9 @@ font-size: 14px;
 }
 
 :where(.css-dev-only-do-not-override-qnu6hi).ant-collapse .ant-collapse-content>.ant-collapse-content-box {
-  padding: 16px 16px;
+
   background-color: #F2F4F7;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-rate .ant-rate-star:not(:last-child) {
+  margin-inline-end: 0px;
 }

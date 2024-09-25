@@ -207,7 +207,7 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border xl:border-[#D9D9D9] lg:border-[#D9D9D9 ] border-none rounded-lg  xl:absolute lg:absolute block right-0 top-[64px] lg:shadow-lg">
+              <div className="max-w-2xl mx-auto bg-white border xl:border-[#D9D9D9] lg:border-[#D9D9D9 ] border-none rounded-lg  xl:fixed lg:fixed  block right-[15%] top-[100px] lg:shadow-lg">
                 <div className="relative">
                   <Image
                     src={videoimg}
@@ -315,7 +315,7 @@ const page = ({ params }) => {
             <div className="border border-[#D9D9D9] rounded-lg my-12 p-6 max-w-2xl">
               <h1 className="text-3xl font-bold mb-8">you'll learn</h1>
               <div>
-                <ul className="list-none text-lg text-[#475467] font-normal  space-y-[20px] py-2 pb-8">
+                <ul className="list-none lg:text-lg md:text-lg text-sm text-[#475467] font-normal  space-y-[20px] py-2 pb-8">
                   <div className="flex items-start justify-start gap-2">
                     <CheckOutlined className="" />
                     <li>
@@ -417,10 +417,10 @@ const page = ({ params }) => {
                       </div>
                     }
                     key="1"
-                    className="mb-2 bg-transparent"
+                    className="mb-2 bg-transparent "
                     style={{ backgroundColor: "transparent" }}
                   >
-                    <div className="space-y-3">
+                    <div className="space-y-3 cursor-pointer">
                       {/* Add space between items */}
                       {panels.map((panel) => (
                         <div
@@ -474,7 +474,7 @@ const page = ({ params }) => {
                     className="mb-2 bg-transparent"
                     style={{ backgroundColor: "transparent" }}
                   >
-                    <div className="space-y-3">
+                    <div className="space-y-3 cursor-pointer">
                       {/* Add space between items */}
                       {panels.map((panel) => (
                         <div
@@ -527,7 +527,7 @@ const page = ({ params }) => {
                     className="mb-2 bg-transparent"
                     style={{ backgroundColor: "transparent" }}
                   >
-                    <div className="space-y-3">
+                    <div className="space-y-3 cursor-pointer">
                       {/* Add space between items */}
                       {panels.map((panel) => (
                         <div
@@ -569,7 +569,7 @@ const page = ({ params }) => {
             </div>
 
             {/* Course rating and reviews here---------------------------------------------- */}
-            <div className="mt-28 max-w-2xl ">
+            <div className="lg:mt-28 md:mt-24 max-w-2xl ">
               <h1 className="text-3xl font-bold mb-8 text-[#1D2939] font-Merriweather">
                 {" "}
                 <Rate
@@ -597,7 +597,7 @@ const page = ({ params }) => {
               </Link>
             </div>
 
-            <div className=" mt-28 max-w-2xl ">
+            <div className=" lg:mt-28 md:mt-24 mt-12 max-w-2xl ">
               <h1 className="text-3xl font-bold mb-8 text-[#1D2939] font-Merriweather">
                 Instructor
               </h1>
@@ -691,7 +691,8 @@ const page = ({ params }) => {
               </button>
             </div>
 
-            <div className="bg-white mt-32  max-w-2xl">
+            {/* others courses section here-------------------------------------------- */}
+            <div className="bg-white lg:mt-32 md:mt-28 mt-12 max-w-2xl">
             <h1 className="text-3xl font-bold mb-8 text-[#000000] font-Merriweather">
             Other courses from John Doe (<span className="text-2xl text-[#1D2939] font-Merriweather">253</span>)
               </h1>

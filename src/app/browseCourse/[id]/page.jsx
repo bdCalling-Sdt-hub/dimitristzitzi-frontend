@@ -276,7 +276,9 @@ const page = ({ params }) => {
                   >
                     €29.00 Buy Now
                   </Button>
-                  <button className="mt-2 bg-transparent font-semibold p-6 text-[#475467] block mx-auto">
+                  <button
+                  //  onClick={()=>handleAddToCart()}   
+                    className="mt-2 bg-transparent font-semibold p-6 text-[#475467] block mx-auto">
                     Add to Cart
                   </button>
                 </div>

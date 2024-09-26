@@ -3,6 +3,7 @@ import { Carousel } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import SignupImage from "../../public/images/signupimage2.png"; // Update the image path if necessary
+import SignupImage1 from "../../public/images/medium-shot-smiley-woman.jpg"; // Update the image path if necessary
 import girlimage from "../../public/images/medium-shot-smiley-woman.jpg";
 
 const SignupCarousel = () => {
@@ -31,7 +32,7 @@ const SignupCarousel = () => {
       {/* Carousel */}
       <Carousel ref={carouselRef} dots={false} arrows={false} infinite>
         {/* First Slide */}
-        <div className="relative h-screen w-full overflow-hidden"> {/* Updated to h-full */}
+        <div className="relative h-screen w-full rounded-bl-[10%] rounded-tl-[10%] overflow-hidden"> {/* Updated to h-full */}
           {/* Image */}
           <Image
             className="w-full h-full object-cover rounded-bl-[10%] rounded-tl-[10%]" // Ensures the image covers the entire container
@@ -60,11 +61,11 @@ const SignupCarousel = () => {
         </div>
 
         {/* Second Slide */}
-        <div className="relative h-screen w-full overflow-hidden"> {/* Updated to h-full */}
+        <div className="relative h-screen w-full rounded-bl-[10%] rounded-tl-[10%] overflow-hidden"> {/* Updated to h-full */}
           {/* Image */}
           <Image
-            className="w-full h-full object-cover rounded-bl-[10%] rounded-tl-[10%]" // Ensures the image covers the entire container
-            src={SignupImage}
+            className="w-full h-full  object-cover rounded-bl-[10%] rounded-tl-[10%]" // Ensures the image covers the entire container
+            src={SignupImage1}
             alt="carousel1"
           />
 
@@ -89,7 +90,7 @@ const SignupCarousel = () => {
         </div>
 
         {/* Third Slide */}
-        <div className="relative h-screen w-full overflow-hidden"> {/* Updated to h-full */}
+        <div className="relative h-screen w-full rounded-bl-[10%] rounded-tl-[10%] overflow-hidden"> {/* Updated to h-full */}
           {/* Image */}
           <Image
             className="w-full h-full object-cover rounded-bl-[10%] rounded-tl-[10%]" // Ensures the image covers the entire container

@@ -26,7 +26,7 @@ const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,
           <p className="text-sm text-[#475467] mb-2">
             by{" "}
             <Link
-              href={"#"}
+              href={`browseCourse/instructor/${enrollLink}`}
               className=" text-[#1D2939] border-b-2 text-sm font-semibold border-[#1D2939]"
             >
               {instructor}

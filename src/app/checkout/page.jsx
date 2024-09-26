@@ -11,7 +11,7 @@ import {
   GoogleOutlined,
   LockFilled,
 } from "@ant-design/icons";
-import { Button, Rate, Space } from "antd";
+import { Button, Modal, Rate, Space } from "antd";
 import { Radio, Input, Form } from "antd";
 import card1 from '../../public/images/icons/card1.svg'
 import card2 from '../../public/images/icons/card2.svg'
@@ -83,6 +83,18 @@ const page = () => {
   // Handle form submission
   const onFinish = (values) => {
     console.log("Form Values:", values);
+  };
+
+
+//   modal 
+const success = () => {
+    Modal.success({
+      content: <div className="w-full py-4 space-y-2">
+        <span className="text-8xl text-center mx-auto block">🎉</span>
+        <h1 className="text-2xl font-bold text-[#34303E]">
+        Congratulations! You’ve completed your Enrollment.</h1>
+      </div>
+    });
   };
   return (
     <div className="max-w-[1056px] p-4 mx-auto">
@@ -309,7 +321,7 @@ const page = () => {
 
               {/* Submit button */}
               <Form.Item>
-                <Button className="h-[48px] text-white text-[16px] font-semibold"  type="primary" htmlType="submit" block>
+                <Button onClick={success} className="h-[48px] text-white text-[16px] font-semibold"  type="primary" htmlType="submit" block>
                   Enroll and Pay €87.00
                 </Button>
               </Form.Item>

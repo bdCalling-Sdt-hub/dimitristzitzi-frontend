@@ -67,7 +67,7 @@ const Navbar = () => {
         <a href="#" className="text-sm text-[#475467] font-normal">
           Become Instructor
         </a>
-        <ShoppingCartOutlined className="text-2xl text-[#475467]" />
+        <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
         <Link
           href={"/auth/login"}
           className="text-[16px] font-semibold text-[#475467]"
@@ -104,7 +104,7 @@ const Navbar = () => {
           <a href="#" className="text-sm">
             Become Instructor
           </a>
-          <ShoppingCartOutlined className="text-2xl" />
+          <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
           <Link
           href={"/auth/login"}
           className="text-[16px] font-semibold text-[#475467]"

@@ -19,9 +19,10 @@ const signup = () => {
 
   return (
     <AuthLayout>
-      <div className="xl:flex lg:flex  flex-row items-center justify-between container mx-auto   px-4">
+      <div className="xl:flex lg:flex h-[812px]  flex-row items-center justify-between container mx-auto   px-4">
 
-      <div className="w-full h-full xl:pb-0 md:pb-0 pb-12 ">
+      {/* left side signup form------------------------------------------ */}
+      <div className="w-full  xl:pb-0 md:pb-0 pb-12 ">
         <div className="flex justify-start items-center mb-4 container mx-auto  p-4">
           <Image src={signupimage} />
         </div>
@@ -33,6 +34,7 @@ const signup = () => {
               Please enter your details.
             </h3>
           </div>
+          {/* signup form ----------------------------------------------------- */}
           <div className="flex justify-start items-center ">
             <Form
               name="signin"
@@ -154,6 +156,7 @@ const signup = () => {
         </div>
       </div>
 
+          {/* right side carosel------------------------------------- */}
       <div className="xl:w-1/2 lg:w-1/2  w-full  ">
         <SignupCarosel/>
       </div>

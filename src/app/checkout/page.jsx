@@ -13,15 +13,15 @@ import {
 } from "@ant-design/icons";
 import { Button, Modal, Rate, Space } from "antd";
 import { Radio, Input, Form } from "antd";
-import card1 from '../../public/images/icons/card1.svg'
-import card2 from '../../public/images/icons/card2.svg'
-import card3 from '../../public/images/icons/card3.svg'
-import card4 from '../../public/images/icons/card4.svg'
+import card1 from "../../public/images/icons/card1.svg";
+import card2 from "../../public/images/icons/card2.svg";
+import card3 from "../../public/images/icons/card3.svg";
+import card4 from "../../public/images/icons/card4.svg";
 
-import apple from '../../public/images/icons/applepay.svg'
-import google from '../../public/images/icons/googlepay.svg'
-import strype from '../../public/images/icons/strype.svg'
-import paypal from '../../public/images/icons/paypal.svg'
+import apple from "../../public/images/icons/applepay.svg";
+import google from "../../public/images/icons/googlepay.svg";
+import strype from "../../public/images/icons/strype.svg";
+import paypal from "../../public/images/icons/paypal.svg";
 
 const page = () => {
   const carditems = [
@@ -85,15 +85,17 @@ const page = () => {
     console.log("Form Values:", values);
   };
 
-
-//   modal 
-const success = () => {
+  //   modal
+  const success = () => {
     Modal.success({
-      content: <div className="w-full py-4 space-y-2">
-        <span className="text-8xl text-center mx-auto block">🎉</span>
-        <h1 className="text-2xl font-bold text-[#34303E]">
-        Congratulations! You’ve completed your Enrollment.</h1>
-      </div>
+      content: (
+        <div className="w-full py-4 space-y-2">
+          <span className="text-8xl text-center mx-auto block">🎉</span>
+          <h1 className="text-2xl font-bold text-[#34303E]">
+            Congratulations! You’ve completed your Enrollment.
+          </h1>
+        </div>
+      ),
     });
   };
   return (
@@ -210,7 +212,12 @@ const success = () => {
             </div>
 
             {/* Ant Design Form */}
-            <Form form={form} layout="vertical" requiredMark={false} onFinish={onFinish}>
+            <Form
+              form={form}
+              layout="vertical"
+              requiredMark={false}
+              onFinish={onFinish}
+            >
               {/* Payment Method */}
               <Form.Item
                 name="paymentMethod"
@@ -222,7 +229,12 @@ const success = () => {
                 ]}
               >
                 <div className="border p-4 rounded-md w-full flex items-center justify-between ">
-                  <Radio className="text-[#475467] text-sm font-medium" value="creditCard ">Credit/Debit Card</Radio>
+                  <Radio
+                    className="text-[#475467] text-sm font-medium"
+                    value="creditCard "
+                  >
+                    Credit/Debit Card
+                  </Radio>
                   <div className="flex items-center justify-center gap-2">
                     <Image src={card1} className="w-7 h-5 cursor-pointer" />
                     <Image src={card2} className="w-7 h-5 cursor-pointer" />
@@ -241,7 +253,12 @@ const success = () => {
                 ]}
               >
                 <div className="border p-4 rounded-md w-full flex items-center justify-between ">
-                  <Radio className="text-[#475467] text-sm font-medium" value="creditCard ">Pay with</Radio>
+                  <Radio
+                    className="text-[#475467] text-sm font-medium"
+                    value="creditCard "
+                  >
+                    Pay with
+                  </Radio>
                   <div className="flex items-center justify-center gap-2">
                     <Image src={apple} className="w-12 h-5 cursor-pointer" />
                     <Image src={google} className="w-12 h-5 cursor-pointer" />
@@ -251,64 +268,97 @@ const success = () => {
                 </div>
               </Form.Item>
 
-             <div className="bg-[#E4E7EC] p-6 rounded-md border ">
-                 {/* Name on card */}
-              <Form.Item
-                name="nameOnCard"
-                label={<label className="capitalize text-[#344054] text-sm font-medium">Name on card</label>}
-               
-                rules={[
-                  {
-                    required: true,
-                    message: "Please enter your name on card!",
-                  },
-                  
-                ]}
-                
-              >
-                <Input  className="text-[16px] text-[#98A2B3] font-normal p-2" placeholder="John Doe" />
-              </Form.Item>
-
-              {/* Card number */}
-              <Form.Item
-                name="cardNumber"
-                label={<label className="capitalize text-[#344054] text-sm font-medium">Card number</label>}
-                rules={[
-                  { required: true, message: "Please enter your card number!" },
-                ]}
-              >
-                <Input  className="text-[16px] text-[#98A2B3] font-normal p-2" type="number" placeholder="1234 5678 9101 1121" />
-              </Form.Item>
-
-              <div className="flex space-x-4">
-                {/* Expire date */}
+              <div className="bg-[#E4E7EC] p-6 rounded-md border ">
+                {/* Name on card */}
                 <Form.Item
-                  name="expireDate"
-                  label={<label className="capitalize text-[#344054] text-sm font-medium">Expire date</label>}
-                  className="w-1/2"
+                  name="nameOnCard"
+                  label={
+                    <label className="capitalize text-[#344054] text-sm font-medium">
+                      Name on card
+                    </label>
+                  }
                   rules={[
                     {
                       required: true,
-                      message: "Please enter the expire date!",
+                      message: "Please enter your name on card!",
                     },
                   ]}
                 >
-                  <Input className="text-[16px] text-[#98A2B3] font-normal p-2" type="date" placeholder="MM/YY" />
+                  <Input
+                    className="text-[16px] text-[#98A2B3] font-normal p-2"
+                    placeholder="John Doe"
+                  />
                 </Form.Item>
 
-                {/* CVC */}
+                {/* Card number */}
                 <Form.Item
-                  name="cvc"
-                  label={<label className="capitalize text-[#344054] text-sm font-medium">CVC/CVV code</label>}
-                  className="w-1/2"
+                  name="cardNumber"
+                  label={
+                    <label className="capitalize text-[#344054] text-sm font-medium">
+                      Card number
+                    </label>
+                  }
                   rules={[
-                    { required: true, message: "Please enter your CVC code!" },
+                    {
+                      required: true,
+                      message: "Please enter your card number!",
+                    },
                   ]}
                 >
-                  <Input  className="text-[16px] text-[#98A2B3] font-normal p-2" placeholder="••••" />
+                  <Input
+                    className="text-[16px] text-[#98A2B3] font-normal p-2"
+                    type="number"
+                    placeholder="1234 5678 9101 1121"
+                  />
                 </Form.Item>
-              </div>      
-            </div>  
+
+                <div className="flex space-x-4">
+                  {/* Expire date */}
+                  <Form.Item
+                    name="expireDate"
+                    label={
+                      <label className="capitalize text-[#344054] text-sm font-medium">
+                        Expire date
+                      </label>
+                    }
+                    className="w-1/2"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter the expire date!",
+                      },
+                    ]}
+                  >
+                    <Input
+                      className="text-[16px] text-[#98A2B3] font-normal p-2"
+                      type="date"
+                      placeholder="MM/YY"
+                    />
+                  </Form.Item>
+
+                  {/* CVC */}
+                  <Form.Item
+                    name="cvc"
+                    label={
+                      <label className="capitalize text-[#344054] text-sm font-medium">
+                        CVC/CVV code
+                      </label>
+                    }
+                    className="w-1/2"
+                    rules={[
+                      {
+                        required: true,
+                        message: "Please enter your CVC code!",
+                      },
+                    ]}
+                  >
+                    <Input
+                      className="text-[16px] text-[#98A2B3] font-normal p-2"
+                      placeholder="••••"
+                    />
+                  </Form.Item>
+                </div>
+              </div>
 
               {/* Terms */}
               <p className="text-sm text-[#475467] my-4">
@@ -321,7 +371,13 @@ const success = () => {
 
               {/* Submit button */}
               <Form.Item>
-                <Button onClick={success} className="h-[48px] text-white text-[16px] font-semibold"  type="primary" htmlType="submit" block>
+                <Button
+                  onClick={success}
+                  className="h-[48px] text-white text-[16px] font-semibold"
+                  type="primary"
+                  htmlType="submit"
+                  block
+                >
                   Enroll and Pay €87.00
                 </Button>
               </Form.Item>

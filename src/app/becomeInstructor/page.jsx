@@ -2,6 +2,7 @@ import { Button } from "antd";
 import Link from "next/link";
 import React from "react";
 import { ArrowUpOutlined, CheckCircleFilled } from "@ant-design/icons";
+import { FileTextOutlined, ProfileOutlined, PlayCircleOutlined, ShakeOutlined } from '@ant-design/icons';
 import Image from "next/image";
 import heroimg from "../../public/images/instructorheroimg.png";
 import student from "../../public/images/icons/students.svg";
@@ -122,7 +123,7 @@ const page = () => {
       </div>
 
       {/* why become an instructor section  */}
-      <div className="bg-[#195671] lg:pt-24 pt-6 lg:pl-24 pl-6 lg:pr-24  pr-6 mb-52">
+      <div className="bg-[#195671] lg:pt-24 pt-6 lg:pl-24 pl-6 lg:pr-24  pr-6 ">
         <div className="lg:flex md:flex flex-row gap-16  justify-center  container mx-auto ">
           <div className="lg:w-1/2 w-full ">
             {/* left content image  */}
@@ -173,6 +174,63 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* become instructor's steps ------------------------------ */}
+      <div className="py-24 bg-[#F9FAFB]">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12">
+          How you'll become a successful <br /> instructor
+        </h2>
+
+        {/* Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Step 1 */}
+          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+            <div className="flex w-fit justify-center bg-[#9E77ED1A] p-4 rounded-md mb-6">
+              <FileTextOutlined className="text-[#9E77ED] text-4xl" />
+            </div>
+            <h3 className="text-sm  font-bold text-[#1D2026] text-start">1. Apply to become instructor.</h3>
+            <p className="text-sm  text-[#667085] mt-3 text-start">
+              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
+            </p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+            <div className="flex w-fit rounded-md justify-center items-center bg-[#FEE4E2] p-4  mb-4">
+              <ProfileOutlined className="text-red-500 text-4xl" />
+            </div>
+            <h3 className="text-sm  font-bold text-[#1D2026] text-start">2. Setup & edit your profile.</h3>
+            <p className="text-sm  text-[#667085] mt-3 text-start">
+              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+            <div className="flex w-fit rounded-md justify-center items-center bg-[#BAE4FF] p-4  mb-4">
+              <PlayCircleOutlined className="text-[#1580FB] text-4xl" />
+            </div>
+            <h3 className="text-sm  font-bold text-[#1D2026] text-start">3. Create your new course.</h3>
+            <p className="text-sm  text-[#667085] mt-3 text-start">
+              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
+            </p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+            <div className="flex w-fit rounded-md justify-center items-center bg-[#D1FADF] p-4  mb-4">
+              <ShakeOutlined className="text-green-500 text-4xl" />
+            </div>
+            <h3 className="text-sm  font-bold text-[#1D2026] text-start">4. Start teaching & earning.</h3>
+            <p className="text-sm  text-[#667085] mt-3 text-start">
+              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+
     </div>
   );
 };

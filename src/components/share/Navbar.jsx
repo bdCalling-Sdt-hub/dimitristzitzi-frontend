@@ -64,9 +64,9 @@ const Navbar = () => {
 
       {/* Right Side: Links (Hidden on small screens) */}
       <div className="hidden lg:flex items-center space-x-6">
-        <a href="#" className="text-sm text-[#475467] font-normal">
-          Become Instructor
-        </a>
+      <Link href="/becomeInstructor" className="text-sm">
+            Become Instructor
+          </Link>
         <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
         <Link
           href={"/auth/login"}
@@ -101,9 +101,9 @@ const Navbar = () => {
           <Button className="mb-4">Category</Button>
         </Dropdown>
         <div className="flex flex-col space-y-4">
-          <a href="#" className="text-sm">
+          <Link href="/becomeInstructor" className="text-sm">
             Become Instructor
-          </a>
+          </Link>
           <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
           <Link
           href={"/auth/login"}

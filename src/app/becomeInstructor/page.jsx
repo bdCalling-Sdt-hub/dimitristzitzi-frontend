@@ -2,7 +2,7 @@ import { Button } from "antd";
 import Link from "next/link";
 import React from "react";
 import { ArrowUpOutlined, CheckCircleFilled } from "@ant-design/icons";
-import { FileTextOutlined, ProfileOutlined, PlayCircleOutlined, ShakeOutlined } from '@ant-design/icons';
+import {MailFilled, FileTextOutlined, ProfileOutlined, PlayCircleOutlined, ShakeOutlined,ArrowRightOutlined} from '@ant-design/icons';
 import Image from "next/image";
 import heroimg from "../../public/images/instructorheroimg.png";
 import student from "../../public/images/icons/students.svg";
@@ -11,6 +11,7 @@ import gloval from "../../public/images/icons/gloval.svg";
 import success from "../../public/images/icons/success.svg";
 import mockup from "../../public/images/mockup.png";
 import regulationimg from '../../public/images/instructorRules.png'
+import helpcenterimg from '../../public/images/helpcenter.png'
 const page = () => {
   return (
     <div>
@@ -176,10 +177,10 @@ const page = () => {
         </div>
       </div>
 
-      {/* become instructor's steps ------------------------------ */}
+      {/* become successfull instructor's steps ------------------------------ */}
       <div className="lg:py-24 py-12 bg-[#F9FAFB]">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-bold text-[#1D2026] mb-12">
           How you'll become a successful <br /> instructor
         </h2>
 
@@ -233,8 +234,8 @@ const page = () => {
       </div>
 
       {/* regulation for instructors--------------------------------- */}
-      <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center lg:justify-center justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
-        <div className="max-w-lg ">
+      <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center  justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
+        <div className=" ">
           <h1 className="text-3xl font-bold text-gray-800 mb-6">Learn about rules & regulations for  Instructor </h1>
           <p className="text-[16px] text-[#667085] font-normal">Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem. </p>
           <ul className="list-disc list-inside  text-[16px]  font-semibold text-[#344054] leading-8 mt-6">
@@ -244,8 +245,33 @@ const page = () => {
             <li>Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.</li>
           </ul>
         </div>
-        <div className="w-fit">
-          <Image src={regulationimg} alt="mockup" className="w-full h-full" />
+        <div className="w-full">
+          <Image src={regulationimg} alt="mockup" className="w-fit h-full" />
+        </div>
+      </div>
+      {/* help center section --------------------------------- */}
+      <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center  justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
+        <div className="w-full">
+          <Image src={helpcenterimg} alt="mockup" className="w-fit h-full" />
+        </div>
+        <div className=" w-full">
+          <h1 className="text-3xl font-bold text-[#1D2026] mb-8">Don’t worry we’re always here <br /> to help you</h1>
+          <p className="text-[16px] text-[#667085] font-normal">Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus nec augue malesuada, sagittis ligula vel, faucibus metus. Nam viverra metus eget nunc dignissim.</p>
+          <ul className="list-disc list-inside  text-[14px]  font-semibold text-[#344054] leading-10 mt-6">
+            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.</li>
+            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Those who are looking to reboot their work life and try a new profession that.</li>
+            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Nunc auctor consequat lorem, in posuere enim hendrerit sed.</li>
+            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Duis ornare enim ullamcorper congue.</li>
+          </ul>
+         <div className="flex items-center  gap-2 mt-8">
+          <div>
+          <MailFilled className="text-2xl  p-3 text-white bg-[#14698A] rounded-full mr-2 cursor-pointer" />
+          </div>
+          <div>
+            <p className="text-sm text-[#667085] font-medium">Email us, anytime anywhere</p>
+            <h3 className="text-lg font-medium text-[#1D2026]">help.pantognostis@gamil.com</h3>
+          </div>
+         </div>
         </div>
       </div>
 

@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
     const timer = setTimeout(() => {
       setSpinning(false);
       setPercent(0); 
-    }, 3000); 
+    }, 50); 
 
     // Cleanup on unmount
     return () => {

@@ -34,7 +34,7 @@ const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,
           </p>
           <div className="flex items-center justify-center mb-2">
             <span className="text-yellow-500 text-sm">
-              <Rate allowHalf count={1} defaultValue={rating} />{" "}
+              <Rate disabled allowHalf count={1} defaultValue={rating} />{" "}
               <span className="text-[#475467] font-bold text-[16px]">{rating}</span>
             </span>
             <span className="text-[#475467] font-normal text-sm ml-2">

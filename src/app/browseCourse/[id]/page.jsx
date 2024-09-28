@@ -207,13 +207,16 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border xl:border-[#D9D9D9] lg:border-[#D9D9D9 ] border-none rounded-lg  xl:fixed  block xl:right-[15%]   top-[100px] lg:shadow-lg z-50">
+              <div className="max-w-2xl mx-auto bg-white border-1 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]   top-[100px] lg:shadow-lg z-50">
                 <div className="relative">
-                  <Image
-                    src={videoimg}
-                    alt="Course cover"
-                    className="w-full rounded-lg"
-                  />
+                  <video
+                    className="w-full rounded-lg h-auto"
+                    autoPlay
+                    loop
+                    controls
+                    playsInline 
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                  ></video>
                   <p className="absolute bottom-2 left-1/3 mt-2 ml-2 bg-opacity-70 text-sm font-bold  text-[#FCFCFD]">
                     Preview this course
                   </p>

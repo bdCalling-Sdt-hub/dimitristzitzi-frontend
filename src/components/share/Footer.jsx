@@ -34,6 +34,7 @@ const Footer = () => {
               <h4>
                 Street Name, Area Address Goes <br /> Here
               </h4>
+             <p> <Link href={'/becomeInstructor'} >Become Instructor</Link></p>
               <p>About Us</p>
 
               <Button

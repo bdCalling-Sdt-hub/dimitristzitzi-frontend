@@ -7,6 +7,7 @@ import image1 from "../../../../public/images/intarest1.png";
 import image2 from "../../../../public/images/intarest2.png";
 import image3 from "../../../../public/images/intarest3.png";
 import image4 from "../../../../public/images/intarest4.png";
+import Link from "next/link";
 
 const Page = () => {
   const [selectedItems, setSelectedItems] = useState([]);
@@ -100,7 +101,9 @@ const Page = () => {
 
             {/* Button to submit form and see selected items */}
             <div className="text-center mt-8">
-              <Button
+       <Link href="/auth/signup/categories">
+       
+       <Button
                 className="text-[#FFFFFF] text-[16px] font-semibold p-6"
                 size="large"
                 type="primary"
@@ -109,6 +112,7 @@ const Page = () => {
               >
                 Continue
               </Button>
+       </Link>
             </div>
           </Form>
         </div>

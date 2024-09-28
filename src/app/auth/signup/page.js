@@ -86,6 +86,7 @@ const Signup = () => {
                 <Button className="text-[#FFFFFF] text-[16px] font-semibold p-6" size="" type="primary" htmlType="submit" block>
                   Create account
                 </Button>
+               </Link>
               </Form.Item>
 
               <Form.Item className="" style={{ width: "360px" }}>

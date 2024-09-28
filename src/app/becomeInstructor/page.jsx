@@ -2,7 +2,7 @@
 
 import { Button, Carousel, Typography } from "antd";
 import Link from "next/link";
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 import { ArrowUpOutlined, CheckCircleFilled } from "@ant-design/icons";
 import {
   MailFilled,
@@ -23,29 +23,30 @@ import success from "../../public/images/icons/success.svg";
 import mockup from "../../public/images/mockup.png";
 import regulationimg from "../../public/images/instructorRules.png";
 import helpcenterimg from "../../public/images/helpcenter.png";
-import quot from '../../public/images/icons/Quotes.png'
-import reviewimg1 from '../../public/images/review1.png'
-import reviewimg2 from '../../public/images/review2.png'
-import reviewimg3 from '../../public/images/review3.png'
-import reviewimg4 from '../../public/images/review4.png'
-import reviewimg5 from '../../public/images/review5.png'
-import reviewimg6 from '../../public/images/review6.png'
-import reviewimg7 from '../../public/images/review7.png'
-import reviewimg8 from '../../public/images/review8.png'
+import quot from "../../public/images/icons/Quotes.png";
+import reviewimg1 from "../../public/images/review1.png";
+import reviewimg2 from "../../public/images/review2.png";
+import reviewimg3 from "../../public/images/review3.png";
+import reviewimg4 from "../../public/images/review4.png";
+import reviewimg5 from "../../public/images/review5.png";
+import reviewimg6 from "../../public/images/review6.png";
+import reviewimg7 from "../../public/images/review7.png";
+import reviewimg8 from "../../public/images/review8.png";
+import teacher from '../../public/images/teacher.png'
 const { Title, Paragraph } = Typography;
 const page = () => {
-   // Ref to control the carousel
-   const carouselRef = useRef(null);
+  // Ref to control the carousel
+  const carouselRef = useRef(null);
 
-   const contentStyle = {
-     height: '160px',
-     width: '70%',
-     color: '#1D2026',
-     lineHeight: '160px',
-     textAlign: 'center',
-     background: '#BAE4FF',
-     padding: '20px',
-   };
+  const contentStyle = {
+    height: "160px",
+    width: "70%",
+    color: "#1D2026",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#BAE4FF",
+    padding: "20px",
+  };
 
   return (
     <div>
@@ -374,111 +375,178 @@ const page = () => {
         </div>
       </div>
 
-
+      {/* review section here ------------------------ */}
       <div className="container mx-auto  py-10 flex justify-between px-6 flex-col lg:flex-row gap-16">
-      {/* Left side - Text Section */}
-      <div className="lg:w-1/3">
-        <Title level={2} className="font-bold text-[30px] text-[#1D2026]">
-          20k+ Instructors created their success story with Pantognostis
-        </Title>
-        <Paragraph className="text-[#4E5566] text-[16px] mt-4">
-          Nunc euismod sapien non felis eleifend porttitor. Maecenas dictum eros justo, id commodo ante laoreet nec. Phasellus aliquet, orci id pellentesque mollis.
-        </Paragraph>
-
-        {/* Carousel Section */}
-        <Carousel autoplay ref={carouselRef} className="mt-10">
+        {/* Left side - Text Section */}
         <div className="lg:w-1/3">
-         
-            {/* Quote Section */}
-            <div className="mt-10 bg-[#BAE4FF] text-[#1D2026]  p-8 rounded-lg">
-              <div className="text-4xl font-bold text-blue-500">
-                <Image src={quot} alt="Quote" className="w-10 h-10" />
+          <Title level={2} className="font-bold text-[30px] text-[#1D2026]">
+            20k+ Instructors created their success story with Pantognostis
+          </Title>
+          <Paragraph className="text-[#4E5566] text-[16px] mt-4">
+            Nunc euismod sapien non felis eleifend porttitor. Maecenas dictum
+            eros justo, id commodo ante laoreet nec. Phasellus aliquet, orci id
+            pellentesque mollis.
+          </Paragraph>
+
+          {/* Carousel Section */}
+          <Carousel autoplay ref={carouselRef} className="mt-10">
+            <div className="lg:w-1/3">
+              {/* Quote Section */}
+              <div className="mt-10 bg-[#BAE4FF] text-[#1D2026]  p-8 rounded-lg">
+                <div className="text-4xl font-bold text-blue-500">
+                  <Image src={quot} alt="Quote" className="w-10 h-10" />
+                </div>
+                <Paragraph className="mt-4 text-[18px] text-[#1D2026]">
+                  Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
+                  Pellentesque ullamcorper auctor ante, egestas interdum quam
+                  facilisis commodo. Phasellus efficitur quis ex in consectetur.
+                  Mauris tristique suscipit metus, a molestie dui dapibus vel.
+                </Paragraph>
               </div>
-              <Paragraph className="mt-4 text-[18px] text-[#1D2026]">
-                Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
-                Pellentesque ullamcorper auctor ante, egestas interdum quam
-                facilisis commodo. Phasellus efficitur quis ex in consectetur.
-                Mauris tristique suscipit metus, a molestie dui dapibus vel.
-              </Paragraph>
-            </div>
 
-            {/* Navigation Arrows */}
-          
-          </div>
-        <div className="lg:w-1/3">
-         
-            {/* Quote Section */}
-            <div className="mt-10 bg-[#BAE4FF] text-[#1D2026]  p-8 rounded-lg">
-            <div className="text-4xl font-bold text-blue-500">
-                <Image src={quot} alt="Quote" className="w-10 h-10" />
+              {/* Navigation Arrows */}
+            </div>
+            <div className="lg:w-1/3">
+              {/* Quote Section */}
+              <div className="mt-10 bg-[#BAE4FF] text-[#1D2026]  p-8 rounded-lg">
+                <div className="text-4xl font-bold text-blue-500">
+                  <Image src={quot} alt="Quote" className="w-10 h-10" />
+                </div>
+                <Paragraph className="mt-4 text-[18px] text-[#1D2026]">
+                  Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
+                  Pellentesque ullamcorper auctor ante, egestas interdum quam
+                  facilisis commodo. Phasellus efficitur quis ex in consectetur.
+                  Mauris tristique suscipit metus, a molestie dui dapibus vel.
+                </Paragraph>
               </div>
-              <Paragraph className="mt-4 text-[18px] text-[#1D2026]">
-                Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
-                Pellentesque ullamcorper auctor ante, egestas interdum quam
-                facilisis commodo. Phasellus efficitur quis ex in consectetur.
-                Mauris tristique suscipit metus, a molestie dui dapibus vel.
-              </Paragraph>
+
+              {/* Navigation Arrows */}
             </div>
+          </Carousel>
 
-            {/* Navigation Arrows */}
-          
+          {/* Navigation Arrows */}
+          <div className="flex items-center justify-start space-x-4 mt-6">
+            <Button
+              icon={<LeftOutlined />}
+              shape="circle"
+              size="large"
+              onClick={() => carouselRef.current.prev()} // Go to previous slide
+            />
+            <Button
+              icon={<RightOutlined />}
+              shape="circle"
+              size="large"
+              className="bg-blue-500 text-white"
+              onClick={() => carouselRef.current.next()} // Go to next slide
+            />
           </div>
-        </Carousel>
+        </div>
 
-        {/* Navigation Arrows */}
-        <div className="flex items-center justify-start space-x-4 mt-6">
-          <Button
-            icon={<LeftOutlined />}
-            shape="circle"
-            size="large"
-            onClick={() => carouselRef.current.prev()} // Go to previous slide
-          />
-          <Button
-            icon={<RightOutlined />}
-            shape="circle"
-            size="large"
-            className="bg-blue-500 text-white"
-            onClick={() => carouselRef.current.next()} // Go to next slide
-          />
+        {/* Right side - Image Grid */}
+        <div className="grid grid-cols-3 gap-4 lg:w-1/2 w-full">
+          {/* First row - 3 equal images */}
+          <div className="col-span-1">
+            <Image
+              src={reviewimg1}
+              alt="Person 1"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="col-span-1">
+            <Image
+              src={reviewimg2}
+              alt="Person 2"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="col-span-1">
+            <Image
+              src={reviewimg3}
+              alt="Person 3"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          {/* Second row - Large image spanning two columns */}
+          <div className="col-span-2">
+            <Image
+              src={reviewimg4}
+              alt="Person 4"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          {/* Third row - Vertical stack and one full image */}
+          <div className="col-span-1 row-span-1">
+            <Image
+              src={reviewimg5}
+              alt="Person 5"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          {/* Fourth row - 3 small images */}
+          <div className="col-span-1">
+            <Image
+              src={reviewimg6}
+              alt="Person 6"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="col-span-1">
+            <Image
+              src={reviewimg7}
+              alt="Person 7"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="col-span-1">
+            <Image
+              src={reviewimg8}
+              alt="Person 8"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </div>
 
-      {/* Right side - Image Grid */}
-      <div className="grid grid-cols-3 gap-4 lg:w-1/2 w-full">
-  {/* First row - 3 equal images */}
-  <div className="col-span-1">
-    <Image src={reviewimg1} alt="Person 1" className="w-full h-auto object-cover" />
-  </div>
-  <div className="col-span-1">
-    <Image src={reviewimg2} alt="Person 2" className="w-full h-auto object-cover" />
-  </div>
-  <div className="col-span-1">
-    <Image src={reviewimg3} alt="Person 3" className="w-full h-auto object-cover" />
-  </div>
 
-  {/* Second row - Large image spanning two columns */}
-  <div className="col-span-2">
-    <Image src={reviewimg4} alt="Person 4" className="w-full h-auto object-cover" />
-  </div>
+      {/* start teaching with us --------------------------------> */}
+      <div>
+      <div className="  min-h-[430px] lg:py-24 py-12 bg-[#000000] text-white">
+        <section className="">
+          <div className="container flex flex-col justify-center mx-auto   lg:flex-row lg:justify-between  ">
+            {/* LEFT HERO SECTION */}
+            <div className="flex flex-col justify-center p-6  text-center rounded-sm  w-full lg:text-left ">
+            
+              <h1 className="lg:text-[56px] text-4xl font-bold leading-none sm:text-6xl text-white font-Merriweather">
+              Start teaching with us <br /> and inspire others
+              </h1>
+              <p className="mt-6 mb-8 text-[16px] font-normal sm:mb-12 text-[#B7BAC7] leading-8 max-w-md lg:mx-0 mx-auto  ">
+              Become an instructor & start teaching with 26k certified instructors. Create a success story with 67.1k Students <br /> — Grow yourself with 71 countries.
+              </p>
+              <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                <Link href="/auth/signup">
+                  <Button
+                    className="text-[#FFFFFF] text-[18px] font-semibold p-6"
+                    size="large"
+                    type="primary"
+                  >
+                  Register now
+                  
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
-  {/* Third row - Vertical stack and one full image */}
-  <div className="col-span-1 row-span-1">
-    <Image src={reviewimg5} alt="Person 5" className="w-full h-auto object-cover" />
-  </div>
-
-  {/* Fourth row - 3 small images */}
-  <div className="col-span-1">
-    <Image src={reviewimg6} alt="Person 6" className="w-full h-auto object-cover" />
-  </div>
-  <div className="col-span-1">
-    <Image src={reviewimg7} alt="Person 7" className="w-full h-auto object-cover" />
-  </div>
-  <div className="col-span-1">
-    <Image src={reviewimg8} alt="Person 8" className="w-full h-auto object-cover" />
-  </div>
+            {/* RIGHT HERO SECTION */}
+            <div className="w-full">
+              <Image className="w-full" src={teacher} alt="heroimg" />
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-
+      </div>
     </div>
   );
 };

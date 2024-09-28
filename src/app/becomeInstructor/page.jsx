@@ -1,8 +1,19 @@
-import { Button } from "antd";
+"use client";
+
+import { Button, Carousel, Typography } from "antd";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from 'react';
 import { ArrowUpOutlined, CheckCircleFilled } from "@ant-design/icons";
-import {MailFilled, FileTextOutlined, ProfileOutlined, PlayCircleOutlined, ShakeOutlined,ArrowRightOutlined} from '@ant-design/icons';
+import {
+  MailFilled,
+  FileTextOutlined,
+  ProfileOutlined,
+  PlayCircleOutlined,
+  ShakeOutlined,
+  ArrowRightOutlined,
+  LeftOutlined,
+  RightOutlined,
+} from "@ant-design/icons";
 import Image from "next/image";
 import heroimg from "../../public/images/instructorheroimg.png";
 import student from "../../public/images/icons/students.svg";
@@ -10,9 +21,32 @@ import certificate from "../../public/images/icons/certification.svg";
 import gloval from "../../public/images/icons/gloval.svg";
 import success from "../../public/images/icons/success.svg";
 import mockup from "../../public/images/mockup.png";
-import regulationimg from '../../public/images/instructorRules.png'
-import helpcenterimg from '../../public/images/helpcenter.png'
+import regulationimg from "../../public/images/instructorRules.png";
+import helpcenterimg from "../../public/images/helpcenter.png";
+import quot from '../../public/images/icons/Quotes.png'
+import reviewimg1 from '../../public/images/review1.png'
+import reviewimg2 from '../../public/images/review2.png'
+import reviewimg3 from '../../public/images/review3.png'
+import reviewimg4 from '../../public/images/review4.png'
+import reviewimg5 from '../../public/images/review5.png'
+import reviewimg6 from '../../public/images/review6.png'
+import reviewimg7 from '../../public/images/review7.png'
+import reviewimg8 from '../../public/images/review8.png'
+const { Title, Paragraph } = Typography;
 const page = () => {
+   // Ref to control the carousel
+   const carouselRef = useRef(null);
+
+   const contentStyle = {
+     height: '160px',
+     width: '70%',
+     color: '#1D2026',
+     lineHeight: '160px',
+     textAlign: 'center',
+     background: '#BAE4FF',
+     padding: '20px',
+   };
+
   return (
     <div>
       {/* top banner section -------------------------------- */}
@@ -142,34 +176,47 @@ const page = () => {
               vitae nulla a purus mollis venenatis.
             </p>
 
-            
             <div className="  py-6  w-full">
               <div>
                 <ul className="list-none lg:text-lg md:text-lg text-sm  font-normal text-[#F2F4F7] space-y-[24px] py-2 pb-8">
                   <div className="flex items-start justify-start gap-4">
                     <CheckCircleFilled className="text-[#12B76A] text-2xl pt-1" />
                     <li>
-                      <h3 className="text-[#F9FAFB] text-lg font-medium pb-2">Tech your students as you want.</h3> 
-                      <p className="text-sm text-[#F2F4F7]">Morbi quis lorem
-                      non orci fermentum euismod. Nam sapien tellus, aliquam nec
-                      porttitor vel, pellentesque at metus.</p>
+                      <h3 className="text-[#F9FAFB] text-lg font-medium pb-2">
+                        Tech your students as you want.
+                      </h3>
+                      <p className="text-sm text-[#F2F4F7]">
+                        Morbi quis lorem non orci fermentum euismod. Nam sapien
+                        tellus, aliquam nec porttitor vel, pellentesque at
+                        metus.
+                      </p>
                     </li>
                   </div>
                   <div className="flex items-start justify-start gap-4">
                     <CheckCircleFilled className="text-[#12B76A] text-2xl pt-1" />
                     <li>
-                      <h3 className="text-[#F9FAFB] text-lg font-medium pb-2">Manage your course, payment in one place</h3>
-                      <p className="text-sm text-[#F2F4F7]">Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu. Nullam vel libero pharetra, euismod turpis et, elementum enim.</p>
+                      <h3 className="text-[#F9FAFB] text-lg font-medium pb-2">
+                        Manage your course, payment in one place
+                      </h3>
+                      <p className="text-sm text-[#F2F4F7]">
+                        Sed et mattis urna. Sed tempus fermentum est, eu
+                        lobortis nibh consequat eu. Nullam vel libero pharetra,
+                        euismod turpis et, elementum enim.
+                      </p>
                     </li>
                   </div>
                   <div className="flex items-start justify-start gap-4">
                     <CheckCircleFilled className="text-[#12B76A] text-2xl pt-1" />
                     <li>
-                      <h3 className="text-[#F9FAFB] text-lg font-medium pb-2">Earn money</h3>
-                      <p className="text-sm text-[#F2F4F7]">Nullam mattis lectus ac diam egestas posuere. Praesent auctor massa orci, ut fermentum eros dictum id. </p>
+                      <h3 className="text-[#F9FAFB] text-lg font-medium pb-2">
+                        Earn money
+                      </h3>
+                      <p className="text-sm text-[#F2F4F7]">
+                        Nullam mattis lectus ac diam egestas posuere. Praesent
+                        auctor massa orci, ut fermentum eros dictum id.{" "}
+                      </p>
                     </li>
                   </div>
-                 
                 </ul>
               </div>
             </div>
@@ -179,101 +226,258 @@ const page = () => {
 
       {/* become successfull instructor's steps ------------------------------ */}
       <div className="lg:py-24 py-12 bg-[#F9FAFB]">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-[#1D2026] mb-12">
-          How you'll become a successful <br /> instructor
-        </h2>
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#1D2026] mb-12">
+            How you'll become a successful <br /> instructor
+          </h2>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Step 1 */}
-          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
-            <div className="flex w-fit justify-center bg-[#9E77ED1A] p-4 rounded-md mb-6">
-              <FileTextOutlined className="text-[#9E77ED] text-4xl" />
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Step 1 */}
+            <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+              <div className="flex w-fit justify-center bg-[#9E77ED1A] p-4 rounded-md mb-6">
+                <FileTextOutlined className="text-[#9E77ED] text-4xl" />
+              </div>
+              <h3 className="text-sm  font-bold text-[#1D2026] text-start">
+                1. Apply to become instructor.
+              </h3>
+              <p className="text-sm  text-[#667085] mt-3 text-start">
+                Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh
+                consequat eu.
+              </p>
             </div>
-            <h3 className="text-sm  font-bold text-[#1D2026] text-start">1. Apply to become instructor.</h3>
-            <p className="text-sm  text-[#667085] mt-3 text-start">
-              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
-            </p>
-          </div>
 
-          {/* Step 2 */}
-          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
-            <div className="flex w-fit rounded-md justify-center items-center bg-[#FEE4E2] p-4  mb-4">
-              <ProfileOutlined className="text-red-500 text-4xl" />
+            {/* Step 2 */}
+            <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+              <div className="flex w-fit rounded-md justify-center items-center bg-[#FEE4E2] p-4  mb-4">
+                <ProfileOutlined className="text-red-500 text-4xl" />
+              </div>
+              <h3 className="text-sm  font-bold text-[#1D2026] text-start">
+                2. Setup & edit your profile.
+              </h3>
+              <p className="text-sm  text-[#667085] mt-3 text-start">
+                Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh
+                consequat eu.
+              </p>
             </div>
-            <h3 className="text-sm  font-bold text-[#1D2026] text-start">2. Setup & edit your profile.</h3>
-            <p className="text-sm  text-[#667085] mt-3 text-start">
-              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
-            </p>
-          </div>
 
-          {/* Step 3 */}
-          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
-            <div className="flex w-fit rounded-md justify-center items-center bg-[#BAE4FF] p-4  mb-4">
-              <PlayCircleOutlined className="text-[#1580FB] text-4xl" />
+            {/* Step 3 */}
+            <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+              <div className="flex w-fit rounded-md justify-center items-center bg-[#BAE4FF] p-4  mb-4">
+                <PlayCircleOutlined className="text-[#1580FB] text-4xl" />
+              </div>
+              <h3 className="text-sm  font-bold text-[#1D2026] text-start">
+                3. Create your new course.
+              </h3>
+              <p className="text-sm  text-[#667085] mt-3 text-start">
+                Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh
+                consequat eu.
+              </p>
             </div>
-            <h3 className="text-sm  font-bold text-[#1D2026] text-start">3. Create your new course.</h3>
-            <p className="text-sm  text-[#667085] mt-3 text-start">
-              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
-            </p>
-          </div>
 
-          {/* Step 4 */}
-          <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
-            <div className="flex w-fit rounded-md justify-center items-center bg-[#D1FADF] p-4  mb-4">
-              <ShakeOutlined className="text-green-500 text-4xl" />
+            {/* Step 4 */}
+            <div className="bg-[#FFFFFF] p-6 rounded-md  hover:shadow-lg transition duration-300 ease-in-out">
+              <div className="flex w-fit rounded-md justify-center items-center bg-[#D1FADF] p-4  mb-4">
+                <ShakeOutlined className="text-green-500 text-4xl" />
+              </div>
+              <h3 className="text-sm  font-bold text-[#1D2026] text-start">
+                4. Start teaching & earning.
+              </h3>
+              <p className="text-sm  text-[#667085] mt-3 text-start">
+                Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh
+                consequat eu.
+              </p>
             </div>
-            <h3 className="text-sm  font-bold text-[#1D2026] text-start">4. Start teaching & earning.</h3>
-            <p className="text-sm  text-[#667085] mt-3 text-start">
-              Sed et mattis urna. Sed tempus fermentum est, eu lobortis nibh consequat eu.
-            </p>
           </div>
         </div>
-      </div>
       </div>
 
       {/* regulation for instructors--------------------------------- */}
       <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center  justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
         <div className=" ">
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">Learn about rules & regulations for  Instructor </h1>
-          <p className="text-[16px] text-[#667085] font-normal">Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem. </p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">
+            Learn about rules & regulations for Instructor{" "}
+          </h1>
+          <p className="text-[16px] text-[#667085] font-normal">
+            Sed auctor, nisl non elementum ornare, turpis orci consequat arcu,
+            at iaculis quam leo nec libero. Aenean mollis turpis velit, id
+            laoreet sem luctus in. Etiam et egestas lorem.{" "}
+          </p>
           <ul className="list-disc list-inside  text-[16px]  font-semibold text-[#344054] leading-8 mt-6">
             <li>Sed ullamcorper libero quis condimentum pellentesque.</li>
             <li>Nam leo tortor, tempus et felis non.</li>
-            <li>Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.</li>
-            <li>Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.</li>
+            <li>
+              Porttitor faucibus erat. Integer eget purus non massa ultricies
+              pretium ac sed eros.
+            </li>
+            <li>
+              Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet
+              turpi.
+            </li>
           </ul>
         </div>
         <div className="w-full">
           <Image src={regulationimg} alt="mockup" className="w-fit h-full" />
         </div>
       </div>
+
       {/* help center section --------------------------------- */}
       <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center  justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
         <div className="w-full">
           <Image src={helpcenterimg} alt="mockup" className="w-fit h-full" />
         </div>
         <div className=" w-full">
-          <h1 className="text-3xl font-bold text-[#1D2026] mb-8">Don’t worry we’re always here <br /> to help you</h1>
-          <p className="text-[16px] text-[#667085] font-normal">Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus nec augue malesuada, sagittis ligula vel, faucibus metus. Nam viverra metus eget nunc dignissim.</p>
+          <h1 className="text-3xl font-bold text-[#1D2026] mb-8">
+            Don’t worry we’re always here <br /> to help you
+          </h1>
+          <p className="text-[16px] text-[#667085] font-normal">
+            Mauris aliquet ornare tortor, ut mollis arcu luctus quis. Phasellus
+            nec augue malesuada, sagittis ligula vel, faucibus metus. Nam
+            viverra metus eget nunc dignissim.
+          </p>
           <ul className="list-disc list-inside  text-[14px]  font-semibold text-[#344054] leading-10 mt-6">
-            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Sed nec dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.</li>
-            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Those who are looking to reboot their work life and try a new profession that.</li>
-            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Nunc auctor consequat lorem, in posuere enim hendrerit sed.</li>
-            <li className="flex gap-2"> <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Duis ornare enim ullamcorper congue.</li>
+            <li className="flex gap-2">
+              {" "}
+              <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Sed nec
+              dapibus orci integer nisl turpis, eleifend sit amet aliquam vel.
+            </li>
+            <li className="flex gap-2">
+              {" "}
+              <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Those
+              who are looking to reboot their work life and try a new profession
+              that.
+            </li>
+            <li className="flex gap-2">
+              {" "}
+              <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Nunc
+              auctor consequat lorem, in posuere enim hendrerit sed.
+            </li>
+            <li className="flex gap-2">
+              {" "}
+              <ArrowRightOutlined className="text-[#14698A]  text-xl" /> Duis
+              ornare enim ullamcorper congue.
+            </li>
           </ul>
-         <div className="flex items-center  gap-2 mt-8">
-          <div>
-          <MailFilled className="text-2xl  p-3 text-white bg-[#14698A] rounded-full mr-2 cursor-pointer" />
+          <div className="flex items-center  gap-2 mt-8">
+            <div>
+              <MailFilled className="text-2xl  p-3 text-white bg-[#14698A] rounded-full mr-2 cursor-pointer" />
+            </div>
+            <div>
+              <p className="text-sm text-[#667085] font-medium">
+                Email us, anytime anywhere
+              </p>
+              <h3 className="text-lg font-medium text-[#1D2026]">
+                help.pantognostis@gamil.com
+              </h3>
+            </div>
           </div>
-          <div>
-            <p className="text-sm text-[#667085] font-medium">Email us, anytime anywhere</p>
-            <h3 className="text-lg font-medium text-[#1D2026]">help.pantognostis@gamil.com</h3>
-          </div>
-         </div>
         </div>
       </div>
+
+
+      <div className="container mx-auto  py-10 flex justify-between px-6 flex-col lg:flex-row gap-16">
+      {/* Left side - Text Section */}
+      <div className="lg:w-1/3">
+        <Title level={2} className="font-bold text-[30px] text-[#1D2026]">
+          20k+ Instructors created their success story with Pantognostis
+        </Title>
+        <Paragraph className="text-[#4E5566] text-[16px] mt-4">
+          Nunc euismod sapien non felis eleifend porttitor. Maecenas dictum eros justo, id commodo ante laoreet nec. Phasellus aliquet, orci id pellentesque mollis.
+        </Paragraph>
+
+        {/* Carousel Section */}
+        <Carousel autoplay ref={carouselRef} className="mt-10">
+        <div className="lg:w-1/3">
+         
+            {/* Quote Section */}
+            <div className="mt-10 bg-[#BAE4FF] text-[#1D2026]  p-8 rounded-lg">
+              <div className="text-4xl font-bold text-blue-500">
+                <Image src={quot} alt="Quote" className="w-10 h-10" />
+              </div>
+              <Paragraph className="mt-4 text-[18px] text-[#1D2026]">
+                Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
+                Pellentesque ullamcorper auctor ante, egestas interdum quam
+                facilisis commodo. Phasellus efficitur quis ex in consectetur.
+                Mauris tristique suscipit metus, a molestie dui dapibus vel.
+              </Paragraph>
+            </div>
+
+            {/* Navigation Arrows */}
+          
+          </div>
+        <div className="lg:w-1/3">
+         
+            {/* Quote Section */}
+            <div className="mt-10 bg-[#BAE4FF] text-[#1D2026]  p-8 rounded-lg">
+            <div className="text-4xl font-bold text-blue-500">
+                <Image src={quot} alt="Quote" className="w-10 h-10" />
+              </div>
+              <Paragraph className="mt-4 text-[18px] text-[#1D2026]">
+                Nulla sed malesuada augue. Morbi interdum vulputate imperdiet.
+                Pellentesque ullamcorper auctor ante, egestas interdum quam
+                facilisis commodo. Phasellus efficitur quis ex in consectetur.
+                Mauris tristique suscipit metus, a molestie dui dapibus vel.
+              </Paragraph>
+            </div>
+
+            {/* Navigation Arrows */}
+          
+          </div>
+        </Carousel>
+
+        {/* Navigation Arrows */}
+        <div className="flex items-center justify-start space-x-4 mt-6">
+          <Button
+            icon={<LeftOutlined />}
+            shape="circle"
+            size="large"
+            onClick={() => carouselRef.current.prev()} // Go to previous slide
+          />
+          <Button
+            icon={<RightOutlined />}
+            shape="circle"
+            size="large"
+            className="bg-blue-500 text-white"
+            onClick={() => carouselRef.current.next()} // Go to next slide
+          />
+        </div>
+      </div>
+
+      {/* Right side - Image Grid */}
+      <div className="grid grid-cols-3 gap-4 lg:w-1/2 w-full">
+  {/* First row - 3 equal images */}
+  <div className="col-span-1">
+    <Image src={reviewimg1} alt="Person 1" className="w-full h-auto object-cover" />
+  </div>
+  <div className="col-span-1">
+    <Image src={reviewimg2} alt="Person 2" className="w-full h-auto object-cover" />
+  </div>
+  <div className="col-span-1">
+    <Image src={reviewimg3} alt="Person 3" className="w-full h-auto object-cover" />
+  </div>
+
+  {/* Second row - Large image spanning two columns */}
+  <div className="col-span-2">
+    <Image src={reviewimg4} alt="Person 4" className="w-full h-auto object-cover" />
+  </div>
+
+  {/* Third row - Vertical stack and one full image */}
+  <div className="col-span-1 row-span-1">
+    <Image src={reviewimg5} alt="Person 5" className="w-full h-auto object-cover" />
+  </div>
+
+  {/* Fourth row - 3 small images */}
+  <div className="col-span-1">
+    <Image src={reviewimg6} alt="Person 6" className="w-full h-auto object-cover" />
+  </div>
+  <div className="col-span-1">
+    <Image src={reviewimg7} alt="Person 7" className="w-full h-auto object-cover" />
+  </div>
+  <div className="col-span-1">
+    <Image src={reviewimg8} alt="Person 8" className="w-full h-auto object-cover" />
+  </div>
+      </div>
+    </div>
 
     </div>
   );

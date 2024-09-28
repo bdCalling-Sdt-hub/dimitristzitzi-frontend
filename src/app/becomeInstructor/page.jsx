@@ -10,6 +10,7 @@ import certificate from "../../public/images/icons/certification.svg";
 import gloval from "../../public/images/icons/gloval.svg";
 import success from "../../public/images/icons/success.svg";
 import mockup from "../../public/images/mockup.png";
+import regulationimg from '../../public/images/instructorRules.png'
 const page = () => {
   return (
     <div>
@@ -24,7 +25,7 @@ const page = () => {
       </div>
 
       {/* hero section here ------------------------------------ */}
-      <div className="  min-h-[430px] py-24">
+      <div className="  min-h-[430px] lg:py-24 py-12">
         <section className="">
           <div className="container flex flex-col justify-center mx-auto   lg:flex-row lg:justify-between  ">
             {/* LEFT HERO SECTION */}
@@ -176,7 +177,7 @@ const page = () => {
       </div>
 
       {/* become instructor's steps ------------------------------ */}
-      <div className="py-24 bg-[#F9FAFB]">
+      <div className="lg:py-24 py-12 bg-[#F9FAFB]">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-12">
           How you'll become a successful <br /> instructor
@@ -229,6 +230,23 @@ const page = () => {
           </div>
         </div>
       </div>
+      </div>
+
+      {/* regulation for instructors--------------------------------- */}
+      <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center lg:justify-center justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
+        <div className="max-w-lg ">
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">Learn about rules & regulations for  Instructor </h1>
+          <p className="text-[16px] text-[#667085] font-normal">Sed auctor, nisl non elementum ornare, turpis orci consequat arcu, at iaculis quam leo nec libero. Aenean mollis turpis velit, id laoreet sem luctus in. Etiam et egestas lorem. </p>
+          <ul className="list-disc list-inside  text-[16px]  font-semibold text-[#344054] leading-8 mt-6">
+            <li>Sed ullamcorper libero quis condimentum pellentesque.</li>
+            <li>Nam leo tortor, tempus et felis non.</li>
+            <li>Porttitor faucibus erat. Integer eget purus non massa ultricies pretium ac sed eros.</li>
+            <li>Vestibulum ultrices commodo tellus. Etiam eu lectus sit amet turpi.</li>
+          </ul>
+        </div>
+        <div className="w-fit">
+          <Image src={regulationimg} alt="mockup" className="w-full h-full" />
+        </div>
       </div>
 
     </div>

@@ -14,7 +14,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <footer className="px-4 divide-y bg-[#000000] text-gray-100">
+      <footer className="px-4 divide-y bg-[#000000] text-gray-100 relative z-50">
         <div className="px-4">
           <div className=" flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
             {/* left side menu  */}

@@ -1,6 +1,9 @@
 "use client";
 
-import { Button, Carousel, Typography } from "antd";
+import { Button, Carousel, Typography, Col, Divider, Row } from "antd";
+const DemoBox = (props) => (
+  <p className={`height-${props.value}`}>{props.children}</p>
+);
 import Link from "next/link";
 import React, { useRef } from "react";
 import { ArrowUpOutlined, CheckCircleFilled } from "@ant-design/icons";
@@ -32,7 +35,7 @@ import reviewimg5 from "../../public/images/review5.png";
 import reviewimg6 from "../../public/images/review6.png";
 import reviewimg7 from "../../public/images/review7.png";
 import reviewimg8 from "../../public/images/review8.png";
-import teacher from '../../public/images/teacher.png'
+import teacher from "../../public/images/teacher.png";
 const { Title, Paragraph } = Typography;
 const page = () => {
   // Ref to control the carousel
@@ -368,7 +371,7 @@ const page = () => {
                 Email us, anytime anywhere
               </p>
               <h3 className="text-lg font-medium text-[#1D2026]">
-                help.pantognostis@gamil.com
+                help.pantognostis @gamil.com
               </h3>
             </div>
           </div>
@@ -376,7 +379,7 @@ const page = () => {
       </div>
 
       {/* review section here ------------------------ */}
-      <div className="container mx-auto  py-10 flex justify-between px-6 flex-col lg:flex-row gap-16">
+      <div className="container mx-auto  py-12 flex justify-between px-6 flex-col lg:flex-row gap-16">
         {/* Left side - Text Section */}
         <div className="lg:w-1/3">
           <Title level={2} className="font-bold text-[30px] text-[#1D2026]">
@@ -443,110 +446,65 @@ const page = () => {
         </div>
 
         {/* Right side - Image Grid */}
-        <div className="grid grid-cols-3 gap-4 lg:w-1/2 w-full">
-          {/* First row - 3 equal images */}
-          <div className="col-span-1">
-            <Image
-              src={reviewimg1}
-              alt="Person 1"
-              className="w-full h-auto object-cover"
-            />
+        <div className="flex items-center justify-center gap-6 w-full ">
+          <div>
+            <div className="flex items-end pb-6  gap-16">
+              <Image src={reviewimg1} alt="reviewimg" className="" />
+              <Image src={reviewimg2} alt="reviewimg" className="" />
+            </div>
+            <div>
+              <Image src={reviewimg4} alt="reviewimg" className="" />
+            </div>
+            <div className="flex items-start pt-6 justify-center gap-6">
+              <Image src={reviewimg6} alt="reviewimg" className="" />
+              <Image src={reviewimg7} alt="reviewimg" className="" />
+            </div>
           </div>
-          <div className="col-span-1">
-            <Image
-              src={reviewimg2}
-              alt="Person 2"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          <div className="col-span-1">
-            <Image
-              src={reviewimg3}
-              alt="Person 3"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
-          {/* Second row - Large image spanning two columns */}
-          <div className="col-span-2">
-            <Image
-              src={reviewimg4}
-              alt="Person 4"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
-          {/* Third row - Vertical stack and one full image */}
-          <div className="col-span-1 row-span-1">
-            <Image
-              src={reviewimg5}
-              alt="Person 5"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
-          {/* Fourth row - 3 small images */}
-          <div className="col-span-1">
-            <Image
-              src={reviewimg6}
-              alt="Person 6"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          <div className="col-span-1">
-            <Image
-              src={reviewimg7}
-              alt="Person 7"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          <div className="col-span-1">
-            <Image
-              src={reviewimg8}
-              alt="Person 8"
-              className="w-full h-auto object-cover"
-            />
+          <div className="space-y-6 lg:block md:block hidden">
+            <Image src={reviewimg3} alt="reviewimg" className="" />
+            <Image src={reviewimg5} alt="reviewimg" className="" />
+            <Image src={reviewimg8} alt="reviewimg" className="" />
           </div>
         </div>
       </div>
 
-
       {/* start teaching with us --------------------------------> */}
       <div>
-      <div className="  min-h-[430px] lg:py-24 py-12 bg-[#000000] text-white">
-        <section className="">
-          <div className="container flex flex-col justify-center mx-auto   lg:flex-row lg:justify-between  ">
-            {/* LEFT HERO SECTION */}
-            <div className="flex flex-col justify-center p-6  text-center rounded-sm  w-full lg:text-left ">
-            
-              <h1 className="lg:text-[56px] text-4xl font-bold leading-none sm:text-6xl text-white font-Merriweather">
-              Start teaching with us <br /> and inspire others
-              </h1>
-              <p className="mt-6 mb-8 text-[16px] font-normal sm:mb-12 text-[#B7BAC7] leading-8 max-w-md lg:mx-0 mx-auto  ">
-              Become an instructor & start teaching with 26k certified instructors. Create a success story with 67.1k Students <br /> — Grow yourself with 71 countries.
-              </p>
-              <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                <Link href="/auth/signup">
-                  <Button
-                    className="text-[#FFFFFF] text-[18px] font-semibold p-6"
-                    size="large"
-                    type="primary"
-                  >
-                  Register now
-                  
-                  </Button>
-                </Link>
+        <div className="  min-h-[430px] lg:py-24 py-12 bg-[#000000] text-white">
+          <section className="">
+            <div className="container flex flex-col justify-center mx-auto   lg:flex-row lg:justify-between  ">
+              {/* LEFT HERO SECTION */}
+              <div className="flex flex-col justify-center p-6  text-center rounded-sm  w-full lg:text-left ">
+                <h1 className="lg:text-[56px] text-4xl font-bold leading-none sm:text-6xl text-white font-Merriweather">
+                  Start teaching with us <br /> and inspire others
+                </h1>
+                <p className="mt-6 mb-8 text-[16px] font-normal sm:mb-12 text-[#B7BAC7] leading-8 max-w-md lg:mx-0 mx-auto  ">
+                  Become an instructor & start teaching with 26k certified
+                  instructors. Create a success story with 67.1k Students <br />{" "}
+                  — Grow yourself with 71 countries.
+                </p>
+                <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                  <Link href="/auth/signup">
+                    <Button
+                      className="text-[#FFFFFF] text-[18px] font-semibold p-6"
+                      size="large"
+                      type="primary"
+                    >
+                      Register now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* RIGHT HERO SECTION */}
+              <div className="w-full">
+                <Image className="w-full" src={teacher} alt="heroimg" />
               </div>
             </div>
+          </section>
+        </div>
+      </div>
 
-            {/* RIGHT HERO SECTION */}
-            <div className="w-full">
-              <Image className="w-full" src={teacher} alt="heroimg" />
-            </div>
-          </div>
-        </section>
-      </div>
-      </div>
     </div>
   );
 };

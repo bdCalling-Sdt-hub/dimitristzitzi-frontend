@@ -207,7 +207,7 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border-1 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]   top-[100px] lg:shadow-lg z-50">
+              <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]   top-[100px] lg:shadow-lg z-50">
                 <div className="relative">
                   <video
                     className="w-full rounded-lg h-auto"

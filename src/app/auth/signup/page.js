@@ -121,7 +121,8 @@ const signup = () => {
          
 
               <Form.Item>
-                <Button
+               <Link href="/auth/signup/intarest">
+               <Button
                   className="text-[#FFFFFF] text-[16px] font-semibold p-6"
                   size="large"
                   type="primary"
@@ -130,6 +131,7 @@ const signup = () => {
                 >
                  Create account
                 </Button>
+               </Link>
               </Form.Item>
 
               {/* Google Sign In Button */}

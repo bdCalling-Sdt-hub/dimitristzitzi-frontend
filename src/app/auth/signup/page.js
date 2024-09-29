@@ -83,6 +83,7 @@ const Signup = () => {
               </Form.Item>
 
               <Form.Item style={{ width: "360px" }}>
+                <Link href="/auth/signup/intarest">
                 <Button className="text-[#FFFFFF] text-[16px] font-semibold p-6" size="" type="primary" htmlType="submit" block>
                   Create account
                 </Button>

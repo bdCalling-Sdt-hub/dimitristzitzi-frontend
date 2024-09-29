@@ -40,7 +40,7 @@ const Navbar = () => {
       </div>
 
       {/* Middle: Search bar with category button (Hidden on small screens) */}
-      <div className="hidden w-full max-w-lg lg:flex items-center space-x-2">
+      <div className="hidden w-full max-w-lg lg:flex items-center space-x-2 px-2">
         <Input
           placeholder="Search for course"
           className="w-full text-[#667085] text-[16px]"
@@ -64,15 +64,15 @@ const Navbar = () => {
 
       {/* Right Side: Links (Hidden on small screens) */}
       <div className="hidden lg:flex items-center space-x-6">
-      <Link href="/becomeInstructor" className="text-sm">
-            Become Instructor
+      <Link href="/becomeInstructor" className="text-sm pl-2">
+            BecomeInstructor
           </Link>
         <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
         <Link
           href={"/auth/login"}
           className="text-[16px] font-semibold text-[#475467]"
         >
-          Log in
+          LogIn
         </Link>
         <Link href={"/auth/signup"}>
           <Button
@@ -96,7 +96,7 @@ const Navbar = () => {
         onClose={closeDrawer}
         visible={drawerVisible}
       >
-        <Input.Search placeholder="Search for course" className="mb-4" />
+        <Input.Search placeholder="Search course" className="mb-4" />
         <Dropdown overlay={categoryMenu} trigger={["click"]}>
           <Button className="mb-4">Category</Button>
         </Dropdown>

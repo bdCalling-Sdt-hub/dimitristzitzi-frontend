@@ -198,13 +198,13 @@ const page = ({ params }) => {
 
   return (
     <div>
-      <div className="max-w-[838px] mx-auto px-6">
+      <div className="max-w-[838px] mx-auto xl:px-6 p-4">
         <div className=" lg:mt-28 md:mt-24 mt-12  w-full ">
           <h1 className="text-3xl font-bold mb-24 text-[#1D2939] font-Merriweather">
             Instructor
           </h1>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center justify-start px-2 mb-9">
+          <div className="lg:flex md:flex flex-wrap items-center justify-between">
+            <div className="flex  items-center justify-start px-2 mb-9">
               <Image
                 height={56}
                 width={56}
@@ -249,7 +249,7 @@ const page = ({ params }) => {
           </div>
         </div>
 
-        <div className="p-6 bg-white ">
+        <div className=" bg-white ">
           <Tabs
             activeKey={activeKey}
             onChange={(key) => setActiveKey(key)}

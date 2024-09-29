@@ -121,10 +121,10 @@ const page = ({ params }) => {
   return (
     <div>
       <div>
-        <div className="mb-10 ">
+        <div className="mb-10  ">
           {/* hero section here ---------------------------------------------------------------------------- */}
-          <div className="xl:bg-[#1D2939]  bg-transparent">
-            <div className="container mx-auto  relative py-16 px-6">
+          <div className="xl:bg-[#1D2939]  bg-transparent ">
+            <div className="container mx-auto  relative py-16 px-2">
               {/* left side content here-------------------------------------------- */}
               <div className="xl:max-w-2xl w-full space-y-3 xl:block  hidden ">
                 <h1 className="text-white text-2xl font-bold font-Merriweather">
@@ -208,7 +208,7 @@ const page = ({ params }) => {
 
               {/* right side content here-------------------------------------------------- */}
               <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]   top-[100px] lg:shadow-lg z-50">
-                <div className="relative">
+                <div className="relative border border-white rounded-lg">
                   <video
                     className="w-full rounded-lg h-auto"
                     autoPlay
@@ -289,7 +289,7 @@ const page = ({ params }) => {
             </div>
           </div>
 
-          <div className=" container mx-auto px-6 ">
+          <div className=" container mx-auto px-2 ">
             {/* webinner section here ------------------------------ */}
             <div className="xl:max-w-2xl w-full  lg:my-12 md:my-12 lg:flex flex-row items-center justify-between gap-6 rounded-lg bg-[#3DCBB1] ">
               {/* left webinar--------- */}

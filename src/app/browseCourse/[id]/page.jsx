@@ -124,7 +124,7 @@ const page = ({ params }) => {
         <div className="mb-10  ">
           {/* hero section here ---------------------------------------------------------------------------- */}
           <div className="xl:bg-[#1D2939] lg:bg-[#1D2939]   bg-transparent ">
-            <div className="container mx-auto  flex gap-4 relative py-16 px-2">
+            <div className="container mx-auto  flex gap-4 relative py-16 lg:px-6 px-2">
               {/* left side content here-------------------------------------------- */}
               <div className="xl:max-w-2xl lg:max-w-xl w-full space-y-3 xl:block lg:block  hidden ">
                 <h1 className="text-white text-2xl font-bold font-Merriweather">
@@ -207,10 +207,10 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[15%]  lg:right-[6px] max-[1024]:right-[6px]  top-[100px] lg:shadow-lg z-50">
-                <div className="relative border border-white rounded-lg">
+              <div className="xl:max-w-2xl lg:max-w-sm mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[15%]  lg:right-[1%] max-[1024]:right-[6px]  top-[150px] lg:shadow-lg z-50">
+                <div className="relative border border-white rounded-lg xl:h-full lg:h-[200px] h-auto">
                   <video
-                    className="w-full rounded-lg h-auto"
+                    className="w-full rounded-lg "
                     autoPlay
                     loop
                     controls
@@ -222,7 +222,7 @@ const page = ({ params }) => {
                   </p>
                 </div>
 
-                <div className="mt-4 p-4">
+                <div className="xl:mt-4 mt-1 p-4 ">
                   <div className="flex items-center space-x-2">
                     <Avatar.Group maxCount={5}>
                       {/* Image for student */}
@@ -245,7 +245,7 @@ const page = ({ params }) => {
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between py-4">
+                  <div className="flex items-center justify-between xl:py-4 ">
                     <h3 className="text-2xl font-bold mt-2">€29.00 </h3>
                     <span className="bg-[#FFFAEB] h-[44px] px-4 text-[#F79009] font-semibold rounded-sm flex items-center justify-center py-1 text-xs">
                       Basic
@@ -275,13 +275,13 @@ const page = ({ params }) => {
                     type="primary"
                     size="large"
                     block
-                    className="mt-4 p-6"
+                    className="xl:mt-4 px-6 py-4"
                   >
                     €29.00 Buy Now
                   </Button>
                   <button
                   //  onClick={()=>handleAddToCart()}   
-                    className="mt-2 bg-transparent font-semibold p-6 text-[#475467] block mx-auto">
+                    className="xl:mt-2 bg-transparent font-semibold px-6 pt-3 text-[#475467] block mx-auto">
                     Add to Cart
                   </button>
                 </div>
@@ -289,7 +289,7 @@ const page = ({ params }) => {
             </div>
           </div>
 
-          <div className=" container mx-auto px-2 ">
+          <div className=" container mx-auto lg:px-6 px-2 ">
             {/* webinner section here ------------------------------ */}
             <div className="xl:max-w-2xl lg:max-w-xl  w-full  lg:my-12 md:my-12 lg:flex flex-row items-center justify-between gap-6 rounded-lg bg-[#3DCBB1] ">
               {/* left webinar--------- */}

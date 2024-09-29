@@ -49,7 +49,7 @@ const Signup = () => {
                 required={false}
               >
                 <Input
-                  className="min-[2035px]:w-[500px] min-[2035px]:h-[50px] w-[360px] h-[44px] border border-[#D0D5DD] p-2 text-[16px] text-[#667085] font-normal hover:border-[#D0D5DD] focus:border-[#dde2eb]"
+                  className="min-[2035px]:w-[500px] min-[2035px]:h-[50px] min-[375px]:w-[330px] min-[320px]:w-[290px] w-[360px] h-[44px] border border-[#D0D5DD] p-2 text-[16px] text-[#667085] font-normal hover:border-[#D0D5DD] focus:border-[#dde2eb]"
                   placeholder="Enter your Name"
                 />
               </Form.Item>
@@ -61,7 +61,7 @@ const Signup = () => {
                 required={false}
               >
                 <Input
-                  className="min-[2035px]:w-[500px] min-[2035px]:h-[50px]  w-[360px] h-[44px] border border-[#D0D5DD] p-2 text-[16px] text-[#667085] font-normal hover:border-[#D0D5DD] focus:border-[#dde2eb]"
+                  className="min-[2035px]:w-[500px] min-[2035px]:h-[50px] min-[375px]:w-[330px] min-[320px]:w-[290px]  w-[360px] h-[44px] border border-[#D0D5DD] p-2 text-[16px] text-[#667085] font-normal hover:border-[#D0D5DD] focus:border-[#dde2eb]"
                   placeholder="Enter your email"
                 />
               </Form.Item>
@@ -77,23 +77,22 @@ const Signup = () => {
                 extra={<p className="text-[16px] font-normal text-[#475467] pt-2">Must be at least 8 characters.</p>}
               >
                 <Input.Password
-                  className="min-[2035px]:w-[500px] min-[2035px]:h-[50px]  w-[360px] h-[44px] border border-[#D0D5DD] p-2 text-[16px] text-[#667085] font-normal hover:border-[#D0D5DD] focus:border-[#dde2eb]"
+                  className="min-[2035px]:w-[500px] min-[2035px]:h-[50px] min-[375px]:w-[330px] min-[320px]:w-[290px]  w-[360px] h-[44px] border border-[#D0D5DD] p-2 text-[16px] text-[#667085] font-normal hover:border-[#D0D5DD] focus:border-[#dde2eb]"
                   placeholder="Enter your password"
                 />
               </Form.Item>
 
               <Form.Item style={{ width: "360px" }}>
-                <Link href="/auth/signup/intarest">
                 <Button className="text-[#FFFFFF] text-[16px] font-semibold p-6" size="" type="primary" htmlType="submit" block>
                   Create account
                 </Button>
                </Link>
               </Form.Item>
 
-              <Form.Item className="" style={{ width: "360px" }}>
+              <Form.Item className=" min-[2035px]:w-[500px] min-[2035px]:h-[50px] min-[375px]:w-[330px] min-[320px]:w-[290px]  w-[360px] h-[44px]">
                 <Button
                   block
-                  className="btn-google text-[#344054] text-[16px] font-semibold p-6 hover:bg-[#344054] hover:text-[#FFFFFF]"
+                  className="btn-google text-[#344054] min-[375px]:w-[330px]  text-[16px] font-semibold p-6 hover:bg-[#344054] hover:text-[#FFFFFF]"
                   style={{ marginBottom: "10px" }}
                 >
                   <Image src={googleicon} width={24} height={24} alt="Google Icon" />

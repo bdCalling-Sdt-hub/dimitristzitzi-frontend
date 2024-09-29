@@ -242,16 +242,18 @@ const page = () => {
                     <span className="text-xl font-semibold text-[#000000]">
                       € 29.00
                     </span>
-                    <div className="flex items-center justify-center xl:gap-12 lg:gap-12 md:gap-12 gap-4">
+                    <div className="flex items-center justify-center xl:gap-12 lg:gap-12 md:gap-12 gap-2">
                       <button className="text-[16px] text-[#B42318] border-b-2 border-[#B42318] font-normal">
                         Remove
                       </button>
                       <Link
                         href={`/checkout`}
-                        className="inline-flex items-center text-[#14698A] border-b-2 border-[#14698A] text-[16px] font-semibold "
+                        className="inline-flex items-center text-[#14698A] border-b-2 border-[#14698A] lg:text-[16px] text-sm font-semibold "
                       >
                         Checkout
+                        <div className="xl:block md:block hidden">
                         <ArrowUpOutlined className="rotate-45 text-xl pl-2" />
+                        </div>
                       </Link>
                     </div>
                   </div>

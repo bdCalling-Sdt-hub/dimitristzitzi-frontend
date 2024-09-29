@@ -52,10 +52,10 @@ const Page = () => {
       <div className="container mx-auto ">
         <div className="shadow-lg rounded-lg max-w-6xl mx-auto p-8">
           <div className="text-center py-8">
-            <h1 className="text-4xl font-Merriweather font-bold mb-4 text-[#000000]">
+            <h1 className="lg:text-4xl text-2xl font-Merriweather font-bold mb-4 text-[#000000]">
               What are you interested in?
             </h1>
-            <h3 className="text-[#1B1B1B99] text-[16px] font-Inter">
+            <h3 className="text-[#1B1B1B99] lg:text-[16px] text-sm font-Inter">
               Select what you're into. We'll help you find great things to
               learn.
             </h3>
@@ -74,7 +74,7 @@ const Page = () => {
                 >
                   <Image
                     src={interest.image}
-                    width={300}
+                   className="w-full"
                     height={300}
                     alt={interest.label}
                   />
@@ -85,7 +85,7 @@ const Page = () => {
                         : ""
                     }`}
                   >
-                    <h3 className="text-[#FFFFFF] font-bold text-center bottom-6 left-12 absolute text-xl">
+                    <h3 className="text-[#FFFFFF] font-bold text-center bottom-6 lg:left-12 md:left-8 left-4 absolute xl:text-xl lg:text-xl md:text-lg text-sm">
                       {interest.label}
                     </h3>
 

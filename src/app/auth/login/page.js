@@ -19,7 +19,7 @@ const signIn = () => {
   return (
     <AuthLayout>
      <div className="pt-12">
-     <div className="text-center">
+     <div className="text-center px-2 py-8">
         <div className="flex justify-center items-center mb-4">
           <Image src={logoimage} />
         </div>

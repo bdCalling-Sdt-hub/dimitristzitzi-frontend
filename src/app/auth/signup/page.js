@@ -82,7 +82,8 @@ const Signup = () => {
                 />
               </Form.Item>
 
-              <Form.Item style={{ width: "360px" }}>
+              <Form.Item className=" min-[2035px]:w-[500px] min-[2035px]:h-[50px] min-[375px]:w-[330px] min-[320px]:w-[290px]  w-[360px] h-[44px]">
+                <Link href="/auth/signup/intarest">
                 <Button className="text-[#FFFFFF] text-[16px] font-semibold p-6" size="" type="primary" htmlType="submit" block>
                   Create account
                 </Button>

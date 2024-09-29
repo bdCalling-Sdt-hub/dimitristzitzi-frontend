@@ -49,10 +49,10 @@ const Page = () => {
 
   return (
     <div>
-      <div className="container mx-auto mt-8">
+      <div className="container mx-auto lg:mt-8">
         <div className="shadow-lg rounded-lg max-w-6xl mx-auto p-8">
           <div className="text-center py-8">
-            <h1 className="text-4xl font-Merriweather font-bold mb-4 text-[#000000]">
+            <h1 className="lg:text-4xl text-2xl font-Merriweather font-bold mb-4 text-[#000000]">
             Pick 3 categories you want to explore
             </h1>
           </div>
@@ -70,7 +70,7 @@ const Page = () => {
                 >
                   <Image
                     src={interest.image}
-                    width={300}
+                    className="w-full"
                     height={300}
                     alt={interest.label}
                   />
@@ -81,7 +81,7 @@ const Page = () => {
                         : ""
                     }`}
                   >
-                    <h3 className="text-[#FFFFFF] font-bold text-center bottom-6 left-12 absolute text-xl">
+                    <h3 className="text-[#FFFFFF] font-bold text-center bottom-6 lg:left-12 md:left-8 left-4 absolute xl:text-xl lg:text-xl md:text-lg text-sm">
                       {interest.label}
                     </h3>
 

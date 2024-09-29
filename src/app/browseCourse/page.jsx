@@ -201,7 +201,7 @@ const page = () => {
         
         {/* art and design menu card  */}
         <div className="flex  justify-between pb-[32px] pt-[82px] ">
-          <h1 className="text-[36px]  font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
+          <h1 className="lg:text-[36px] md:text-[28px] text-18px  font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
             Art & Design
           </h1>
          <div>
@@ -228,7 +228,7 @@ const page = () => {
 
         {/* programming menu card  */}
         <div className="flex  justify-between pb-[32px] pt-[82px] ">
-          <h1 className="text-[36px]  font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
+          <h1 className="lg:text-[36px] md:text-[28px] text-18px   font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
           Programing
           </h1>
          <div>
@@ -255,7 +255,7 @@ const page = () => {
 
         {/* Sales & Marketing menu card  */}
         <div className="flex  justify-between pb-[32px] pt-[82px] ">
-          <h1 className="text-[36px]  font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
+          <h1 className="lg:text-[36px] md:text-[28px] text-18px   font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
           Sales & Marketing
           </h1>
          <div>

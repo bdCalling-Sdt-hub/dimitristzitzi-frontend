@@ -123,10 +123,10 @@ const page = ({ params }) => {
       <div>
         <div className="mb-10  ">
           {/* hero section here ---------------------------------------------------------------------------- */}
-          <div className="xl:bg-[#1D2939]  bg-transparent ">
-            <div className="container mx-auto  relative py-16 px-2">
+          <div className="xl:bg-[#1D2939] lg:bg-[#1D2939]   bg-transparent ">
+            <div className="container mx-auto  flex gap-4 relative py-16 px-2">
               {/* left side content here-------------------------------------------- */}
-              <div className="xl:max-w-2xl w-full space-y-3 xl:block  hidden ">
+              <div className="xl:max-w-2xl lg:max-w-xl w-full space-y-3 xl:block lg:block  hidden ">
                 <h1 className="text-white text-2xl font-bold font-Merriweather">
                   Product Management Basic Course
                 </h1>
@@ -207,7 +207,7 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]   top-[100px] lg:shadow-lg z-50">
+              <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]  lg:right-[5%]  top-[100px] lg:shadow-lg z-50">
                 <div className="relative border border-white rounded-lg">
                   <video
                     className="w-full rounded-lg h-auto"

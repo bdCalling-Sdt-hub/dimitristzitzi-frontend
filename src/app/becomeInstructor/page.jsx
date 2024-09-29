@@ -328,7 +328,7 @@ const page = () => {
       {/* help center section --------------------------------- */}
       <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center  justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
         <div className="w-full">
-          <Image src={helpcenterimg} alt="mockup" className="w-fit h-full" />
+          <Image  src={helpcenterimg} alt="mockup" className="w-full h-full" />
         </div>
         <div className=" w-full">
           <h1 className="text-3xl font-bold text-[#1D2026] mb-8">

@@ -142,8 +142,8 @@ const page = () => {
         style={{ backgroundImage: `url(${heroimg.src})` }}
         className="w-full min-h-[407px] bg-cover"
       >
-        <div className="pt-28 px-6">
-          <div className="flex items-center justify-between max-w-2xl mx-auto ">
+        <div className="lg:pt-28 md:pt-28 px-6">
+          <div className="flex min-[425px]:flex-wrap min-[320px]:flex-wrap items-center justify-between max-w-2xl mx-auto ">
             <div className=" my-8 ">
               <div className="flex items-center space-x-2 pr-4 border-r-2 border-white">
                 <h1 className="text-white text-4xl font-bold">16K</h1>
@@ -196,7 +196,7 @@ const page = () => {
       </div>
       {/* End of Hero section  */}
 
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
 
         
         {/* art and design menu card  */}

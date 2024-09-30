@@ -27,8 +27,7 @@ const Footer = () => {
                 <Image
                   src={logo}
                   alt="Pantagonostis"
-                  width={350}
-                  height={350}
+           
                 />
               </div>
               <h4>

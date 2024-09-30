@@ -19,6 +19,11 @@ module.exports = {
         Merriweather: ["Merriweather", "sans-serif"],
         Inter: ["Inter", "ans-serif"],
       },
+      screens: {
+        'l-mobile': '425px',
+        'm-mobile': '375px',
+        's-mobile': '320px',
+      },
       // backgroundImage: {
       //   'herobgimg': "url('')",
       // }

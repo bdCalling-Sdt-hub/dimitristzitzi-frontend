@@ -7,13 +7,13 @@ import Footer from "@/components/share/Footer";
 import { usePathname } from "next/navigation";
 import { Spin } from "antd";
 import Image from "next/image";
-import logo from "/public/images/logo.png";
+import logo from "../assets/logo.png";
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
   // Define routes where Navbar and Footer should not appear
   const authRoutes = ["/auth/signup"];
-  const footerCriteria = [
+  const footerCriteria = [,,,,,,
     "/auth/otpverification",
     "/auth/forgetpassword",
     "/auth/signup/intarest",

@@ -13,15 +13,15 @@ import {
 } from "@ant-design/icons";
 import { Button, Modal, Rate, Space } from "antd";
 import { Radio, Input, Form } from "antd";
-import card1 from "public/images/icons/card1.svg";
-import card2 from "public/images/icons/card2.svg";
-import card3 from "public/images/icons/card3.svg";
-import card4 from "public/images/icons/card4.svg";
+import card1 from "/public/images/icons/card1.svg";
+import card2 from "/public/images/icons/card2.svg";
+import card3 from "/public/images/icons/card3.svg";
+import card4 from "/public/images/icons/card4.svg";
 
-import apple from "public/images/icons/applepay.svg";
-import google from "public/images/icons/googlepay.svg";
-import strype from "public/images/icons/strype.svg";
-import paypal from "public/images/icons/paypal.svg";
+import apple from "/public/images/icons/applepay.svg";
+import google from "/public/images/icons/googlepay.svg";
+import strype from "/public/images/icons/strype.svg";
+import paypal from "/public/images/icons/paypal.svg";
 
 const page = () => {
   const carditems = [

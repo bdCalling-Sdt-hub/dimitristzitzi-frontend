@@ -13,8 +13,21 @@ module.exports = {
         primary: "#0E68E7",
         secondary: "#475467",
         boldSecoundary: "#000000"
-      
+        
       },
+      fontFamily: {
+        Merriweather: ["Merriweather", "sans-serif"],
+        Inter: ["Inter", "ans-serif"],
+      },
+      screens: {
+        'l-mobile': '425px',
+        'm-mobile': '375px',
+        's-mobile': '320px',
+      },
+      // backgroundImage: {
+      //   'herobgimg': "url('')",
+      // }
+      
     },
   },
   plugins: [],

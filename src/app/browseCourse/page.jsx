@@ -146,7 +146,7 @@ const page = () => {
           <div className="flex s-mobile:py-6 l-mobile:flex-wrap m-mobile:flex-wrap s-mobile:flex-wrap items-center justify-between max-w-2xl mx-auto ">
             <div className=" lg:my-8 md:my-8 my-2 ">
 
-              <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 border-r-2 border-white">
+              <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 s-mobile:pr-[8px] pl-4 s-mobile:pl-[8px]  xl:border-r-2 lg:border-r-2 md:border-r-2 border-white">
                 <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">16K</h1>
                 <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
                   instractors
@@ -154,7 +154,7 @@ const page = () => {
               </div>
             </div>
             <div className=" lg:my-8 md:my-8 my-2 ">
-              <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 pl-4 border-r-2 border-white">
+              <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 s-mobile:pr-[8px]  s-mobile:pl-[2px] xl:border-r-2 lg:border-r-2 md:border-r-2  border-white">
                 <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">120k</h1>
                 <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
                   Graduates
@@ -162,7 +162,7 @@ const page = () => {
               </div>
             </div>
             <div className=" lg:my-8 md:my-8 my-2 ">
-              <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 pl-4 ">
+              <div className="xl:flex lg:flex flex-wrap items-center space-x-2  ">
                 <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">150k</h1>
                 <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
                   Members

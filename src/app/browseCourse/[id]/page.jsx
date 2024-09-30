@@ -1,9 +1,9 @@
 "use client";
 import { Card, Avatar, Button, Rate } from "antd";
 import React, { useState } from "react";
-import instactor from "/public/images/instructor.png";
-import instactor2 from "/public/images/instructor2.png";
-import videoimg from "/public/images/videoimg.png";
+import instactor from "../../../../public/images/instructor.png";
+import instactor2 from "../../../../public/images/instructor2.png";
+
 import student from "/public/images/instructor.png";
 import Image from "next/image";
 import { Collapse } from "antd";

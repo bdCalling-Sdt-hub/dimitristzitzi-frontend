@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import emptycart from "../../public/images/emptystates-empty-cart.png";
+import emptycart from "/public/images/emptystates-empty-cart.png";
 import {
   ClockCircleOutlined,
   UsergroupDeleteOutlined,

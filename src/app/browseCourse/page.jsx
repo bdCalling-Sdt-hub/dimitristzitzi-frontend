@@ -142,29 +142,29 @@ const page = () => {
         style={{ backgroundImage: `url(${heroimg.src})` }}
         className="w-full min-h-[407px] bg-cover py-6"
       >
-        <div className="lg:pt-28 md:pt-28 px-6">
-          <div className="flex  l-mobile:flex-wrap m-mobile:flex-wrap s-mobile:flex-wrap items-center justify-between max-w-2xl mx-auto ">
-            <div className=" my-8 ">
+        <div className="lg:pt-28 md:pt-28 py-12 px-6">
+          <div className="flex s-mobile:py-6 l-mobile:flex-wrap m-mobile:flex-wrap s-mobile:flex-wrap items-center justify-between max-w-2xl mx-auto ">
+            <div className=" lg:my-8 md:my-8 my-2 ">
 
               <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 border-r-2 border-white">
-                <h1 className="text-white text-4xl font-bold">16K</h1>
-                <span className=" text-white text-[24px] font-normal">
+                <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">16K</h1>
+                <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
                   instractors
                 </span>
               </div>
             </div>
-            <div className=" my-8 ">
+            <div className=" lg:my-8 md:my-8 my-2 ">
               <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 pl-4 border-r-2 border-white">
-                <h1 className="text-white text-4xl font-bold">120k</h1>
-                <span className=" text-white text-[24px] font-normal">
+                <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">120k</h1>
+                <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
                   Graduates
                 </span>
               </div>
             </div>
-            <div className=" my-8 ">
+            <div className=" lg:my-8 md:my-8 my-2 ">
               <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 pl-4 ">
-                <h1 className="text-white text-4xl font-bold">150k</h1>
-                <span className=" text-white text-[24px] font-normal">
+                <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">150k</h1>
+                <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
                   Members
                 </span>
               </div>

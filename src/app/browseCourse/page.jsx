@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import heroimg from "../../public/images/browseheroimg.png";
+import heroimg from "/public/images/browseheroimg.png";
 import { Button, Dropdown, Menu, Input } from "antd";
 import { SearchOutlined, DownOutlined,RightOutlined } from "@ant-design/icons";
 import Link from "next/link";

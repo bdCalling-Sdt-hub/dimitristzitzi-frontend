@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import { Carousel } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import Image from "next/image";
-import SignupImage from "../../public/images/signupimage2.png"; // Update the image path if necessary
-import SignupImage1 from "../../public/images/medium-shot-smiley-woman.jpg"; // Update the image path if necessary
-import girlimage from "../../public/images/medium-shot-smiley-woman.jpg";
+import SignupImage from "/public/images/signupimage2.png"; // Update the image path if necessary
+import SignupImage1 from "/public/images/medium-shot-smiley-woman.jpg"; // Update the image path if necessary
+import girlimage from "/public/images/medium-shot-smiley-woman.jpg";
 
 const SignupCarousel = () => {
   const carouselRef = useRef(null);

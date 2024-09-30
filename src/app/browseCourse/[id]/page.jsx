@@ -1,10 +1,10 @@
 "use client";
 import { Card, Avatar, Button, Rate } from "antd";
 import React, { useState } from "react";
-import instactor from "../../../public/images/instructor.png";
-import instactor2 from "../../../public/images/instructor2.png";
-import videoimg from "../../../public/images/videoimg.png";
-import student from "../../../public/images/instructor.png";
+import instactor from "/public/images/instructor.png";
+import instactor2 from "/public/images/instructor2.png";
+import videoimg from "/public/images/videoimg.png";
+import student from "/public/images/instructor.png";
 import Image from "next/image";
 import { Collapse } from "antd";
 import {
@@ -21,7 +21,7 @@ import {
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import ReviewCard from "@/components/ui/ReviewCard";
-import ratingimage from "../../../public/images/srahkhan.png";
+import ratingimage from "/public/images/srahkhan.png";
 import Link from "next/link";
 import CourseCard from "@/components/ui/CourseCard";
 const page = ({ params }) => {

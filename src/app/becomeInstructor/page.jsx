@@ -18,24 +18,24 @@ import {
   RightOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
-import heroimg from "../../public/images/instructorheroimg.png";
-import student from "../../public/images/icons/students.svg";
-import certificate from "../../public/images/icons/certification.svg";
-import gloval from "../../public/images/icons/gloval.svg";
-import success from "../../public/images/icons/success.svg";
-import mockup from "../../public/images/mockup.png";
-import regulationimg from "../../public/images/instructorRules.png";
-import helpcenterimg from "../../public/images/helpcenter.png";
-import quot from "../../public/images/icons/Quotes.png";
-import reviewimg1 from "../../public/images/review1.png";
-import reviewimg2 from "../../public/images/review2.png";
-import reviewimg3 from "../../public/images/review3.png";
-import reviewimg4 from "../../public/images/review4.png";
-import reviewimg5 from "../../public/images/review5.png";
-import reviewimg6 from "../../public/images/review6.png";
-import reviewimg7 from "../../public/images/review7.png";
-import reviewimg8 from "../../public/images/review8.png";
-import teacher from "../../public/images/teacher.png";
+import heroimg from "/public/images/instructorheroimg.png";
+import student from "/public/images/icons/students.svg";
+import certificate from "/public/images/icons/certification.svg";
+import gloval from "/public/images/icons/gloval.svg";
+import success from "/public/images/icons/success.svg";
+import mockup from "/public/images/mockup.png";
+import regulationimg from "/public/images/instructorRules.png";
+import helpcenterimg from "/public/images/helpcenter.png";
+import quot from "/public/images/icons/Quotes.png";
+import reviewimg1 from "/public/images/review1.png";
+import reviewimg2 from "/public/images/review2.png";
+import reviewimg3 from "/public/images/review3.png";
+import reviewimg4 from "/public/images/review4.png";
+import reviewimg5 from "/public/images/review5.png";
+import reviewimg6 from "/public/images/review6.png";
+import reviewimg7 from "/public/images/review7.png";
+import reviewimg8 from "/public/images/review8.png";
+import teacher from "/public/images/teacher.png";
 const { Title, Paragraph } = Typography;
 const page = () => {
   // Ref to control the carousel

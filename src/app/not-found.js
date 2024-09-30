@@ -1,5 +1,5 @@
 import React from "react";
-import errorimage from "../public/images/errorimage.png";
+import errorimage from "/public/images/errorimage.png";
 import Image from "next/image";
 import { Button } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";

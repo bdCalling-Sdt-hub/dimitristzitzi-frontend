@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { Rate, Tabs } from "antd";
 import Image from "next/image";
-import instactor from "../../../../public/images/instructor.png";
-import ratingimage from "../../../../public/images/srahkhan.png";
+import instactor from "/public/images/instructor.png";
+import ratingimage from "/public/images/srahkhan.png";
 import { ArrowUpOutlined, PlayCircleOutlined } from "@ant-design/icons";
 import CourseCard from "@/components/ui/CourseCard";
 import ReviewCard from "@/components/ui/ReviewCard";

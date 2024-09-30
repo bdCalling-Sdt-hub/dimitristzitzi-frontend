@@ -7,7 +7,7 @@ import Footer from "@/components/share/Footer";
 import { usePathname } from "next/navigation";
 import { Spin } from "antd";
 import Image from "next/image";
-import logo from "../public/images/logo.png";
+import logo from "/public/images/logo.png";
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
@@ -51,11 +51,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          rel="icon"
-          href="../public/images/emptystates-empty-cart.png"
-          type="image/png"
-        />
+       <link rel="icon" href="/favicon.ico" />
         <title>Pantagonostis</title>
       </head>
       <body className="antialiased font-Inter">

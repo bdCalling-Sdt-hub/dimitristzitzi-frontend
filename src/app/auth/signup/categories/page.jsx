@@ -3,10 +3,10 @@ import { Button, Form } from "antd";
 import Image from "next/image";
 import React, { useState } from "react";
 import { CheckCircleFilled } from "@ant-design/icons";
-import image1 from "../../../../public/images/category1.png";
-import image2 from "../../../../public/images/category2.png";
-import image3 from "../../../../public/images/category3.png";
-import image4 from "../../../../public/images/category4.png";
+import image1 from "..//public/images/category1.png";
+import image2 from "..//public/images/category2.png";
+import image3 from "..//public/images/category3.png";
+import image4 from "..//public/images/category4.png";
 import Link from "next/link";
 
 const Page = () => {

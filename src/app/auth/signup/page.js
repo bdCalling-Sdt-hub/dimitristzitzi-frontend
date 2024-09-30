@@ -4,8 +4,8 @@ import { Form, Input, Button } from "antd";
 import AuthLayout from "@/components/AuthLayout";
 import Link from "next/link";
 import Image from "next/image";
-import signupimage from "../../../public/images/logo.png";
-import googleicon from "../../../public/images/google.png";
+import signupimage from "/public/images/logo.png";
+import googleicon from "/public/images/google.png";
 import SignupCarousel from "@/components/utils/SignupCarosel";
 
 const Signup = () => {

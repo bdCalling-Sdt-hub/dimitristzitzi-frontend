@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import catimage1 from "../../public/images/icons/art.png";
-import catimage2 from "../../public/images/icons/development.png";
-import catimage3 from "../../public/images/icons/communication.png";
-import catimage4 from "../../public/images/icons/video.png";
-import catimage5 from "../../public/images/icons/photography.png";
-import catimage6 from "../../public/images/icons/marketing.png";
-import catimage7 from "../../public/images/icons/content.png";
-import catimage8 from "../../public/images/icons/finnace.png";
-import catimage9 from "../../public/images/icons/science.png";
-import catimage10 from "../../public/images/icons/art.png";
+import catimage1 from "/public/images/icons/art.png";
+import catimage2 from "/public/images/icons/development.png";
+import catimage3 from "/public/images/icons/communication.png";
+import catimage4 from "/public/images/icons/video.png";
+import catimage5 from "/public/images/icons/photography.png";
+import catimage6 from "/public/images/icons/marketing.png";
+import catimage7 from "/public/images/icons/content.png";
+import catimage8 from "/public/images/icons/finnace.png";
+import catimage9 from "/public/images/icons/science.png";
+import catimage10 from "/public/images/icons/art.png";
 const Categories = () => {
   const categories = [
     {

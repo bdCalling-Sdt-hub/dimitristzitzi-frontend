@@ -1,7 +1,7 @@
 import React from 'react';
-import iconone from "../../public/images/icons/instracture.png"
-import icontow from "../../public/images/icons/graduate.png"
-import iconthree from "../../public/images/icons/member.png"
+import iconone from "/public/images/icons/instracture.png"
+import icontow from "/public/images/icons/graduate.png"
+import iconthree from "/public/images/icons/member.png"
 import Image from 'next/image';
 const InfoSumarize = () => {
     return (

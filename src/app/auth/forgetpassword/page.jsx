@@ -5,8 +5,8 @@ import { GoogleOutlined } from "@ant-design/icons";
 import AuthLayout from "@/components/AuthLayout";
 import Link from "next/link";
 import Image from "next/image";
-import logoimage from "../../../public/images/logoimage.png";
-import googleicon from "../../../public/images/google.png";
+import logoimage from "/public/images/logoimage.png";
+import googleicon from "/public/images/google.png";
 const page = () => {
   const onFinish = (values) => {
     console.log("Success:", values);

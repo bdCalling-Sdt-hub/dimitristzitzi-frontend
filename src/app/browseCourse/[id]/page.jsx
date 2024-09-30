@@ -207,7 +207,7 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed  block xl:right-[15%]  lg:right-[5%]  top-[100px] lg:shadow-lg z-50">
+              <div className="max-w-2xl mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[15%]  lg:right-[6px] max-[1024]:right-[6px]  top-[100px] lg:shadow-lg z-50">
                 <div className="relative border border-white rounded-lg">
                   <video
                     className="w-full rounded-lg h-auto"
@@ -291,7 +291,7 @@ const page = ({ params }) => {
 
           <div className=" container mx-auto px-2 ">
             {/* webinner section here ------------------------------ */}
-            <div className="xl:max-w-2xl w-full  lg:my-12 md:my-12 lg:flex flex-row items-center justify-between gap-6 rounded-lg bg-[#3DCBB1] ">
+            <div className="xl:max-w-2xl lg:max-w-xl  w-full  lg:my-12 md:my-12 lg:flex flex-row items-center justify-between gap-6 rounded-lg bg-[#3DCBB1] ">
               {/* left webinar--------- */}
               <div className="space-y-2 p-6 max-w-xs">
                 <div className="pb-4">
@@ -317,7 +317,7 @@ const page = ({ params }) => {
             </div>
 
             {/* course details section here ---------- */}
-            <div className="border border-[#D9D9D9] rounded-lg my-12 p-6 xl:max-w-2xl w-full">
+            <div className="border border-[#D9D9D9] rounded-lg my-12 p-6 xl:max-w-2xl lg:max-w-xl w-full">
               <h1 className="text-3xl font-bold mb-8">you'll learn</h1>
               <div>
                 <ul className="list-none lg:text-lg md:text-lg text-sm text-[#475467] font-normal  space-y-[20px] py-2 pb-8">
@@ -380,7 +380,7 @@ const page = ({ params }) => {
             </div>
 
             {/* Course curriculum section here ------------- */}
-            <div className="xl:max-w-2xl w-full my-12 border border-[#D9D9D9] rounded-lg p-4">
+            <div className="xl:max-w-2xl lg:max-w-xl w-full my-12 border border-[#D9D9D9] rounded-lg p-4">
               <h1 className="text-3xl font-bold mb-8">Course Curriculum</h1>
 
               {/* lacture folder ----------------- */}
@@ -574,7 +574,7 @@ const page = ({ params }) => {
             </div>
 
             {/* Course rating and reviews here---------------------------------------------- */}
-            <div className="lg:mt-28 md:mt-24 xl:max-w-2xl w-full ">
+            <div className="lg:mt-28 md:mt-24 xl:max-w-2xl lg:max-w-xl w-full ">
               <h1 className="text-3xl font-bold mb-8 text-[#1D2939] font-Merriweather">
                 {" "}
                 <Rate
@@ -602,7 +602,7 @@ const page = ({ params }) => {
               </Link>
             </div>
 
-            <div className=" lg:mt-28 md:mt-24 mt-12 xl:max-w-2xl w-full ">
+            <div className=" lg:mt-28 md:mt-24 mt-12 xl:max-w-2xl lg:max-w-xl w-full ">
               <h1 className="text-3xl font-bold mb-8 text-[#1D2939] font-Merriweather">
                 Instructor
               </h1>
@@ -660,7 +660,7 @@ const page = ({ params }) => {
             </div>
 
             {/* about section -------------------------------------------------------------- */}
-            <div className="bg-white my-12   xl:max-w-2xl w-full  relative">
+            <div className="bg-white my-12   xl:max-w-2xl lg:max-w-xl w-full  relative">
               <h2 className="text-lg font-semibold text-[#475467] mb-4">About</h2>
               <div
                 className={`relative ${
@@ -697,7 +697,7 @@ const page = ({ params }) => {
             </div>
 
             {/* others courses section here-------------------------------------------- */}
-            <div className="bg-white lg:mt-32 md:mt-28 mt-12 xl:max-w-2xl w-full">
+            <div className="bg-white lg:mt-32 md:mt-28 mt-12 xl:max-w-2xl lg:max-w-xl w-full">
             <h1 className="text-3xl font-bold mb-8 text-[#000000] font-Merriweather">
             Other courses from John Doe (<span className="text-2xl text-[#1D2939] font-Merriweather">253</span>)
               </h1>

@@ -21,7 +21,7 @@ import {
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import ReviewCard from "@/components/ui/ReviewCard";
-import ratingimage from "../../../../assets/images/srahkhan.png";
+import ratingimage from "./Instructor.png";
 import Link from "next/link";
 import CourseCard from "@/components/ui/CourseCard";
 const page = ({ params }) => {

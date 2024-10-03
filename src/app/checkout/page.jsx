@@ -96,7 +96,12 @@ const page = () => {
           </h1>
         </div>
       ),
+      okText: "Continue", // Customize the button text
+      okButtonProps: {
+        style: { backgroundColor: '#564FFD', borderColor: '#564FFD', color: '#fff' }, // Customize button styles
+      },
     });
+    
   };
   return (
     <div className="max-w-[1056px] p-4 mx-auto">

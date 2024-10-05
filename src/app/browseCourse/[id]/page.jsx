@@ -21,7 +21,7 @@ import {
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import ReviewCard from "@/components/ui/ReviewCard";
-import ratingimage from "./Instructor.png";
+// import student from "./Instructor.png";
 import Link from "next/link";
 import CourseCard from "@/components/ui/CourseCard";
 const page = ({ params }) => {
@@ -41,7 +41,7 @@ const page = ({ params }) => {
   const reviews = [
     {
       name: "Sarah Khan",
-      avatar: ratingimage,
+      avatar: student,
       rating: 5,
       time: "a month ago",
       comment:
@@ -49,7 +49,7 @@ const page = ({ params }) => {
     },
     {
       name: "John Doe",
-      avatar: ratingimage,
+      avatar: student,
       rating: 4,
       time: "2 weeks ago",
       comment:
@@ -57,7 +57,7 @@ const page = ({ params }) => {
     },
     {
       name: "Emily Smith",
-      avatar: ratingimage,
+      avatar: student,
       rating: 5,
       time: "3 weeks ago",
       comment:
@@ -65,7 +65,7 @@ const page = ({ params }) => {
     },
     {
       name: "David Johnson",
-      avatar: ratingimage,
+      avatar: student,
       rating: 4,
       time: "a month ago",
       comment:
@@ -87,8 +87,7 @@ const page = ({ params }) => {
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
       category: "All courses",
-    }, 
-    
+    },
   ];
   const coursetwo = [
     {
@@ -117,7 +116,7 @@ const page = ({ params }) => {
       imageLink: "https://i.ibb.co.com/vPfYHr7/category1.png",
       category: "All courses",
     },
-  ]
+  ];
   return (
     <div>
       <div>
@@ -214,7 +213,7 @@ const page = ({ params }) => {
                     autoPlay
                     loop
                     controls
-                    playsInline 
+                    playsInline
                     src="https://www.w3schools.com/html/mov_bbb.mp4"
                   ></video>
                   <p className="absolute bottom-2 left-1/3 mt-2 ml-2 bg-opacity-70 text-sm font-bold  text-[#FCFCFD]">
@@ -280,8 +279,9 @@ const page = ({ params }) => {
                     €29.00 Buy Now
                   </Button>
                   <button
-                  //  onClick={()=>handleAddToCart()}   
-                    className="xl:mt-2 bg-transparent font-semibold px-6 pt-3 text-[#475467] block mx-auto">
+                    //  onClick={()=>handleAddToCart()}
+                    className="xl:mt-2 bg-transparent font-semibold px-6 pt-3 text-[#475467] block mx-auto"
+                  >
                     Add to Cart
                   </button>
                 </div>
@@ -661,7 +661,9 @@ const page = ({ params }) => {
 
             {/* about section -------------------------------------------------------------- */}
             <div className="bg-white my-12   xl:max-w-2xl lg:max-w-xl w-full  relative">
-              <h2 className="text-lg font-semibold text-[#475467] mb-4">About</h2>
+              <h2 className="text-lg font-semibold text-[#475467] mb-4">
+                About
+              </h2>
               <div
                 className={`relative ${
                   !isExpanded ? "max-h-40 overflow-hidden" : ""
@@ -698,44 +700,48 @@ const page = ({ params }) => {
 
             {/* others courses section here-------------------------------------------- */}
             <div className="bg-white lg:mt-32 md:mt-28 mt-12 xl:max-w-2xl lg:max-w-xl w-full">
-            <h1 className="text-3xl font-bold mb-8 text-[#000000] font-Merriweather">
-            Other courses from John Doe (<span className="text-2xl text-[#1D2939] font-Merriweather">253</span>)
+              <h1 className="text-3xl font-bold mb-8 text-[#000000] font-Merriweather">
+                Other courses from John Doe (
+                <span className="text-2xl text-[#1D2939] font-Merriweather">
+                  253
+                </span>
+                )
               </h1>
 
               <div className="">
-              {courseone.map((item) => (
-                <CourseCard
-                  key={item.id}
-                  courseimage={item.imageLink}
-                  courseTitle={item.courseTitle}
-                  instructor={item.instructor}
-                  rating={item.rating}
-                  price={item.price}
-                  reviews={item.reviews}
-                  duration={item.duration}
-                  students={item.students}
-                  enrollLink={item.id}
-                />
-              ))}
-            </div>
+                {courseone.map((item) => (
+                  <CourseCard
+                    key={item.id}
+                    courseimage={item.imageLink}
+                    courseTitle={item.courseTitle}
+                    instructor={item.instructor}
+                    rating={item.rating}
+                    price={item.price}
+                    reviews={item.reviews}
+                    duration={item.duration}
+                    students={item.students}
+                    enrollLink={item.id}
+                  />
+                ))}
+              </div>
 
-            <div className="grid grid-cols-1  md:grid-cols-2 mt-6 lg:grid-cols-2 gap-4">
-              {coursetwo.map((item) => (
-                <CourseCard
-                  key={item.id}
-                  courseimage={item.imageLink}
-                  courseTitle={item.courseTitle}
-                  instructor={item.instructor}
-                  rating={item.rating}
-                  price={item.price}
-                  reviews={item.reviews}
-                  duration={item.duration}
-                  students={item.students}
-                  enrollLink={item.id}
-                />
-              ))}
-            </div>
-            <Link
+              <div className="grid grid-cols-1  md:grid-cols-2 mt-6 lg:grid-cols-2 gap-4">
+                {coursetwo.map((item) => (
+                  <CourseCard
+                    key={item.id}
+                    courseimage={item.imageLink}
+                    courseTitle={item.courseTitle}
+                    instructor={item.instructor}
+                    rating={item.rating}
+                    price={item.price}
+                    reviews={item.reviews}
+                    duration={item.duration}
+                    students={item.students}
+                    enrollLink={item.id}
+                  />
+                ))}
+              </div>
+              <Link
                 href={" #"}
                 className="inline-flex items-center text-[#475467] border-b-2 border-[#475467] mt-8 text-[16px] font-semibold "
               >

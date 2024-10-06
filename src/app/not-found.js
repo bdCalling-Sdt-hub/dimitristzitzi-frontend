@@ -13,27 +13,28 @@ const NotFound = () => {
           Page not found
         </h1>
         <p className="text-[#475467] pb-10">
-          Sorry, the page you are looking for doesn't exist. <br/> Here are some
-          helpful links:
+          Sorry, the page you are looking for doesn't exist. <br /> Here are
+          some helpful links:
         </p>
-     <Link href={"/"}>
-     <Button
-                className=" bg-transparent border-2 border-[#D0D5DD] text-[16px] text-[#344054] font-semibold p-6 mr-4"
-                size="large"
-                type="primary"
-              >
-                <ArrowLeftOutlined />
-               Go back
-        </Button>
-     </Link>
-       <Link href="/"> 
-       <Button
-                className="text-[#FFFFFF] text-[16px] font-semibold p-6"
-                size="large"
-                type="primary"
-              >
-               Take me home
-        </Button></Link>
+        <Link href={"/"}>
+          <Button
+            className=" bg-transparent border-2 border-[#D0D5DD] text-[16px] text-[#344054] font-semibold p-6 mr-4"
+            size="large"
+            type="primary"
+          >
+            <ArrowLeftOutlined />
+            Go back
+          </Button>
+        </Link>
+        <Link href="/">
+          <Button
+            className="text-[#FFFFFF] text-[16px] font-semibold p-6"
+            size="large"
+            type="primary"
+          >
+            Take me home
+          </Button>
+        </Link>
       </div>
       <Image className="" src={errorimage} alt="Error Image" />
     </div>

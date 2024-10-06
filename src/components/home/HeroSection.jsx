@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import React from "react";
 import heroimg from "/public/images/heroimg.png";
@@ -5,6 +6,7 @@ import herobg from "/public/images/onlineschool.png";
 import { Button } from "antd";
 import { ArrowUpOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 const HeroSection = () => {
   return (
     <div className="bg-[#D8F0FF]  min-h-[430px]">

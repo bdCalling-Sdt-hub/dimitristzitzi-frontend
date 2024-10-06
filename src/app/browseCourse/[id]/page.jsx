@@ -1,9 +1,9 @@
 "use client";
 import { Card, Avatar, Button, Rate } from "antd";
+import { message } from "antd";
 import React, { useState } from "react";
 import instactor from "./Instructor.png";
 import instactor2 from "./Instructor2.png";
-
 import student from "./Instructor.png";
 import Image from "next/image";
 import { Collapse } from "antd";
@@ -24,8 +24,11 @@ import ReviewCard from "@/components/ui/ReviewCard";
 // import student from "./Instructor.png";
 import Link from "next/link";
 import CourseCard from "@/components/ui/CourseCard";
+import { useRouter } from "next/navigation"; // Correct import
+
 const page = ({ params }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const router = useRouter(); // Correct usage
   // course curriculam data
   const { Panel } = Collapse;
   const panels = [
@@ -117,8 +120,20 @@ const page = ({ params }) => {
       category: "All courses",
     },
   ];
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const handleAddToCart = () => {
+    messageApi.open({
+      type: 'success',
+      content: 'add to cart success',
+    });
+  
+    console.log("Added to cart");
+    router.push('/checkout')
+  };
   return (
     <div>
+      {contextHolder}
       <div>
         <div className="mb-10  ">
           {/* hero section here ---------------------------------------------------------------------------- */}
@@ -279,7 +294,7 @@ const page = ({ params }) => {
                     €29.00 Buy Now
                   </Button>
                   <button
-                    //  onClick={()=>handleAddToCart()}
+                     onClick={handleAddToCart}
                     className="xl:mt-2 bg-transparent font-semibold px-6 pt-3 text-[#475467] block mx-auto"
                   >
                     Add to Cart

@@ -82,7 +82,7 @@ const page = () => {
                 yourself with 71 countries.
               </p>
               <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                <Link href="/browseCourse">
+                <Link href="/auth/signup">
                   <Button
                     className="text-[#FFFFFF] text-[16px] font-semibold p-6"
                     size="large"

@@ -60,7 +60,8 @@ const page = () => {
               </Form.Item>
 
               <Form.Item>
-                <Button
+              <Link href="/auth/otpverification">
+              <Button
                   className="text-[#FFFFFF] text-[16px] font-semibold p-6"
                   size="large"
                   type="primary"
@@ -68,7 +69,7 @@ const page = () => {
                   block
                 >
                   Submit
-                </Button>
+                </Button></Link>
               </Form.Item>
             </Form>
           </div>

@@ -1,15 +1,29 @@
 "use client";
 import React from "react";
 import { Form, Input, Button, Checkbox } from "antd";
+import { message, Space } from 'antd';
 import { GoogleOutlined } from "@ant-design/icons";
 import AuthLayout from "@/components/AuthLayout";
 import Link from "next/link";
 import Image from "next/image";
 import logoimage from "/public/images/logoimage.png";
 import googleicon from "/public/images/google.png";
+import { useRouter } from "next/navigation";
+
 const signIn = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+  const router=useRouter()
   const onFinish = (values) => {
     console.log("Success:", values);
+    if(values){
+      messageApi.open({
+        type: 'success',
+        content: 'login success',
+      });
+    }
+    setTimeout(() => {
+      router.push("/")
+    }, 1000);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -18,6 +32,7 @@ const signIn = () => {
 
   return (
     <AuthLayout>
+     {contextHolder}
      <div className="pt-12">
      <div className="text-center px-2 py-8">
         <div className="flex justify-center items-center mb-4">

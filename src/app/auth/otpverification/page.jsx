@@ -66,7 +66,8 @@ const Page = () => {
               </div>
 
               <Form.Item className="pt-6">
-                <Button
+               <Link href="/auth/login">
+               <Button
                   className="text-[#FFFFFF] text-[16px] font-semibold p-6"
                   size="large"
                   type="primary"
@@ -74,7 +75,7 @@ const Page = () => {
                   block
                 >
                   Submit
-                </Button>
+                </Button></Link>
               </Form.Item>
             </Form>
           </div>

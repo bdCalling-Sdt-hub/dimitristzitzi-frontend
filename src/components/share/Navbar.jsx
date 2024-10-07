@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import {  useState } from "react";
 import { Input, Button, Dropdown, Menu, Drawer } from "antd";
 import {
   ShoppingCartOutlined,
@@ -10,17 +10,12 @@ import {
 import logo from "/public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
 
-  const categoryMenu = (
-    <Menu>
-      <Menu.Item key="1">Category 1</Menu.Item>
-      <Menu.Item key="2">Category 2</Menu.Item>
-      <Menu.Item key="3">Category 3</Menu.Item>
-    </Menu>
-  );
+
 
   const showDrawer = () => {
     setDrawerVisible(true);
@@ -30,6 +25,24 @@ const Navbar = () => {
     setDrawerVisible(false);
   };
 
+
+
+  const t = useTranslations();
+ 
+
+  // useEffect(() => {
+  //   const savedLang = cookieMiya.get("NEXT_LOCALE") || "en";
+  //   setLanguage(savedLang);
+  // }, []); 
+
+
+  const categoryMenu = (
+    <Menu>
+      <Menu.Item key="1">{t('Category')} 1</Menu.Item>
+      <Menu.Item key="2">{t('Category')} 2</Menu.Item>
+      <Menu.Item key="3">{t('Category')} 3</Menu.Item>
+    </Menu>
+  );
   return (
     <nav className="w-full p-4 bg-white  mx-auto flex justify-between items-center">
       {/* Left Side: Logo */}
@@ -54,7 +67,7 @@ const Navbar = () => {
                   overlay={categoryMenu}
                   trigger={["hover"]}
                 >
-                  <Button className="">Category  <DownOutlined className="" /> </Button>
+                  <Button className="">{t('Category')}  <DownOutlined className="" /> </Button>
                 </Dropdown>
               </div>
             </div>
@@ -65,21 +78,21 @@ const Navbar = () => {
       {/* Right Side: Links (Hidden on small screens) */}
       <div className="hidden lg:flex items-center space-x-6">
       <Link href="/becomeInstructor" className="text-sm pl-2">
-            BecomeInstructor
+            {t('BecomeInstructor')}
           </Link>
         <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
         <Link
           href={"/auth/login"}
           className="text-[16px] font-semibold text-[#475467]"
         >
-          LogIn
+          {t('LogIn')}
         </Link>
         <Link href={"/auth/signup"}>
           <Button
             className="text-[#FFFFFF] font-semibold text-[16px] p-5"
             type="primary"
           >
-            Sign up
+            {t('Sign Up')}
           </Button>
         </Link>
       </div>
@@ -98,7 +111,7 @@ const Navbar = () => {
       >
         <Input.Search placeholder="Search course" className="mb-4" />
         <Dropdown overlay={categoryMenu} trigger={["click"]}>
-          <Button className="mb-4">Category</Button>
+          <Button className="mb-4">{t('Category')}</Button>
         </Dropdown>
         <div className="flex flex-col space-y-4">
           <Link href="/becomeInstructor" className="text-sm">

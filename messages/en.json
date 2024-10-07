@@ -1,9 +1,17 @@
 {
   
     "Street Name, Area Address Goes Here": "Street Name, Area Address Goes Here",
-  "Become an Instructor": "Become an Instructor",
+  "BecomeanInstructor": "BecomeanInstructor",
   "About us": "About Us",
   "Programs": "Programs",
+  "Introducing":"Introducing",
+  "An Excellent Platform to Boost your Career":"An Excellent Platform to Boost your Career",
+  "Untitled UI is an online based educational platform, where you will find more than": "Untitled UI is an online based educational platform, where you will find more than",
+  "pre recorded":"pre recorded",
+"& live skills development courses":"& live skills development courses",
+"16k Instructors":"16k Instructors",
+"16,000+ top class professionals instructors teaching here with excellent communication skills" :"16,000+ top class professionals instructors teaching here with excellent communication skills.",
+
   "Art & Design": "Art & Design",
   "Development": "Development",
   "Communication": "Communication",
@@ -24,9 +32,9 @@
   "Phone": "+(00)-000-000-0000",
   "Email": "infoname@mail.com",
     "Category": "Category",
-    "Become an Instructor": "Become an Instructor",
+
     "© Pantagonostis 2024 | All rights reserved.":"© Pantagonostis 2024 | All rights reserved.",
-    "Login": "Login",
+    "LogIn": "LogIn",
     "Sign Up": "Sign Up",
     "Login in to your account": "Login in to your account",
     "Password": "Password",
@@ -94,6 +102,7 @@
     "Graduates": "Graduates",
     "Members": "Members",
     "Browse all": "Browse all",
+    "BROWSE COURSES": "BROWSE COURSES",
     "Buy Now": "Buy Now",
     "Add to Cart": "Add to Cart",
     "Shopping Cart": "Shopping Cart",

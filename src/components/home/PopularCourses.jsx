@@ -4,10 +4,11 @@ import React from "react";
 import CourseCard from "../ui/CourseCard";
 import { Button, Tabs } from "antd";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const PopularCourses = () => {
   const [activeKey, setActiveKey] = useState("1");
-
+const t=useTranslations()
 
 //   FAKE JSON DATA FOR DEMO PURPOSES ONLY
   const course = [
@@ -22,7 +23,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -35,7 +36,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -48,7 +49,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -61,7 +62,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -74,7 +75,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -87,7 +88,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -100,7 +101,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 1,
@@ -113,7 +114,7 @@ const PopularCourses = () => {
       price: "€ 29.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
     {
       id: 2,
@@ -217,7 +218,7 @@ const PopularCourses = () => {
       price: "€ 37.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/vPfYHr7/category1.png",
-      category: "All courses",
+      category: `${t("All courses")}`,
     },
   ];
 
@@ -236,7 +237,7 @@ const PopularCourses = () => {
   return (
     <div className="container mx-auto py-16 px-4">
       <h1 className="xl:text-[56px] lg:text-[56px] font-black leading-none text-2xl text-[#101828] font-Merriweather text-center pb-12">
-        Popular Courses
+        {t("Popular Courses")}
       </h1>
 
       {/* Tabs for categories */}

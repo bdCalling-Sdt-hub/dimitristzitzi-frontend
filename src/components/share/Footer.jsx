@@ -23,22 +23,23 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Footer = () => {
-  const [language, setLanguage] = useState("en"); // Default to 'en'
   const router = useRouter();
+  
+  
+  
+  const [language, setLanguage] = useState("en"); // Default to 'en'
   const t = useTranslations();
-  console.log(t)
-
   const localActive = useLocale();
   const cookieMiya = new Cookies();
-
-
-
 
   useEffect(() => {
     const savedLang = cookieMiya.get("NEXT_LOCALE") || "en";
     setLanguage(savedLang);
   }, []); 
 
+
+
+  
 
   const handleChange = (lang) => {
     if (lang && lang !== language) {

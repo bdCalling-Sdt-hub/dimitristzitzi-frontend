@@ -7,9 +7,10 @@ import {
   ArrowUpOutlined,
 } from "@ant-design/icons";
 import { Rate } from "antd";
+import { useTranslations } from "next-intl";
 
 const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,duration,students,enrollLink}) => {
-
+const t=useTranslations()
   return (
     <div className=" w-full bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
       {/* COURSE CARD BANNER IMGE HERE */}
@@ -24,7 +25,7 @@ const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,
       <div className="p-4">
         <div className="flex justify-between items-center pt-5">
           <p className="text-sm text-[#475467] mb-2">
-            by{" "}
+            {t("by")}
             <Link
               href={`/browseCourse/instructor/${enrollLink}`}
               className=" text-[#1D2939] border-b-2 text-sm font-semibold border-[#1D2939]"
@@ -48,11 +49,11 @@ const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,
         <div className="flex items-center justify-between text-[#475467] text-sm py-4 border-b border-[#E5E7EB]">
           <span className="mr-4 flex items-center font-normal">
             <ClockCircleOutlined className="text-lg pr-2" />
-            {duration} Hours
+            {duration} {t("Hours")}
           </span>
           <span className="flex items-center font-normal">
             <UsergroupDeleteOutlined className="text-lg pr-2" />
-            {students} Students
+            {students} {t("Students")}
           </span>
         </div>
         <div className="flex justify-between items-center py-4">
@@ -60,7 +61,7 @@ const CourseCard = ({ courseimage,courseTitle ,instructor,rating,price ,reviews,
           <Link href={`/browseCourse/${enrollLink}`}
             className="inline-flex items-center text-[#14698A] border-b-2 border-[#14698A] text-[16px] font-semibold "
           >
-            ENROLL NOW
+            {t("ENROLL NOW")}
             <ArrowUpOutlined className="rotate-45 text-xl pl-2" />
           </Link>
         </div>

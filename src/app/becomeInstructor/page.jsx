@@ -36,8 +36,10 @@ import reviewimg6 from "/public/images/review6.png";
 import reviewimg7 from "/public/images/review7.png";
 import reviewimg8 from "/public/images/review8.png";
 import teacher from "/public/images/teacher.png";
+import { useTranslations } from "next-intl";
 const { Title, Paragraph } = Typography;
 const page = () => {
+  const t=useTranslations()
   // Ref to control the carousel
   const carouselRef = useRef(null);
 

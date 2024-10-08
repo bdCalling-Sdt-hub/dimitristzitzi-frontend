@@ -6,8 +6,10 @@ import { Button, Dropdown, Menu, Input } from "antd";
 import { SearchOutlined, DownOutlined,RightOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import CourseCard from "@/components/ui/CourseCard";
+import { useTranslations } from "next-intl";
 
 const page = () => {
+  const t=useTranslations()
     const coursemenu =[
         {
           "id": 1,
@@ -130,9 +132,9 @@ const page = () => {
       
   const categoryMenu = (
     <Menu>
-      <Menu.Item key="1">Category 1</Menu.Item>
-      <Menu.Item key="2">Category 2</Menu.Item>
-      <Menu.Item key="3">Category 3</Menu.Item>
+      <Menu.Item key="1">{t("Category")} 1</Menu.Item>
+      <Menu.Item key="2">{t("Category")} 2</Menu.Item>
+      <Menu.Item key="3">{t("Category")} 3</Menu.Item>
     </Menu>
   );
   return (
@@ -149,7 +151,7 @@ const page = () => {
               <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 s-mobile:pr-[8px] pl-4 s-mobile:pl-[8px]  xl:border-r-2 lg:border-r-2 md:border-r-2 border-white">
                 <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">16K</h1>
                 <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
-                  instractors
+                  {t("instractors")}
                 </span>
               </div>
             </div>
@@ -157,7 +159,7 @@ const page = () => {
               <div className="xl:flex lg:flex flex-wrap items-center space-x-2 pr-4 s-mobile:pr-[8px]  s-mobile:pl-[2px] xl:border-r-2 lg:border-r-2 md:border-r-2  border-white">
                 <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">120k</h1>
                 <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
-                  Graduates
+                  {t("Graduates")}
                 </span>
               </div>
             </div>
@@ -165,7 +167,7 @@ const page = () => {
               <div className="xl:flex lg:flex flex-wrap items-center space-x-2  ">
                 <h1 className="text-white lg:text-4xl md:text-4xl text-2xl font-bold">150k</h1>
                 <span className=" text-white lg:text-[24px] md:text-[24px] text-sm font-normal">
-                  Members
+                  {t("Members")}
                 </span>
               </div>
             </div>
@@ -185,7 +187,7 @@ const page = () => {
                       trigger={["hover"]}
                     >
                       <Button className="text-lg">
-                        Category <DownOutlined className="text-lg" />{" "}
+                      {t("Category")} <DownOutlined className="text-lg" />{" "}
                       </Button>
                     </Dropdown>
                   </div>
@@ -203,10 +205,10 @@ const page = () => {
         {/* art and design menu card  */}
         <div className="flex  justify-between pb-[32px] pt-[82px] ">
           <h1 className="lg:text-[36px] md:text-[28px] text-18px  font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
-            Art & Design
+            {t("Art & Design")}
           </h1>
          <div>
-         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">View all  <RightOutlined className="font-bold pl-1" /> </Link>
+         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
          </div>
         </div>
          {/* Course cards for each category */}
@@ -230,10 +232,10 @@ const page = () => {
         {/* programming menu card  */}
         <div className="flex  justify-between pb-[32px] pt-[82px] ">
           <h1 className="lg:text-[36px] md:text-[28px] text-18px   font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
-          Programing
+          {t("Programing")}
           </h1>
          <div>
-         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">View all  <RightOutlined className="font-bold pl-1" /> </Link>
+         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
          </div>
         </div>
          {/* Course cards for each category */}
@@ -257,10 +259,10 @@ const page = () => {
         {/* Sales & Marketing menu card  */}
         <div className="flex  justify-between pb-[32px] pt-[82px] ">
           <h1 className="lg:text-[36px] md:text-[28px] text-18px   font-bold leading-none text-2xl text-[#101828] font-Merriweather text-start ">
-          Sales & Marketing
+          {t("Sales & Marketing")}
           </h1>
          <div>
-         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">View all  <RightOutlined className="font-bold pl-1" /> </Link>
+         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
          </div>
         </div>
          {/* Course cards for each category */}

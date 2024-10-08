@@ -1,40 +1,56 @@
 "use client";
-import {  useState } from "react";
-import { Input, Button, Dropdown, Menu, Drawer } from "antd";
+import { useState,useEffect } from "react";
+import { Input, Button, Dropdown, Menu, Drawer, Modal, Select } from "antd";
 import {
   ShoppingCartOutlined,
   MenuOutlined,
   SearchOutlined,
-  DownOutlined
+  DownOutlined,
+  GlobalOutlined
 } from "@ant-design/icons";
 import logo from "/public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { Option } from "antd/es/mentions";
+import Cookies from "universal-cookie";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const [language, setLanguage] = useState("en"); // Default to 'en'
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const t = useTranslations();
+  const cookieMiya = new Cookies();
+  const router = useRouter();
 
+  useEffect(() => {
+    const savedLang = cookieMiya.get("NEXT_LOCALE") || "en";
+    setLanguage(savedLang);
+  }, []);
 
+  const handleChange = (lang) => {
+    if (lang && lang !== language) {
+      setLanguage(lang);
+      cookieMiya.set("NEXT_LOCALE", lang, { path: "/" });
+      router.refresh(); // Refresh the data and re-render the page content
+      setIsModalVisible(false); // Close the modal after selection
+    }
+  };
 
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
   const showDrawer = () => {
     setDrawerVisible(true);
   };
-
   const closeDrawer = () => {
     setDrawerVisible(false);
   };
-
-
-
-  const t = useTranslations();
- 
-
-  // useEffect(() => {
-  //   const savedLang = cookieMiya.get("NEXT_LOCALE") || "en";
-  //   setLanguage(savedLang);
-  // }, []); 
-
 
   const categoryMenu = (
     <Menu>
@@ -43,8 +59,9 @@ const Navbar = () => {
       <Menu.Item key="3">{t('Category')} 3</Menu.Item>
     </Menu>
   );
+
   return (
-    <nav className="w-full p-4 bg-white  mx-auto flex justify-between items-center">
+    <nav className="w-full p-4 bg-white mx-auto flex justify-between items-center">
       {/* Left Side: Logo */}
       <div className="flex items-center space-x-4">
         <Link href="/">
@@ -57,9 +74,8 @@ const Navbar = () => {
         <Input
           placeholder="Search for course"
           className="w-full text-[#667085] text-[16px]"
-          prefix={<SearchOutlined size={15} className="text-[#667085]" />} // Single element for the left icon
+          prefix={<SearchOutlined size={15} className="text-[#667085]" />}
           suffix={
-            // Wrap inside a div
             <div>
               <div className="border-l-2 text-sm text-[#1D2939] font-normal border-[#D0D5DD]">
                 <Dropdown
@@ -67,7 +83,7 @@ const Navbar = () => {
                   overlay={categoryMenu}
                   trigger={["hover"]}
                 >
-                  <Button className="">{t('Category')}  <DownOutlined className="" /> </Button>
+                  <Button>{t('Category')} <DownOutlined /></Button>
                 </Dropdown>
               </div>
             </div>
@@ -77,24 +93,24 @@ const Navbar = () => {
 
       {/* Right Side: Links (Hidden on small screens) */}
       <div className="hidden lg:flex items-center space-x-6">
-      <Link href="/becomeInstructor" className="text-sm pl-2">
-            {t('BecomeInstructor')}
-          </Link>
-        <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
-        <Link
-          href={"/auth/login"}
-          className="text-[16px] font-semibold text-[#475467]"
-        >
+        <Link href="/becomeInstructor" className="text-sm pl-2">
+          {t('BecomeInstructor')}
+        </Link>
+        <Link className="cursor-pointer" href={"/shoppingcart"}>
+          <ShoppingCartOutlined className="text-2xl" />
+        </Link>
+        <Link href={"/auth/login"} className="text-[16px] font-semibold text-[#475467]">
           {t('LogIn')}
         </Link>
         <Link href={"/auth/signup"}>
-          <Button
-            className="text-[#FFFFFF] font-semibold text-[16px] p-5"
-            type="primary"
-          >
+          <Button className="text-[#FFFFFF] font-semibold text-[16px] p-5" type="primary">
             {t('Sign Up')}
           </Button>
         </Link>
+
+        <Button onClick={showModal} size="large">
+          <GlobalOutlined />
+        </Button>
       </div>
 
       {/* Mobile Menu Button (Visible on small screens) */}
@@ -102,12 +118,42 @@ const Navbar = () => {
         <MenuOutlined className="text-2xl" onClick={showDrawer} />
       </div>
 
+      {/* Modal for language selection */}
+      <Modal
+ 
+  visible={isModalVisible}
+  onCancel={handleCancel}
+  footer={null}
+>
+  <h2 className="text-lg font-semibold mb-4" >{t("Choose Your Preferred Language")}</h2>
+  <p className="mb-4 text-sm text-gray-500">
+    {t("Select a language from the dropdown to change the language of the website.")}
+  </p>
+  <Select
+  className="h-[44px] "
+    placeholder={t("Select Language")}
+    value={language}
+    style={{ width: "100%", marginBottom: "1rem" }}
+    onChange={handleChange}
+  >
+    <Select.Option className=" mb-2" value="en">{t("English")}</Select.Option>
+    <Select.Option value="gr">{t("Greek")}</Select.Option>
+    {/* Add other languages as needed */}
+  </Select>
+  <p className=" text-sm text-gray-500">
+    {t("Note: Changing the language will refresh the page to apply your selection.")}
+  </p>
+  <p className="mb-4 text-sm text-gray-500">
+    {t("If you encounter any issues, please try reloading the page manually.")}
+  </p>
+</Modal>
+
       {/* Drawer for mobile menu */}
       <Drawer
         title="Menu"
         placement="left"
         onClose={closeDrawer}
-        visible={drawerVisible}
+        open={drawerVisible}
       >
         <Input.Search placeholder="Search course" className="mb-4" />
         <Dropdown overlay={categoryMenu} trigger={["click"]}>
@@ -115,23 +161,19 @@ const Navbar = () => {
         </Dropdown>
         <div className="flex flex-col space-y-4">
           <Link href="/becomeInstructor" className="text-sm">
-            Become Instructor
+            {t('BecomeInstructor')}
           </Link>
-          <Link className="cursor-pointer" href={"/shoppingcart"}><ShoppingCartOutlined className="text-2xl" /></Link>
-          <Link
-          href={"/auth/login"}
-          className="text-[16px] font-semibold text-[#475467]"
-        >
-          Log in
-        </Link>
-        <Link href={"/auth/signup"}>
-          <Button
-            className="text-[#FFFFFF] font-semibold text-[16px] p-5"
-            type="primary"
-          >
-            Sign up
-          </Button>
-        </Link>
+          <Link className="cursor-pointer" href={"/shoppingcart"}>
+            <ShoppingCartOutlined className="text-2xl" />
+          </Link>
+          <Link href={"/auth/login"} className="text-[16px] font-semibold text-[#475467]">
+            {t('LogIn')}
+          </Link>
+          <Link href={"/auth/signup"}>
+            <Button className="text-[#FFFFFF] font-semibold text-[16px] p-5" type="primary">
+              {t('Sign Up')}
+            </Button>
+          </Link>
         </div>
       </Drawer>
     </nav>

@@ -150,7 +150,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link rel="noopener noreferrer" href="#">
-                        {t('Newworking')}
+                        {t('Networking')}
                       </Link>
                     </li>
                   </ul>
@@ -179,7 +179,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link rel="noopener noreferrer" href="#">
-                     {('Terms & Conditions')}
+                     {t('Terms & Conditions')}
                     </Link>
                   </li>
                   <li>
@@ -196,13 +196,13 @@ const Footer = () => {
                 </h3>
                 <div>
                   <InstagramOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
-                  <TwitterOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
+                  {/* <TwitterOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" /> */}
                   <YoutubeOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
                 </div>
                 <div className="text-[#E4E7EC] text-[16px] font-semibold space-y-4 pt-4">
                   <div>
-                    <PhoneOutlined className="rotate-90 text-lg text-[#4BCAE9] pr-2" />
-                    <span className="text-[#E4E7EC]">{t('+(00)-000-000-0000')}</span>
+                    {/* <PhoneOutlined className="rotate-90 text-lg text-[#4BCAE9] pr-2" />
+                    <span className="text-[#E4E7EC]">{t('+(00)-000-000-0000')}</span> */}
                   </div>
                   <div className="pl-2">
                     <MailFilled className=" text-lg text-[#4BCAE9] pr-2" />

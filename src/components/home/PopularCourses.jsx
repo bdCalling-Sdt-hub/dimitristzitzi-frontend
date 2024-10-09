@@ -127,7 +127,7 @@ const t=useTranslations()
       price: "€ 35.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/xLN7bSQ/category2.png",
-      category: "Graphic Design",
+      category: `${t("Graphic Design")}`,
     },
     {
       id: 3,
@@ -140,7 +140,7 @@ const t=useTranslations()
       price: "€ 27.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/vPfYHr7/category1.png",
-      category: "UI/UX Design",
+      category: `${t("UI/UX Design")}`,
     },
     {
       id: 4,
@@ -153,7 +153,7 @@ const t=useTranslations()
       price: "€ 40.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/xLN7bSQ/category2.png",
-      category: "Programming",
+      category: `${t("Programming")}`,
     },
     {
       id: 5,
@@ -166,7 +166,7 @@ const t=useTranslations()
       price: "€ 50.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "Artificial Intelligence",
+      category: `${t("Artificial Intelligence")}`,
     },
     {
       id: 6,
@@ -179,7 +179,7 @@ const t=useTranslations()
       price: "€ 25.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/vPfYHr7/category1.png",
-      category: "Business Management",
+      category: `${t("Business Management")}`,
     },
     {
       id: 7,
@@ -192,7 +192,7 @@ const t=useTranslations()
       price: "€ 30.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/xLN7bSQ/category2.png",
-      category: "3D",
+      category: `${t("3D")}`,
     },
     {
       id: 8,
@@ -205,7 +205,7 @@ const t=useTranslations()
       price: "€ 33.00",
       enrollLink: "ENROLL NOW",
       imageLink: "https://i.ibb.co.com/17pL5Qj/caourse1.png",
-      category: "Sports",
+      category: `${t("Sports")}`,
     },
     {
       id: 9,

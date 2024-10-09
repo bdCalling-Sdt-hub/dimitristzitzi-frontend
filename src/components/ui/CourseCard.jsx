@@ -49,7 +49,7 @@ const t=useTranslations()
         <div className="flex items-center justify-between text-[#475467] text-sm py-4 border-b border-[#E5E7EB]">
           <span className="mr-4 flex items-center font-normal">
             <ClockCircleOutlined className="text-lg pr-2" />
-            {duration} {t("Hours")}
+            {duration} 
           </span>
           <span className="flex items-center font-normal">
             <UsergroupDeleteOutlined className="text-lg pr-2" />

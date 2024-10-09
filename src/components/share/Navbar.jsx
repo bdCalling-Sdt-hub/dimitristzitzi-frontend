@@ -94,7 +94,7 @@ const Navbar = () => {
       {/* Right Side: Links (Hidden on small screens) */}
       <div className="hidden lg:flex items-center space-x-6">
         <Link href="/becomeInstructor" className="text-sm pl-2">
-          {t('BecomeInstructor')}
+          {t('Become an Instructor')}
         </Link>
         <Link className="cursor-pointer" href={"/shoppingcart"}>
           <ShoppingCartOutlined className="text-2xl" />

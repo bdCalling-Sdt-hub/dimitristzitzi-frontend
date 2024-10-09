@@ -39,7 +39,7 @@ import teacher from "/public/images/teacher.png";
 import { useTranslations } from "next-intl";
 const { Title, Paragraph } = Typography;
 const page = () => {
-  const t=useTranslations()
+  const t = useTranslations();
   // Ref to control the carousel
   const carouselRef = useRef(null);
 
@@ -58,10 +58,10 @@ const page = () => {
       {/* top banner section -------------------------------- */}
       <div className="bg-[#F9FAFB] text-center p-6">
         <h1 className="text-3xl font-bold text-[#1D2939]">
-          Become an Instructor
+          {t("Become an Instructor")}
         </h1>
         <p className="text-sm font-normal text-[#667085] pt-2">
-          Home / Become an Instructor
+          Home / {t("Become an Instructor")}
         </p>
       </div>
 
@@ -73,15 +73,15 @@ const page = () => {
             <div className="flex flex-col justify-center p-6  text-center rounded-sm  w-full lg:text-left ">
               <div className="bg-[#D8F0FF] px-4 font-semibold pr-6 py-2 text-[#475467] w-fit rounded-3xl">
                 {" "}
-                🔥 Earn money
+                🔥 {t("Earn money")}
               </div>
               <h1 className="lg:text-[56px] text-4xl font-black leading-none sm:text-6xl text-[#101828] font-Merriweather">
-                Become an Instuctor
+                {t("Become an Instructor")}
               </h1>
               <p className="mt-6 mb-8 text-[16px] font-normal sm:mb-12 text-[#475467] leading-8 max-w-md lg:mx-0 mx-auto ">
-                Become an instructor & start teaching with 26k certified
-                instructors. Create a success story with 67.1k Students — Grow
-                yourself with 71 countries.
+                {t(
+                  "Become an instructor & start teaching with 26k certified instructors. Create a success story with 67.1k Students — Grow yourself with 71 countries."
+                )}
               </p>
               <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                 <Link href="/auth/signup">
@@ -90,7 +90,7 @@ const page = () => {
                     size="large"
                     type="primary"
                   >
-                    Get started now
+                    {t("Get started now")}
                     <span>
                       {" "}
                       <ArrowUpOutlined className="rotate-45 text-xl" />
@@ -330,7 +330,7 @@ const page = () => {
       {/* help center section --------------------------------- */}
       <div className="bg-white lg:py-24 py-12 container mx-auto lg:flex flex-row items-center  justify-between lg:gap-52 gap-6 px-6 space-y-11 ">
         <div className="w-full">
-          <Image  src={helpcenterimg} alt="mockup" className="w-full h-full" />
+          <Image src={helpcenterimg} alt="mockup" className="w-full h-full" />
         </div>
         <div className=" w-full">
           <h1 className="text-3xl font-bold text-[#1D2026] mb-8">
@@ -506,7 +506,6 @@ const page = () => {
           </section>
         </div>
       </div>
-
     </div>
   );
 };

@@ -137,6 +137,7 @@ const page = () => {
       <Menu.Item key="3">{t("Category")} 3</Menu.Item>
     </Menu>
   );
+
   return (
     <div>
       {/* Hero section with image and search bar and category dropdown  */}
@@ -208,7 +209,7 @@ const page = () => {
             {t("Art & Design")}
           </h1>
          <div>
-         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
+         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href={`/browseCourse/category/ArtandDesign`}>{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
          </div>
         </div>
          {/* Course cards for each category */}
@@ -235,7 +236,7 @@ const page = () => {
           {t("Programing")}
           </h1>
          <div>
-         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
+         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href={`/browseCourse/category/Programing`}>{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
          </div>
         </div>
          {/* Course cards for each category */}
@@ -262,7 +263,7 @@ const page = () => {
           {t("Sales & Marketing")}
           </h1>
          <div>
-         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href="/browseCourse/category/">{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
+         <Link className=" font-bold border-b-2 pb-0 border-[#1D2939] text-[#000000]" href={`/browseCourse/category/ASales&Marketing`}>{t("View all")}  <RightOutlined className="font-bold pl-1" /> </Link>
          </div>
         </div>
          {/* Course cards for each category */}

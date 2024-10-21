@@ -23,11 +23,11 @@ const HeroSection = () => {
               {t("An Excellent Platform to Boost your Career")}
             </h1>
             <p className="mt-6 mb-8 text-[16px] font-normal sm:mb-12 text-[#475467] leading-8 ">
-              {t("Untitled UI is an online based educational platform, where you will find more than")} <br />
+              {t("Pantognostis  is an online based educational platform, where you will find more than")} <br />
               <span className="bg-[#FEC84B] text-black  px-2 py-1 font-bold h-9 w-9 mr-1">
                 17k+
               </span>
-             {t("pre recorded")} {t("& live skills development courses")}.
+             {t("pre recorded & live skills development courses")}.
             </p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
             <Link href="/browseCourse">

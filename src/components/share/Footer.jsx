@@ -66,10 +66,7 @@ const Footer = () => {
            
                 />
               </div>
-              <h4>
-               {t("Street Name, Area Address Goes Here")}
-              </h4>
-             <p> <Link href={'/becomeInstructor'} >{t('BecomeanInstructor')}</Link></p>
+             <p> <Link href={'/becomeInstructor'} >{t('Become an Instructor')}</Link></p>
               <p>{t('About us')}</p>
 
 
@@ -163,27 +160,27 @@ const Footer = () => {
                 </h3>
                 <ul className="space-y-[12px] text-[#E4E7EC] text-sm">
                   <li>
-                    <Link rel="noopener noreferrer" href="#">
+                    <Link rel="noopener noreferrer" href="/FAQS">
                       {t('FAQs')}
                     </Link>
                   </li>
                   <li>
-                    <Link rel="noopener noreferrer" href="#">
+                    <Link rel="noopener noreferrer" href="/contactUs">
                       {t('Contact Us')}
                     </Link>
                   </li>
                   <li>
-                    <Link rel="noopener noreferrer" href="#">
+                    <Link rel="noopener noreferrer" href="/PrivacyAndPolicy">
                       {t('Privacy & Policy')}
                     </Link>
                   </li>
                   <li>
-                    <Link rel="noopener noreferrer" href="#">
+                    <Link rel="noopener noreferrer" href="/TermsAndConditions">
                      {t('Terms & Conditions')}
                     </Link>
                   </li>
                   <li>
-                    <Link rel="noopener noreferrer" href="#">
+                    <Link rel="noopener noreferrer" href="/courseEnrolmentHelp">
                       {t('Course Enrollment Help')}
                     </Link>
                   </li>
@@ -191,14 +188,7 @@ const Footer = () => {
               </div>
               {/* SOCIAL MEDIA MENU ITEM   */}
               <div className="space-y-3">
-                <h3 className="  text-[#FFFFFF] font-bold text-[16px] pb-3 font-Merriweather">
-                  {t('Social Media')}
-                </h3>
-                <div>
-                  <InstagramOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
-                  {/* <TwitterOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" /> */}
-                  <YoutubeOutlined className="text-2xl p-2 bg-[#302e2e] rounded-full mr-2 cursor-pointer" />
-                </div>
+      
                 <div className="text-[#E4E7EC] text-[16px] font-semibold space-y-4 pt-4">
                   <div>
                     {/* <PhoneOutlined className="rotate-90 text-lg text-[#4BCAE9] pr-2" />
@@ -206,7 +196,7 @@ const Footer = () => {
                   </div>
                   <div className="pl-2">
                     <MailFilled className=" text-lg text-[#4BCAE9] pr-2" />
-                    <span className="text-[#E4E7EC]">{t('infoname@mail.com')}</span>
+                    <span className="text-[#E4E7EC]">{t('support@pantognostis.com')}</span>
                   </div>
                 </div>
               </div>

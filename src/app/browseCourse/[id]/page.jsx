@@ -140,7 +140,7 @@ const page = ({ params }) => {
         <div className="mb-10  ">
           {/* hero section here ---------------------------------------------------------------------------- */}
           <div className="xl:bg-[#1D2939] lg:bg-[#1D2939]   bg-transparent ">
-            <div className="container mx-auto  flex gap-4 relative py-16 lg:px-6 px-2">
+            <div className="container mx-auto  flex gap-4 relative py-6 lg:px-6 px-2">
               {/* left side content here-------------------------------------------- */}
               <div className="xl:max-w-2xl lg:max-w-xl w-full space-y-3 xl:block lg:block  hidden ">
                 <h1 className="text-white text-2xl font-bold font-Merriweather">
@@ -219,8 +219,8 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="xl:max-w-2xl lg:max-w-sm    mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[9%]  lg:right-[1%] max-[1440]:fixed max-[1024]:right-[6px] max-[1440]:fixed max-[1440]:right-[0%]  top-[110px] lg:shadow-lg z-50">
-                <div className="relative border border-white rounded-lg xl:h-full lg:h-[200px] h-auto">
+              <div className="xl:max-w-2xl lg:max-w-sm    mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[9%]  lg:right-[1%] max-[1440]:fixed max-[1024]:right-[6px] max-[1440]:fixed max-[1440]:right-[0%] lg:shadow-lg z-50  h-fit mb-8">
+                <div className="relative border border-white rounded-lg ">
                   <video
                     className="w-full rounded-lg "
                     autoPlay
@@ -234,7 +234,7 @@ const page = ({ params }) => {
                   </p>
                 </div>
 
-                <div className="xl:mt-4 mt-1 p-4 ">
+                <div className="xl:mt-1 mt-1 p-4 ">
                   <div className="flex items-center space-x-2">
                     <Avatar.Group maxCount={5}>
                       {/* Image for student */}
@@ -264,7 +264,7 @@ const page = ({ params }) => {
                     </span>
                   </div>
 
-                  <div className="text-[#1D2939]  mt-2">
+                  <div className="text-[#1D2939]  ">
                     <p>
                       <strong className="text-sm font-semibold">
                        {t("Whom this course is for")}:
@@ -286,13 +286,13 @@ const page = ({ params }) => {
                     type="primary"
                     size="large"
                     block
-                    className="xl:mt-4 px-6 py-4"
+                    className=" px-6 "
                   >
                     €29.00 {t("Buy Now")}
                   </Button>
                   <button
                      onClick={handleAddToCart}
-                    className="xl:mt-2 bg-transparent font-semibold px-6 pt-3 text-[#475467] block mx-auto"
+                    className=" bg-transparent font-semibold px-6 pt-3 text-[#475467] block mx-auto"
                   >
                     {t("Add to Cart")}
                   </button>

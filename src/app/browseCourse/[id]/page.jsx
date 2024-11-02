@@ -26,7 +26,7 @@ import Link from "next/link";
 import CourseCard from "@/components/ui/CourseCard";
 import { useRouter } from "next/navigation"; // Correct import
 import { useTranslations } from "next-intl";
-
+// import coursevideo from '/public/video/video1.mp4'
 const page = ({ params }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const router = useRouter(); // Correct usage
@@ -219,15 +219,16 @@ const page = ({ params }) => {
               </div>
 
               {/* right side content here-------------------------------------------------- */}
-              <div className="xl:max-w-2xl lg:max-w-sm    mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[9%]  lg:right-[1%] max-[1440]:fixed max-[1024]:right-[6px] max-[1440]:fixed max-[1440]:right-[0%] lg:shadow-lg z-50  h-fit mb-8">
+              <div className="xl:max-w-2xl lg:max-w-sm    mx-auto bg-white border-2 border-[#dee0e2]  rounded-lg  xl:fixed lg:fixed block xl:right-[9%]  lg:right-[1%] max-[1440]:fixed max-[1024]:right-[6px] max-[1440]:fixed max-[1440]:right-[0%] lg:shadow-lg z-50  h-fit mb-8 w-[465px]">
                 <div className="relative border border-white rounded-lg ">
                   <video
-                    className="w-full rounded-lg "
+                    className=" rounded-lg  "
                     autoPlay
                     loop
                     controls
                     playsInline
-                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                  
+                    src='https://videos.pexels.com/video-files/6985525/6985525-uhd_2560_1440_25fps.mp4'
                   ></video>
                   <p className="absolute bottom-2 left-1/3 mt-2 ml-2 bg-opacity-70 text-sm font-bold  text-[#FCFCFD]">
                     {t("Preview this course")}
